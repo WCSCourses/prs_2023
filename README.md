@@ -7,7 +7,7 @@ Base for the Polygenic Risk Scores course Repository
 [Course website]()
 
 ## Instructors
-- [Instrucotr](link),Affiliation
+- [Instructor](link),Affiliation
 
 ### Overview
 
