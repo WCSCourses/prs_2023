@@ -6,7 +6,7 @@
 
 # Day 1 Timetable {#day-1-timetable .unnumbered}
 
-> []{#_bookmark2 .anchor}**Time Title Presenter**
+**Time Title Presenter**
 >
 > 9:00 - 9:15 Welcome Address Dr Daneshwar and Dr Baichoo
 >
