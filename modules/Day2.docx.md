@@ -11,8 +11,9 @@ height="2.8874989063867016in"}
 |**Time**   |   **Title** |                         |**Presenter**     |
 |       --- |    ---      |      ---                |          ---     |
 |8:30 - 9:00| Recap and day overview  |                         | > \-             |
-|9:00 - 10:30 | ***Lecture***: Introduction to PRS I  | |Carene Ndong Sima |
-|             | ***Practical***: Computing PRS + performing QC |            | 
+|9:00 - 10:30 | ***Lecture***: Introduction to PRS I | |Carene Ndong Sima |
+|              ***Practical***: Computing PRS + performing QC             | 
+|10:30 - 
 
 | 10:30 -    | >           |                         | > \-                |
 | 11:00      | Coffee      |                         |                     |
