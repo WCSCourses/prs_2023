@@ -14,7 +14,7 @@ height="2.8874989063867016in"}
 | > 9:00 -   | A      |                         | > \-                |
 | > 9:15     | rrival |                         |                     |
 +------------+--------+-------------------------+---------------------+
-| > 9:15 -   | [Lec   | > Introduction to PRS I | > Dr Paul O'Reilly  |
+| > 9:15 -   | [Lec   | > Introduction to PRS I | >Carene Ndong Sima  |
 | > 10:30    | ture]{ |                         |                     |
 |            | .under |                         |                     |
 |            | line}: |                         |                     |
@@ -26,7 +26,7 @@ height="2.8874989063867016in"}
 |            | > and  |                         |                     |
 |            | > Q&A  |                         |                     |
 +------------+--------+-------------------------+---------------------+
-| 11:00 -    | > [Lec |                         | > Dr Paul O'Reilly  |
+| 11:00 -    | > [Lec |                         | >Carene Ndong Sima  |
 | 12:00      | ture]{ |                         |                     |
 |            | .under |                         |                     |
 |            | line}: |                         |                     |
