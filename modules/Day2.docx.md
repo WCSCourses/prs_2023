@@ -11,7 +11,7 @@ height="2.8874989063867016in"}
 |**Time**   |   **Title** |                         |**Presenter**     |
 |       --- |    ---      |      ---                |          ---     |
 |8:30 - 9:00| Recap and day overview  |                         | > \-             |
-|9:00 - 10:30 | [Lecture]{underline}: Introduction to PRS I | |Carene Ndong Sima
+|9:00 - 10:30 | [Lecture]{.underline}: Introduction to PRS I | |Carene Ndong Sima
 
 |9:00 -  10:30 | [Lec        | > Introduction to PRS I | > Carene Ndong Sima |
 | | ture]{      |                         |                     |
