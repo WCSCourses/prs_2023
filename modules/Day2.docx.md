@@ -8,82 +8,21 @@ height="2.8874989063867016in"}
 # Day 2 Timetable {#day-2-timetable .unnumbered}
 
 
-|**Time**   |   **Title** |  **Presenter**     |
+|**TIME**   |   **TITLE** |  **PRESENTER**     |
 |       --- |    ---      |      ---  |
 |8:30 - 9:00| Recap and day overview  |                                  |
 |9:00 - 10:30 | ***Lecture***: Introduction to PRS I |Carene Ndong Sima |
-|             | ***Practical***: Computing PRS + performing QC|             | 
+|             | ***Practical***: Performing QC + Computing PRS|  Carene + Marion            | 
 |10:30 - 11:00 | Coffee break and Q&A |
-
-| 10:30 -    | >           |                         | > \-                |
-| 11:00      | Coffee      |                         |                     |
-|            | >           |                         |                     |
-|            |  Break      |                         |                     |
-|            | > and       |                         |                     |
-|            | > Q&A       |                         |                     |
-+------------+--------+------------------------------+---------------------+
-| 11:00 -    | > [Lec      |                         | > Carene Ndong Sima |
-| 12:00      | ture]{      |                         |                     |
-|            | .under      |                         |                     |
-|            | line}:      |                         |                     |
-|            | >           |                         |                     |
-|            | Introd      |                         |                     |
-|            | uction      |                         |                     |
-|            | > to        |                         |                     |
-|            | > PRS       |                         |                     |
-|            | > II        |                         |                     |
-+------------+-------------+-------------------------+---------------------+
-| 12:00 -    | >           |                         | > \-                |
-| 13:30      |  Lunch      |                         |                     |
-+------------+-------------+-------------------------+---------------------+
-| 13:30 -    | >           |                         | > Dr Conrad Iyegbe  |
-| 14:30      | [Pract.     |                         | > & Tutors          |
-|            | ical]{      |                         |                     |
-|            | .under      |                         |                     |
-|            | line}:      |                         |                     |
-|            | >           |                         |                     |
-|            | Introd      |                         |                     |
-|            | uction      |                         |                     |
-|            | > to        |                         |                     |
-|            | > PRS       |                         |                     |
-|            | > I         |                         |                     |
-+------------+-------------+-------------------------+---------------------+
-| 14:30 -    | >           |                         | > \-                |
-| 15:00      | Coffee      |                         |                     |
-|            | >           |                         |                     |
-|            |  Break      |                         |                     |
-|            | > and       |                         |                     |
-|            | > Q&A       |                         |                     |
-+------------+-------------+-------------------------+---------------------+
-| 15:00 -    | >           |                         | > Dr Conrad Iyegbe  |
-| 16:00      | [Pract      |                         | > & Tutors          |
-|            | ical]{      |                         |                     |
-|            | .under      |                         |                     |
-|            | line}:      |                         |                     |
-|            | >           |                         |                     |
-|            | Introd      |                         |                     |
-|            | uction      |                         |                     |
-|            | > to        |                         |                     |
-|            | > PRS       |                         |                     |
-|            | > II        |                         |                     |
-+------------+-------------+-------------------------+---------------------+
-| 16:00 -    | > [S        |                         | > Dr Nicki Tiffin   |
-| 17:00      | pecial      |                         |                     |
-|            | > Sem       |                         |                     |
-|            | inar]{      |                         |                     |
-|            | .under      |                         |                     |
-|            | line}:      |                         |                     |
-|            | > Pol       |                         |                     |
-|            | ygenic      |                         |                     |
-|            | > Risk      |                         |                     |
-|            | >           |                         |                     |
-|            | Scores      |                         |                     |
-|            | >           |                         |                     |
-|            | > \+        |                         |                     |
-|            | > and       |                         |                     |
-|            | >           |                         |                     |
-|            | Ethics      |                         |                     |
-+------------+-------------+-------------------------+---------------------+
+|11:00 - 12:00| ***Practical***: PRS I - continued |Carene + Marion | 
+|12:00 - 13:00| Seminar | Abdel |
+|13:00 - 14:00| Lunch |
+|14:00 - 15:30| ***Lecture***: Introduction to PRS II| Carene Ndong Sima|
+|             | ***Practical***: PRS prediction + cross-trait analyses, visualizing results| Carene + Marion | 
+|15:30 - 16:00| Break|
+|16:00 - 17:00| ***Practical***: Intro to PRS II - continued| Carene + Marion |
+|17:00 - 17:30| Seminar: PRS ethics consideration| |
+|17:30 - 18:00| Feedback & reflecxion|
 
 > **Contents**
 
