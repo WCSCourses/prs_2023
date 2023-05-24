@@ -1,4 +1,4 @@
-> **Polygenic Risk Score Analyses Workshop 2022**
+> **Polygenic Risk Score Analyses Workshop 2023**
 
 ![](media/image1.jpeg){width="2.939998906386702in"
 height="2.8874989063867016in"}
