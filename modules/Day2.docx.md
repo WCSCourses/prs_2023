@@ -7,15 +7,14 @@ height="2.8874989063867016in"}
 
 # Day 2 Timetable {#day-2-timetable .unnumbered}
 
-+------------+-------------+-------------------------+---------------------+
-| > **Time** | > **Title** |                         | > **Presenter**     |
-|            |             |                         |                     |
-+============+=============+=========================+=====================+
-| > 9:00 -   | A           |                         | > \-                |
-| > 9:15     | rrival      |                         |                     |
-+------------+-------------+-------------------------+---------------------+
-| > 9:15 -   | [Lec        | > Introduction to PRS I | > Carene Ndong Sima |
-| > 10:30    | ture]{      |                         |                     |
+
+|**Time**   |   **Title** |                         |**Presenter**     |
+|       --- |    ---      |      ---                |          ---     |
+|8:30 - 9:00| Recap and day overview  |                         | > \-             |
+|9:00 - 10:30 | [Lecture]{underline}: Introduction to PRS I | Carene Ndong Sima
+
+|9:00 -  10:30 | [Lec        | > Introduction to PRS I | > Carene Ndong Sima |
+| | ture]{      |                         |                     |
 |            | .under      |                         |                     |
 |            | line}:      |                         |                     |
 +------------+-------------+-------------------------+---------------------+
