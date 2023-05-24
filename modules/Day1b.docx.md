@@ -2,9 +2,9 @@
 
 ![](media/image1.jpeg){width="2.94in" height="2.8874989063867016in"}
 
-> **Day 2: Introduction to GWAS & PRS**
+> **Day 1: Introduction to GWAS & PRS**
 
-> **Day 2 Timetable**
+> **Day 1 Timetable**
 
 > 9:00 - 9:15 Welcome Address Dr Daneshwar and Dr Baichoo
 >
