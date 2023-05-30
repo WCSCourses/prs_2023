@@ -115,7 +115,7 @@
 
 [License](#license) 14
 
-# Introduction to PLINK I: Basics
+# Practical 1: Introduction to PLINK I basics
 
 ## Key Learning Outcomes
 
@@ -129,13 +129,12 @@
 
 4.  Select and exclude lists of samples and SNPs
 
-![](media/image2.jpeg){width="0.3229166666666667in"
-height="0.3229166666666667in"}
+> **NOTE**: All data used in this workshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only.
 
 ## Introduction
 
 > PLINK is the most popular software program for performing genome-wide
-> associ- ation analyses t is extremely extensive, allowing a huge
+> association analyses it is extremely extensive, allowing a huge
 > number of analyses to be performed. It also includes many options for
 > reformatting your data and provides useful data summaries. Software
 > packages are usually best learnt by having a go at running some of
