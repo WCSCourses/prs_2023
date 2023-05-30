@@ -115,7 +115,8 @@
 
 [License](#license) 14
 
-# Practical 1: Introduction to PLINK I basics
+# Practical 1
+## Introduction to PLINK I: basics
 
 ## Key Learning Outcomes
 
@@ -276,11 +277,18 @@ You will now use the SNP list that you have created to extract those SNPs and cr
 
 3.  Use the output file name 'D1D_MAF_MISS'
 
+----
+📝 Log files are uselful to check that the number of SNPs and samples is as expected. Always check your your log files to ensure that they are sensible.
+SNP lists can also be used to EXCLUDE SNPs - select 'exclude' above instead of 'extract'. 
+Sample ID lists can also be used to 'keep' or 'remove' individuals in the same 'filter' window. Note that both sample IDs (FID IID,separated by a space are required in the sample file list.
+
+----
+
 **Solutions:**
 
 > 1 *./Software/plink
 >
-> 2  *--bfile Data/D1D
+> 2 *--bfile Data/D1D
 >
 > 3 *--maf 0.05
 >
@@ -301,7 +309,9 @@ You will now use the SNP list that you have created to extract those SNPs and cr
 >
 > 5 *--out Data/D1D_MAF_MISS*
 
-# Introduction to PLINK II: Performing QC & GWAS
+# Practical 2 
+
+## Introduction to PLINK II: Performing QC & GWAS
 
 ## Key Learning Outcomes
 
@@ -315,19 +325,14 @@ You will now use the SNP list that you have created to extract those SNPs and cr
 
 ## Generate summaries to perform QC
 
-> There are many kinds of summaries of the data that can generated in
-> PLINK in order to perform particular quality control (QC) steps, which
-> help to make our data more reliable. Some of these involve summaries
-> in relation to the individuals (e.g. individual missingness,
-> sex-check) and some relate to summaries of SNP data (e.g. MAF,
-> Hardy-Weinburg Equilibrium). Over the next few sub-sections you will
-> go through some examples of generating summary statistics that can be
-> used to perform QC.
+There are many kinds of summaries of the data that can generated in PLINK in order to perform particular quality control (QC) steps, which
+help to make our data more reliable. Some of these involve summaries in relation to the individuals (e.g. individual missingness, sex-check) and some 
+relate to summaries of SNP data (e.g. MAF, Hardy-Weinburg Equilibrium). Over the next few sub-sections you will go through some examples of generating 
+summary statistics that can be used to perform QC.
 
 ### Individual missingness
 
-1.  Use the D1D binary files to generate files containing missingness
-    information (*\--*missing). Use the output file name 'D1D_miss'
+1.  Use the D1D binary files to generate files containing missingness information (*\--*missing*). Use the output file name 'D1D_miss'
 
 2.  Open the 2 files that were generated (lmiss & imiss).
 
