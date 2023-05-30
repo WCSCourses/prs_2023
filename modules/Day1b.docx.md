@@ -227,8 +227,11 @@ Genotype data in allele count format is very useful, for example to use in regre
 Generate the D1D data in allele count format:
 
 > 1 *./Software/plink
+> 
 > 2 *--bfile Data/D1D
+> 
 > 3 *--recodeA
+> 
 > 4 *--out Data/D1D_AC*
 
 ----
@@ -240,7 +243,11 @@ Generate the D1D data in allele count format:
 ## PLINK website
 
 Go to <http://zzz.bwh.harvard.edu/plink/download.shtml> and skim through the front page to get an idea of PLINK's functionality. Note
-the list of clickable links on the left side of the website. Under 'Data Management' (click the heading on the left) and read the list of the diﬀerent ways you may want to recode and reorder data sets. Don't attempt to read much further as this is a very large and detailed section - a useful future resource but too much for today. Under 'Data Management', click 'Write SNP list' and read the instructions there to write SNP lists.
+the list of clickable links on the left side of the website. 
+
+Under 'Data Management' (click the heading on the left) and read the list of the diﬀerent ways you may want to recode and reorder data sets. Don't attempt to read much further as this is a very large and detailed section - a useful future resource but too much for today. 
+
+Under 'Data Management', click 'Write SNP list' and read the instructions there to write SNP lists.
 
 ## Write SNP list and extract SNPs
 
@@ -269,31 +276,30 @@ You will now use the SNP list that you have created to extract those SNPs and cr
 
 3.  Use the output file name 'D1D_MAF_MISS'
 
+**Solutions:**
+
+> 1 *./Software/plink
+>
+> 2  *--bfile Data/D1D
+>
+> 3 *--maf 0.05
+>
+> 4 *--geno 0.05
+>
+> 5 *--write-snplist
+>
+> 6 *--out Data/D1D_snps*
 
 
-> Solutions:
+> 1 *./Software/plink
 >
-> 1 ./Software/plink
+> 2 *--bfile Data/D1D
 >
-> 2 \--bfile Data/D1D
+> 3 *--extract Data/D1D_snps.snplist
 >
-> 3 \--maf 0.05
+> 4 *--make-bed
 >
-> 4 \--geno 0.05
->
-> 5 \--write-snplist
->
-> 6 \--out Data/D1D_snps
->
-> 1 ./Software/plink
->
-> 2 \--bfile Data/D1D
->
-> 3 \--extract Data/D1D_snps.snplist
->
-> 4 \--make-bed
->
-> 5 \--out Data/D1D_MAF_MISS
+> 5 *--out Data/D1D_MAF_MISS*
 
 # Introduction to PLINK II: Performing QC & GWAS
 
