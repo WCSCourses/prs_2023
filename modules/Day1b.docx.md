@@ -186,19 +186,25 @@ sophisticated analyses through these PLINK tutorials.
     files (<http://zzz.bwh.harvard.edu/plink/download.shtml)>
     (Look in the blue column on the left side)
     
- ----   󠁑
+ ----  
+ 󠁑
 ❓ What are the 4 columns in the map file?
+
    What are the first 6 columns in a ped file?
+   
    What information is in the remaining columns of the ped file?
    
 ----
 
 5.  Create 'binary' format PLINK files using the recode command:
 
-> 1 *./Software/plink
-> 2 *--file Data/D1D
-> 3 *--make-bed
-> 4 *--out Data/D1D
+> 1 *./Software/plink*
+
+> 2 *--file Data/D1D*
+
+> 3 *--make-bed*
+
+> 4 *--out Data/D1D*
 
 6.  List files (*ls*) and check which new files have appeared
 
@@ -206,9 +212,12 @@ sophisticated analyses through these PLINK tutorials.
     file.
 
 8.  Open and skim the '.log' file.
+
 ----
 ❓ How is the fam file similar to the ped file? How is it different? 
+
    How is the bim file similar to the map file? How is it different?
+   
   (Use the PLINK website if necessary)
   
 ----
