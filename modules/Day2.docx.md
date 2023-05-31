@@ -24,7 +24,7 @@ height="2.8874989063867016in"}
 |17:00 - 17:30| Seminar: PRS ethics consideration| |
 |17:30 - 18:00| Feedback & reflecxion|
 
-> **Contents**
+> **Table of Contents**
 
 [Day 2 Timetable](#day-2-timetable) 1
 
