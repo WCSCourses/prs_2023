@@ -1,52 +1,8 @@
-> **Polygenic Risk Score Analyses Workshop 2023**
+**Polygenic Risk Score Analyses Workshop 2023**
 
-![](media/image1.jpeg){width="2.94in" height="2.8874989063867016in"}
 
-> **Day 1: Introduction to GWAS & PRS**
 
-> **Day 1 Timetable**
 
-> 9:00 - 9:15 Welcome Address Dr Daneshwar and Dr Baichoo
->
-> 9:15 - 9:30 Opening Speech from Organisers Dr Segun Fatumo and
->
-> Dr Nicki Tiﬃn
->
-> 9:30 - 10:30 [Lecture]{.underline}: Background to PRS: GWAS &
->
-> relevant Statistics
->
-> Dr Paul O'Reilly
->
-> 10:30 - 11:00 Coﬀee Break and Q&A -
->
-> 11:00 - 12:00 [Practical]{.underline}: Introduction to Bash and R Dr
-> Paul O'Reilly & Tu-
->
-> tors
->
-> 12:00 - 13:30 Lunch -
->
-> 13:30 - 15:00 [Practical]{.underline}: Introduction to PLINK I -
->
-> Basics
->
-> Dr Conrad Iyegbe & Tutors
->
-> 15:00 - 15:30 Coﬀee Break and Q&A -
->
-> 15:30 - 16:30 [Practical]{.underline}: Introduction to PLINK II -
->
-> QC & GWAS
->
-> Dr Conrad Iyegbe & Tutors
->
-> **Contents**
-
-[Day 1 Timetable](#day-1-timetable) 1
-
-[D](#day-1-timetable)[ay 1 Timetable](#time-title-presenter) . . . . . .
-. . . . . . . . . . . . . . . . . . . . . . . . . 1
 
 1.  [Introduction to PLINK I: Basics](#introduction-to-plink-i-basics) 3
 
@@ -286,6 +242,7 @@ Sample ID lists can also be used to 'keep' or 'remove' individuals in the same '
 
 **Solutions:**
 
+<---
 > 1 *./Software/plink
 >
 > 2 *--bfile Data/D1D
@@ -308,7 +265,7 @@ Sample ID lists can also be used to 'keep' or 'remove' individuals in the same '
 > 4 *--make-bed
 >
 > 5 *--out Data/D1D_MAF_MISS*
-
+---!> 
 # Practical 2 
 
 ## Introduction to PLINK II: Performing QC & GWAS
