@@ -5,7 +5,7 @@ height="2.8874989063867016in"}
 
 > **Day 2: Introduction to Polygenic Risk Scores**
 
-# Day 2 Timetable {#day-2-timetable .unnumbered}
+ # Day 2 Timetable
 
 
 |**TIME**   |   **TITLE** |  **PRESENTER**     |
