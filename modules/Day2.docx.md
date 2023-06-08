@@ -27,10 +27,8 @@
         3. [Data Structure](#data-structure) 
         4. [Introduction](#introduction) 
         5. [Understanding GWAS Summary Statistics](#understanding-gwas-summary-statistics) 
-        6. [Matching the Base and Target Data
-        sets](#matching-the-base-and-target-data-sets) 
-        7. [Linkage Disequilibrium in PRS
-        Analyses](#linkage-disequilibrium-in-prs-analyses) 
+        6. [Matching the Base and Target Data sets](#matching-the-base-and-target-data-sets) 
+        7. [Linkage Disequilibrium in PRS Analyses](#linkage-disequilibrium-in-prs-analyses) 
            1. [Performing Clumping](#performing-clumping) 
        8. [P-Value Thresholding](#p-value-thresholding) 
            1. [Height PRS using GW-significant SNPs
@@ -88,7 +86,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
 > #an image should go here
 
 ---
-[↥ **Back to Top**](#Table_of_Contents) (to be reviewed. I want to add a "back to top" button that takes us in the top of the page)
+[↥ **Back to Top**](#Table-of-Contents) (to be reviewed. I want to add a "back to top" button that takes us in the top of the page)
 
 
 ## Introduction
