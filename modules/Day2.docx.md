@@ -20,54 +20,42 @@
 |17:30 - 18:00| Feedback & reflecxion|
 
 ## Table of Contents
-1.  [Introduction to Polygenic Score
-    > Analyses](#introduction-to-polygenic-score-analyses) 3
+   # Introduction to Polygenic Score
 
-    1.  [Key Learning Outcomes](#key-learning-outcomes) . . . . . . . .
-        . . . . . . . . . . . . . . . . 3
+    1.  [Key Learning Outcomes](#key-learning-outcomes)
 
-    2.  [Resources you will be using](#resources-you-will-be-using) . .
-        . . . . . . . . . . . . . . . . . . . . 3
+    2.  [Resources you will be using](#resources-you-will-be-using)
 
-    3.  [Data Structure](#data-structure) . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . 4
+    3.  [Data Structure](#data-structure) 
 
-    4.  [Introduction](#introduction) . . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . 5
+    4.  [Introduction](#introduction) 
 
     5.  [Understanding GWAS Summary
-        Statistics](#understanding-gwas-summary-statistics) . . . . . .
-        . . . . . . . . 5
+        Statistics](#understanding-gwas-summary-statistics) 
 
     6.  [Matching the Base and Target Data
-        sets](#matching-the-base-and-target-data-sets) . . . . . . . . .
-        . . . . . . 6
+        sets](#matching-the-base-and-target-data-sets) 
 
     7.  [Linkage Disequilibrium in PRS
-        Analyses](#linkage-disequilibrium-in-prs-analyses) . . . . . . .
-        . . . . . . . . 7
+        Analyses](#linkage-disequilibrium-in-prs-analyses) 
 
-        1.  [Performing Clumping](#performing-clumping) . . . . . . . .
-            . . . . . . . . . . . . . . 7
+        1.  [Performing Clumping](#performing-clumping) 
 
-    8.  [P-Value Thresholding](#p-value-thresholding) . . . . . . . . .
-        . . . . . . . . . . . . . . . . . 8
+    8.  [P-Value Thresholding](#p-value-thresholding) 
 
         1.  [Height PRS using GW-significant SNPs
-            only](#height-prs-using-gw-significant-snps-only) . . . . .
-            . . . . 8
+            only](#height-prs-using-gw-significant-snps-only) 
 
         2.  [Height PRS across multiple P-value
-            thresholds](#height-prs-across-multiple-p-value-thresholds)
-            10
+            thresholds](#height-prs-across-multiple-p-value-thresholds)   
 
-        3.  [High Resolution Scoring](#high-resolution-scoring) 12
+        3.  [High Resolution Scoring](#high-resolution-scoring)
 
-    9.  [Stratifying Samples by PRS](#stratifying-samples-by-prs) 15
+    9.  [Stratifying Samples by PRS](#stratifying-samples-by-prs) 
 
-    10. [Case Control Studies](#case-control-studies) 17
+    10. [Case Control Studies](#case-control-studies) 
 
-    11. [Cross-Trait Analysis](#cross-trait-analysis) 18
+    11. [Cross-Trait Analysis](#cross-trait-analysis)
 
 # Introduction to Polygenic Score Analyses
 
@@ -88,14 +76,13 @@
 > Association Stud- ies (GWAS) are required. In this workshop, the
 > following summary statistics are used:
 >
-> Phenotype Provider Description Download Link
->
+|**Phenotype**|**Provider**|**Description**|**Download Link**|
+|---|---|---|---|
+|Height|GIANT Consortium|GWAS of height on 253,288 individuals|[(https://portals.broadinstitue.org/collaboration/giant/index.php/GIANT_consortium_data_files)](#wood_defining_2014)| 
+|Coronary artery disease (CAD)|CARDIoGRAM plus C4D Consortium|GWAS on 60,801 CAD cases and 123,504 controls|
 > Height [GIANT
-> Consortium](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files)
-> GWAS of height on
->
-> 253,288 individuals (**wood_defining_2014**)
->
+> Consortium](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files) 
+
 > [Download](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)
 > [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)
 >
@@ -103,11 +90,7 @@
 >
 > [CARDIoGRAM plus](http://www.cardiogramplusc4d.org/) [C4D
 > consortium](http://www.cardiogramplusc4d.org/)
->
-> GWAS on 60,801
->
-> CAD cases and 123,504 controls
->
+
 > [Download](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)
 > [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)
 
