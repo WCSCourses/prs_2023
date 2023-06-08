@@ -88,6 +88,12 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
 ---
 <a href="#top">Back to top</a>
 
+
+<a href="#" class="button">Post comment (link)</a>
+<input class="button" type="submit" value="Post comment (input)">
+<button class="button" type="submit">Post comment (button)</button>
+
+
 ## Introduction
 A PRS is a (usually weak) estimate of an individual's genetic propensity to a phenotype, calculated as a sum of their genome-wide genotypes weighted by corresponding genotype effect sizes obtained from GWAS summary statistics. In the next section we will consider what the effect size means and how it is used in computing PRS.
 
