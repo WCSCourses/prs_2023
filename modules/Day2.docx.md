@@ -86,8 +86,9 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
 > #an image should go here
 
 ---
-[↥ **Back to Top**](#Table-of-Contents) (to be reviewed. I want to add a "back to top" button that takes us in the top of the page)
+>[↥ **Back to Top**](#Table-of-Contents) (to be reviewed. I want to add a "back to top" button that takes us in the top of the page)
 
+<a href="#top">Back to top</a>
 
 ## Introduction
 A PRS is a (usually weak) estimate of an individual's genetic propensity to a phenotype, calculated as a sum of their genome-wide genotypes weighted by corresponding genotype effect sizes obtained from GWAS summary statistics. In the next section we will consider what the effect size means and how it is used in computing PRS.
