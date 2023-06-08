@@ -138,44 +138,25 @@ While option 2 is statistically appealing, option 1 has been most adopted in PRS
 
 ### Performing Clumping
 
-> *Clumping* is the procedure where a SNP data set is 'thinned' by
-> removing SNPs across the genome that are correlated (in high LD) with
-> a nearby SNP that has a smaller association 𝑃 -value.
->
-> SNPs are first sorted (i.e. ranked) by their 𝑃 -values. Then, starting
-> from the most significant SNP (denoted as the *index SNP*), any SNPs
-> in high LD (eg. 𝑟^2^ \> 0.1, with 𝑟^2^ typically calculated from
-> 𝑝ℎ𝑎𝑠𝑒𝑑 ℎ𝑎𝑝𝑙𝑜𝑡𝑦𝑝𝑒 data) with the index SNP are removed. To reduce
-> computational burden, only SNPs that are within e.g. 250 kb of the
-> *index SNP* are 𝑐𝑙𝑢𝑚𝑝𝑒𝑑. This process is continued until no *index
-> SNPs* remain.
->
-> Use the command below to perform clumping of the Height GWAS data
-> using PLINK(**chang_second_2015**). First, you will have to navigate
-> to the right folder where the data are stored using the terminal. Open
-> the terminal and type the command below at the terminal prompt:
->
-> 1 cd \~/Desktop/PRS\\\_Workshop/
->
-> Next type the following command (NB. See warning below):
->
-> 1 ./Software/plink_linux
->
-> 2 \--bfile Target_Data/TAR
->
-> 3 \--clump Base_Data/GIANT_Height.txt
->
-> 4 \--clump-p1 1
->
-> 5 \--clump-snp-field MarkerName
->
-> 6 \--clump-field p
->
-> 7 \--clump-kb 250
->
-> 8 \--clump-r2 0.1
->
-> 9 \--out Results/Height
+*Clumping* is the procedure where a SNP data set is 'thinned' by removing SNPs across the genome that are correlated (in high LD) with a nearby SNP that has a smaller association 𝑃 -value. 
+
+SNPs are first sorted (i.e. ranked) by their 𝑃 -values. Then, starting from the most significant SNP (denoted as the *index SNP*), any SNPs in high LD (eg. 𝑟^2^0.1, with 𝑟^2^ typically calculated from *phased haplotype* data) with the index SNP are removed. To reduce computational burden, only SNPs that are within e.g. 250 kb of the *index SNP* are 𝑐𝑙𝑢𝑚𝑝𝑒𝑑. This process is continued until no *index SNPs* remain.
+
+Use the command below to perform clumping of the Height GWAS data using PLINK([**chang_second_2015**](https://doi.org/10.1186/s13742-015-0047-8)). First, you will have to navigate to the right folder where the data are stored using the terminal. Open the terminal and type the command below at the terminal prompt:
+
+ cd \~/Desktop/PRS\\\_Workshop/
+
+Next type the following command (NB. See warning below):
+
+  ./Software/plink_linux
+  --bfile Target_Data/TAR
+  --clump Base_Data/GIANT_Height.txt
+  --clump-p1 1
+  --clump-snp-field MarkerName
+  --clump-field p
+  --clump-kb 250
+  --clump-r2 0.1
+  --out Results/Height
 
 ![](media/image5.jpeg){width="0.3229155730533683in"
 height="0.3229166666666667in"}
