@@ -21,7 +21,7 @@
 
 ## Table of Contents
 
-    1. [Introduction to Polygenic Score Analyses](#Introduction)
+   1. [Introduction to Polygenic Score Analyses](#Introduction-to-polygenic-score-analyses)
         1. [Key Learning Outcomes](#key-learning-outcomes)
         2. [Resources you will be using](#resources-you-will-be-using)
         3. [Data Structure](#data-structure) 
