@@ -65,7 +65,11 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 ## Data Structure
 You will find all practical materials in the **PRS_Workshop/Day_2** directory. Relevant materials that you should see there at the start of the practical are as follows:
 
-  | :file_folder: Base_Data| GIANT_Height.txt cad.add.txt cad.add.readme |
+
+
+  | :file_folder: Base_Data| GIANT_Height.txt |
+  |                        |cad.add.txt |
+  |                        |cad.add.readme |
           
   | :file_folder: Target_Data| TAR.fam TAR.bim TAR.bed TAR.height TAR.cad TAR.covariate|
   | :hammer_and_wrench: Software| plink_mac plink_linux plink.exe PRSice.R PRSice_mac PRSice_linux PRSice_win64.exe|
