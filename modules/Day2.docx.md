@@ -21,7 +21,7 @@
 
 ## Table of Contents
    # Introduction to Polygenic Score
-    1. [(Key Learning Outcomes)](#key-learning-outcomes)
+   [Key Learning Outcomes](#key-learning-outcomes)
     2. [Resources you will be using](#resources-you-will-be-using)
     3. [Data Structure](#data-structure) 
     4. [Introduction](#introduction) 
