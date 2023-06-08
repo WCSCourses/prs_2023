@@ -195,54 +195,27 @@ Rscript ./Software/PRSice.R \
 
 ```
 
-This command takes the Height GWAS summary statistic file (--base), informs PRSice of the column name for the column containing the SNP ID(--snp), the effect allele (--A1), the non-effect allele (--A2),the effect size (\--stat) and the 𝑃 -value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addi- tion, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10^*−*8^.
+This command takes the Height GWAS summary statistic file (\--base), informs PRSice of the column name for the column containing the SNP ID(\--snp), the effect allele (--A1), the non-effect allele (\--A2),the effect size (\--stat) and the 𝑃 -value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addi- tion, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10^*−*8^.
 
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
 
-> PRSice performs strand flipping and clumping automatically and
-> generates the **Height.gws.summary** file, together with other output
-> that we will look into later in the practical. The summary file
-> contains the following columns:
+PRSice performs strand flipping and clumping automatically and generates the **Height.gws.summary** file, together with other output that we will look into later in the practical. The summary file contains the following columns:
 
 1.  **Phenotype** - Name of Phenotype.
-
 2.  **Set** - Name of Gene Set. Default is *Base*
-
 3.  **Threshold** - Best P-value Threshold
-
 4.  **PRS.R2** - Variance explained by the PRS
-
-5.  **Full.R2** - Variance explained by the full model (including the
-    covariates)
-
-6.  **Null.R2** - Variance explained by the covariates (none provided
-    here)
-
-7.  **Prevalence** - The population disease prevalence as indicated by
-    the user (not provided here due to testing continuous trait)
-
-8.  **Coefficient** - The 𝛽 coefficient corresponding to the effect
-    estimate of the best-fit PRS on the target trait in the regression.
-    A one unit increase in the PRS increases the outcome by 𝛽
-
-9.  **Standard.Error** - The standard error of the best-fit PRS 𝛽
-    coefficient (see above)
-
-10. **P** - The 𝑃 -value relating to testing the null hypothesis that
-    the best-fit PRS
-
-> 𝛽 coefficient is zero.
-
+5.  **Full.R2** - Variance explained by the full model (including the covariates)
+6.  **Null.R2** - Variance explained by the covariates (none provided here)
+7.  **Prevalence** - The population disease prevalence as indicated by the user (not provided here due to testing continuous trait)
+8.  **Coefficient** - The 𝛽 coefficient corresponding to the effect estimate of the best-fit PRS on the target trait in the regression. A one unit increase in the PRS increases the outcome by 𝛽
+9.  **Standard.Error** - The standard error of the best-fit PRS 𝛽 coefficient (see above)
+10. **P** - The 𝑃 -value relating to testing the null hypothesis that the best-fit PRS 𝛽 coefficient is zero.
 11. **Num_SNP** - Number of SNPs included in the best-fit PRS
+12. **Empirical-P** - Only provided if permutation is performed. This is the em- pirical 𝑃 -value corresponding to the association test of the best-fit PRS - this controls for the over-fitting that occurs when multiple thresholds are tested.
 
-12. **Empirical-P** - Only provided if permutation is performed. This is
-    the em- pirical 𝑃 -value corresponding to the association test of
-    the best-fit PRS - this controls for the over-fitting that occurs
-    when multiple thresholds are tested.
-
-> For now, we can ignore most columns and focus on the **PRS.R2** and
-> the **P** column, which provide information on the model fit.
+For now, we can ignore most columns and focus on the **PRS.R2** and the **P** column, which provide information on the model fit.
 
 ![](media/image7.jpeg){width="0.3541666666666667in"
 height="0.3593744531933508in"}
