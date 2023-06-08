@@ -47,14 +47,11 @@
 # Introduction to Polygenic Score Analyses
 
 ## Key Learning Outcomes
-
-> After completing this practical, you should be able to:
+After completing this practical, you should be able to:
 
 1.  Perform basic Polygenic Risk Score (PRS) analyses using PRSice
     (Euesden, Lewis & O'Reilly 2015; Choi & O'Reilly 2019)
-
 2.  Interpret results generated from PRS analyses
-
 3.  Customise visualisation of results
 
 ## Resources you will be using
