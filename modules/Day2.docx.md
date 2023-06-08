@@ -86,8 +86,6 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
 > #an image should go here
 
 ---
->[↥ **Back to Top**](#Table-of-Contents) (to be reviewed. I want to add a "back to top" button that takes us in the top of the page)
-
 <a href="#top">Back to top</a>
 
 ## Introduction
