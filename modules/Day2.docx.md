@@ -1,8 +1,3 @@
-> **Polygenic Risk Score Analyses Workshop 2023**
-
-![](media/image1.jpeg){width="2.939998906386702in"
-height="2.8874989063867016in"}
-
 > **Day 2: Introduction to Polygenic Risk Scores**
 
  # Day 2 Timetable
@@ -24,13 +19,7 @@ height="2.8874989063867016in"}
 |17:00 - 17:30| Seminar: PRS ethics consideration| |
 |17:30 - 18:00| Feedback & reflecxion|
 
-> **Table of Contents**
-
-[Day 2 Timetable](#day-2-timetable) 1
-
-[Day 2 Timetable](#day-2-timetable) . . . . . . . . . . . . . . . . . .
-. . . . . . . . . . . . . 1
-
+## Table of Contents
 1.  [Introduction to Polygenic Score
     > Analyses](#introduction-to-polygenic-score-analyses) 3
 
@@ -130,7 +119,7 @@ height="2.8874989063867016in"}
 > directory. Relevant materials that you should see there at the start
 > of the practical are as follows:
 >
-> ![](media/image2.png)Practical Base_Data
+> ![](media/image2.png)Practical Base_Data (This is how you download a picture, but it seems I need to make the "media" folder. The question is HOW???)
 >
 > GIANT_Height.txt cad.add.txt cad.add.readme
 >
