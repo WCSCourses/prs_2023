@@ -1,4 +1,4 @@
-> **Day 2: Introduction to Polygenic Risk Scores**
+# Introduction to Polygenic Risk Scores
 
  # Day 2 Timetable
 
@@ -20,7 +20,6 @@
 |17:30 - 18:00| Feedback & reflecxion|
 
 ## Table of Contents
-  1. Introduction to Polygenic Score
   2. [Key Learning Outcomes](#key-learning-outcomes)
   3. [Resources you will be using](#resources-you-will-be-using)
   4. [Data Structure](#data-structure) 
