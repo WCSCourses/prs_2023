@@ -59,54 +59,61 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 
 |**Phenotype**|**Provider**|**Description**|**Download Link**|
 |---|---|---|---|
-|Height|GIANT Consortium|GWAS of height on 253,288 individuals [**wood_defining_2014**](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files)| [Download](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz) [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)|
-|Coronary artery disease (CAD)|CARDIoGRAM plus C4D Consortium|GWAS on 60,801 CAD cases and 123,504 controls [**consortium_comprehensive_2015**](http://www.cardiogramplusc4d.org/)|[Download](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip) [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)|
+|Height|GIANT Consortium|GWAS of height on 253,288 individuals ([**wood_defining_2014**](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files))| [Download](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz) [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)|
+|Coronary artery disease (CAD)|CARDIoGRAM plus C4D Consortium|GWAS on 60,801 CAD cases and 123,504 controls ([**consortium_comprehensive_2015**](http://www.cardiogramplusc4d.org/))|[Download](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip) [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)|
 
 ## Data Structure
 You will find all practical materials in the **PRS_Workshop/Day_2** directory. Relevant materials that you should see there at the start of the practical are as follows:
 
 - :file_folder: Base_Data
-                       - GIANT_Height.txt, 
-                       - cad.add.txt, 
-                       - cad.add.readme. 
-          
-  | :file_folder: Target_Data| TAR.fam TAR.bim TAR.bed TAR.height TAR.cad TAR.covariate|
-  | :hammer_and_wrench: Software| plink_mac plink_linux plink.exe PRSice.R PRSice_mac PRSice_linux PRSice_win64.exe|
-       
+  - GIANT_Height.txt,
+  - cad.add.txt,
+  - cad.add.readme.
+- :file_folder: Target_Data
+  - TAR.fam
+  - TAR.bim
+  - TAR.bed
+  - TAR.height
+  - TAR.cad 
+  - TAR.covariate
+- :hammer_and_wrench: Software
+  - plink_mac
+  - plink_linux
+  - plink.exe
+  - PRSice.R 
+  - PRSice_mac
+  - PRSice_linux
+  - PRSice_win64.exe
 
+> #an image should go here
 
 ## Introduction
-
-> A PRS is a (usually weak) estimate of an individual's genetic
-> propensity to a pheno- type, calculated as a sum of their genome-wide
-> genotypes weighted by corresponding genotype effect sizes obtained
-> from GWAS summary statistics. In the next section we will consider
-> what the effect size means and how it is used in computing PRS.
+A PRS is a (usually weak) estimate of an individual's genetic propensity to a phenotype, calculated as a sum of their genome-wide genotypes weighted by corresponding genotype effect sizes obtained from GWAS summary statistics. In the next section we will consider what the effect size means and how it is used in computing PRS.
 
 ## Understanding GWAS Summary Statistics
 
-> When GWAS are performed on a quantitative trait, the effect size is
-> typically given as a beta coefficient (𝛽) from a linear regression
-> with Single Nucleotide Polymor- phism (SNP) genotypes as predictor of
-> phenotype. The 𝛽 coefficient estimates the increase in the phenotype
-> for each copy of the *effect allele*. For example, if the effect
-> allele of a SNP is **G** and the non-effect allele is **A** , then the
-> genotypes **AA**, **AG** and **GG** will be coded as 0, 1 and 2
-> respectively. In this scenario, the 𝛽 coefficient reflects how much
-> the phenotype changes for each **G** allele present (NB. The 𝛽 can be
-> positive or negative - so the 'effect allele' is simply the allele
-> that was coded in the regression, not necessarily the allele with a
-> positive effect).
->
-> When a GWAS is performed on a binary trait (e.g. case-control study),
-> the effect size is usually reported as an Odd Ratios (OR). Using the
-> same example, if the OR from the GWAS is 2 with respect to the **G**
-> allele, then the OR of **AG** relative to **AA** is 2, and the OR of
-> **GG** relative to **AA** is 4. So an individual with the **GG**
-> genotype are estimated\* to be 4 times more likely to be a case than
-> someone with the **AA** genotype (\*an Odds Ratio is itself an
-> estimate of a Risk Ratio, which cannot be calculated from a
-> case/control study)
+ When GWAS are performed on a quantitative trait, the effect size is
+ typically given as a beta coefficient (𝛽) from a linear regression
+ with Single Nucleotide Polymorphism (SNP) genotypes as predictor of
+ phenotype. The 𝛽 coefficient estimates the increase in the phenotype
+for each copy of the *effect allele*. For example, if the effect
+ allele of a SNP is **G** and the non-effect allele is **A** , then the
+ genotypes **AA**, **AG** and **GG** will be coded as 0, 1 and 2
+ respectively. In this scenario, the 𝛽 coefficient reflects how much
+ the phenotype changes for each **G** allele present (NB. The 𝛽 can be
+ positive or negative - so the 'effect allele' is simply the allele
+ that was coded in the regression, not necessarily the allele with a
+ positive effect).
+
+ When a GWAS is performed on a binary trait (e.g. case-control study),
+ the effect size is usually reported as an Odd Ratios (OR). Using the
+ same example, if the OR from the GWAS is 2 with respect to the **G**
+ allele, then the OR of **AG** relative to **AA** is 2, and the OR of
+ **GG** relative to **AA** is 4. So an individual with the **GG**
+ genotype are estimated\* to be 4 times more likely to be a case than
+ someone with the **AA** genotype (\*an Odds Ratio is itself an
+ estimate of a Risk Ratio, which cannot be calculated from a
+ case/control study)
 
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
@@ -116,48 +123,18 @@ height="0.3281244531933508in"}
 
 ## Matching the Base and Target Data sets
 
-> The first step in PRS calculation is to ensure consistency between the
-> GWAS sum- mary statistic file (*base data*) and the target genotype
-> file (*target data*). Since the base and target data are generated
-> independently, they often relate to different SNPs
->
-> \- and so the first job is to identify the overlapping SNPs across the
-> two data sets and remove non-overlapping SNPs (this is usually done
-> for you by PRS software). If the overlap is low then it would be a
-> good idea to perform imputation on your target data to increase the
-> number of SNPs that overlap between the data sets.
->
-> The next, more tricky issue, is that the genotype encoding between the
-> data sets may differ. For example, while the effect allele of a SNP is
-> **T** in the base data, the effect allele in the target might be **G**
-> instead. When this occurs, *allele flipping* should be performed,
-> where the genotype encoding in the target data is reversed so that
-> **TT**, **TG** and **GG** are coded as 2, 1 and 0. Again, this is
-> usually performed automatically by PRS software.
+ The first step in PRS calculation is to ensure consistency between the GWAS summary statistic file (*base data*) and the target genotype file (*target data*). Since the base and target data are generated independently, they often relate to different SNPs and so the first job is to identify the overlapping SNPs across the two data sets and remove non-overlapping SNPs (this is usually done for you by PRS software). If the overlap is low then it would be a good idea to perform imputation on your target data to increase the number of SNPs that overlap between the data sets.
+
+The next, more tricky issue, is that the genotype encoding between the data sets may differ. For example, while the effect allele of a SNP is **T** in the base data, the effect allele in the target might be **G** instead. When this occurs, *allele flipping* should be performed,where the genotype encoding in the target data is reversed so that **TT**, **TG** and **GG** are coded as 2, 1 and 0. Again, this is usually performed automatically by PRS software.
 
 ![](media/image5.jpeg){width="0.3229166666666667in"
 height="0.3229166666666667in"}
 
 ## Linkage Disequilibrium in PRS Analyses
 
-> GWAS are typically performed one-SNP-at-a-time, which, combined with
-> the strong correlation structure across the genome (Linkage
-> Disequilibrium (LD)), makes iden- tifying the independent genetic
-> effects (or their best proxies if these are not geno- typed/imputed)
-> challenging. There are two main options for approximating the PRS that
-> would have been generated from full conditional GWAS: 1. SNPs are
-> *clumped* so that the retained SNPs are largely independent of each
-> other, allowing their effects to be summed, assuming additive effects,
-> 2. all SNPs are included and the LD between them is accounted for.
->
-> While option 2 is statistically appealing, option 1 has been most
-> adopted in PRS studies so far, most likely due to its simplicity and
-> the similarity of results of meth- ods using the different options to
-> date (**mak_polygenic_2017**). In this work- shop we will consider
-> option 1, implemented in PRSice, but if you are interested in how LD
-> can be incorporated as a parameter in PRS calculation then see the LD-
-> pred (**vilhjalmsson_modeling_2015**) and lassosum
-> (**mak_polygenic_2017**) papers.
+GWAS are typically performed one-SNP-at-a-time, which, combined with the strong correlation structure across the genome (Linkage Disequilibrium (LD)), makes identifying the independent genetic effects (or their best proxies if these are not genotyped/imputed) challenging. There are two main options for approximating the PRS that would have been generated from full conditional GWAS: 1. SNPs are *clumped* so that the retained SNPs are largely independent of each other, allowing their effects to be summed, assuming additive effects, 2. all SNPs are included and the LD between them is accounted for.
+
+While option 2 is statistically appealing, option 1 has been most adopted in PRS studies so far, most likely due to its simplicity and the similarity of results of methods using the different options to date ([**mak_polygenic_2017**](https://doi.org/10.1002/gepi.22050)). In this workshop we will consider option 1, implemented in PRSice, but if you are interested in how LD can be incorporated as a parameter in PRS calculation then see the LDpred ([**vilhjalmsson_modeling_2015**](https://doi.org/10.1016/j.ajhg.2015.09.001))and lassosum ([**mak_polygenic_2017**](https://doi.org/10.1002/gepi.22050)) papers.
 
 ### Performing Clumping
 
