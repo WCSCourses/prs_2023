@@ -65,7 +65,7 @@
 >
 |**Phenotype**|**Provider**|**Description**|**Download Link**|
 |---|---|---|---|
-|Height|GIANT Consortium|GWAS of height on 253,288 individuals ([**wood_defining_2014**])(https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files)| [Download](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz) [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)|
+|Height|GIANT Consortium|GWAS of height on 253,288 individuals [**wood_defining_2014**](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files)| [Download](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz) [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)|
 |Coronary artery disease (CAD)|CARDIoGRAM plus C4D Consortium|GWAS on 60,801 CAD cases and 123,504 controls [**consortium_comprehensive_2015**](http://www.cardiogramplusc4d.org/)|[Download](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip) [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)|
 > Height [GIANT
 > Consortium](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files) 
@@ -81,8 +81,6 @@
 > [Download](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)
 > [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)
 > [[(https://portals.broadinstitue.org/collaboration/giant/index.php/GIANT_consortium_data_files)](#wood_defining_2014)
-
-#### (consortium_comprehensive_2015) {#consortium_comprehensive_2015 .unnumbered}
 
 ## Data Structure
 
