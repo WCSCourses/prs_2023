@@ -89,11 +89,6 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
 <a href="#top">Back to top</a>
 
 
-<a href="#" class="button">Post comment (link)</a>
-<input class="button" type="submit" value="Post comment (input)">
-<button class="button" type="submit">Post comment (button)</button>
-
-
 ## Introduction
 A PRS is a (usually weak) estimate of an individual's genetic propensity to a phenotype, calculated as a sum of their genome-wide genotypes weighted by corresponding genotype effect sizes obtained from GWAS summary statistics. In the next section we will consider what the effect size means and how it is used in computing PRS.
 
@@ -199,19 +194,8 @@ Rscript ./Software/PRSice.R \
 --out Results/Height.gws
 
 ```
->
-> This command takes the Height GWAS summary statistic file (\--base),
-> informs PRSice of the column name for the column containing the SNP ID
-> (\--snp), the effect allele (\--A1), the non-effect allele (\--A2),
-> the effect size (\--stat) and the 𝑃 -value (\--pvalue). We also inform
-> PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an
-> OR. The \--binary-target F command informs PRSice that the target
-> phenotype is a quantitative trait and thus linear regression should be
-> performed. In addi- tion, we ask PRSice not to perform high-resolution
-> scoring over multiple thresholds
->
-> (\--fastscore), and to compute the PRS using only those SNPs with 𝑃
-> -value \< 5*×*10^*−*8^.
+
+This command takes the Height GWAS summary statistic file (--base), informs PRSice of the column name for the column containing the SNP ID(--snp), the effect allele (--A1), the non-effect allele (--A2),the effect size (\--stat) and the 𝑃 -value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addi- tion, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10^*−*8^.
 
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
