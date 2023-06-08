@@ -4,7 +4,7 @@
 
 
 |**TIME**   |   **TITLE** |  **PRESENTER**     |
-|       --- |    ---      |      ---  |
+|      :---: |    :---:      |      :---:  |
 |8:30 - 9:00| Recap and day overview  |                                  |
 |9:00 - 10:30 | ***Lecture***: Introduction to PRS I |Carene Ndong Sima |
 |             | ***Practical***: Performing QC + Computing PRS|  Carene + Marion            | 
@@ -58,7 +58,7 @@ After completing this practical, you should be able to:
 To perform PRS analyses, summary statistics from Genome-Wide Association Studies (GWAS) are required. In this workshop, the following summary statistics are used:
 
 |**Phenotype**|**Provider**|**Description**|**Download Link**|
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 |Height|GIANT Consortium|GWAS of height on 253,288 individuals ([**wood_defining_2014**](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files))| [Download](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz) [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)|
 |Coronary artery disease (CAD)|CARDIoGRAM plus C4D Consortium|GWAS on 60,801 CAD cases and 123,504 controls ([**consortium_comprehensive_2015**](http://www.cardiogramplusc4d.org/))|[Download](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip) [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)|
 
@@ -86,6 +86,10 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - PRSice_win64.exe
 
 > #an image should go here
+
+---
+[↥ **Back to Top**](#Back_to_Top) (to be reviewed. I want to add a "back to top" button that takes us in the top of the page)
+
 
 ## Introduction
 A PRS is a (usually weak) estimate of an individual's genetic propensity to a phenotype, calculated as a sum of their genome-wide genotypes weighted by corresponding genotype effect sizes obtained from GWAS summary statistics. In the next section we will consider what the effect size means and how it is used in computing PRS.
@@ -140,89 +144,58 @@ While option 2 is statistically appealing, option 1 has been most adopted in PRS
 
 *Clumping* is the procedure where a SNP data set is 'thinned' by removing SNPs across the genome that are correlated (in high LD) with a nearby SNP that has a smaller association 𝑃 -value. 
 
-SNPs are first sorted (i.e. ranked) by their 𝑃 -values. Then, starting from the most significant SNP (denoted as the *index SNP*), any SNPs in high LD (eg. 𝑟^2^0.1, with 𝑟^2^ typically calculated from *phased haplotype* data) with the index SNP are removed. To reduce computational burden, only SNPs that are within e.g. 250 kb of the *index SNP* are 𝑐𝑙𝑢𝑚𝑝𝑒𝑑. This process is continued until no *index SNPs* remain.
+SNPs are first sorted (i.e. ranked) by their 𝑃 -values. Then, starting from the most significant SNP (denoted as the *index SNP*), any SNPs in high LD (eg. 𝑟^2 > 0.1, with 𝑟^2 typically calculated from *phased haplotype* data) with the index SNP are removed. To reduce computational burden, only SNPs that are within e.g. 250 kb of the *index SNP* are 𝑐𝑙𝑢𝑚𝑝𝑒𝑑. This process is continued until no *index SNPs* remain.
 
 Use the command below to perform clumping of the Height GWAS data using PLINK([**chang_second_2015**](https://doi.org/10.1186/s13742-015-0047-8)). First, you will have to navigate to the right folder where the data are stored using the terminal. Open the terminal and type the command below at the terminal prompt:
-
+```
  cd \~/Desktop/PRS\\\_Workshop/
 
-Next type the following command (NB. See warning below):
+#Next type the following command (NB. See warning below):
 
-  ./Software/plink_linux
-  --bfile Target_Data/TAR
-  --clump Base_Data/GIANT_Height.txt
-  --clump-p1 1
-  --clump-snp-field MarkerName
-  --clump-field p
-  --clump-kb 250
-  --clump-r2 0.1
+  ./Software/plink_linux \
+  --bfile Target_Data/TAR \
+  --clump Base_Data/GIANT_Height.txt \
+  --clump-p1 1 \
+  --clump-snp-field MarkerName \
+  --clump-field p \
+  --clump-kb 250 \
+  --clump-r2 0.1 \
   --out Results/Height
-
+```
 ![](media/image5.jpeg){width="0.3229155730533683in"
 height="0.3229166666666667in"}
 
-> The command above performs clumping on the height GWAS using LD
-> calculated based on the **TAR** genotype file. SNPs that have 𝑟^2^ \>
-> 0.1 within a 250 kb window of the index SNP are removed. This will
-> generate the **Height.clumped** file, which contains the SNPs retained
-> after clumping.
+The command above performs clumping on the height GWAS using LD calculated based on the **TAR** genotype file. SNPs that have 𝑟^2^>0.1 within a 250 kb window of the index SNP are removed. This will generate the **Height.clumped** file, which contains the SNPs retained after clumping.
 
 ![](media/image7.jpeg){width="0.3541655730533683in"
 height="0.3593744531933508in"}
 
 ## P-Value Thresholding
 
-> Deciding which SNPs to include in the calculation of PRS is one of the
-> major challenges in the field. A simple and popular approach is to
-> include SNPs according to their GWAS association 𝑃 -value. For
-> example, we may choose to include only the genome-wide significant
-> SNPs from the GWAS because those are the SNPs with significant
-> evidence for association. In the next subsection you will compute PRS
-> from GW-significant SNPs only, and then in the subsequent subsection
-> you will generate multiple PRSs using different 𝑃 -value thresholds.
+Deciding which SNPs to include in the calculation of PRS is one of the major challenges in the field. A simple and popular approach is to include SNPs according to their GWAS association 𝑃-value. For example, we may choose to include only the genome-wide significant SNPs from the GWAS because those are the SNPs with significant evidence for association. In the next subsection you will compute PRS from GW-significant SNPs only, and then in the subsequent subsection you will generate multiple PRSs using different 𝑃-value thresholds.
 
 ### Height PRS using GW-significant SNPs only
 
-> Use the commands below to run PRSice with GIANT Height GWAS as base
-> data and the height phenotype target data. PRSice will calculate
-> Height PRS in the
->
-> target data and then perform a regression of the Height PRS against
-> the target individual's true height values. From the
-> **PRS_Workshop/Day_2** directory, run the following command in the
-> terminal:
->
-> 1 Rscript ./Software/PRSice.R
->
-> 2 \--prsice Software/PRSice_linux
->
-> 3 \--base Base_Data/GIANT_Height.txt
->
-> 4 \--target Target_Data/TAR
->
-> 5 \--snp MarkerName
->
-> 6 \--A1 Allele1
->
-> 7 \--A2 Allele2
->
-> 8 \--stat b
->
-> 9 \--beta
->
-> 10 \--pvalue p
->
-> 11 \--pheno Target_Data/TAR.height
->
-> 12 \--binary-target F
->
-> 13 \--bar-levels 5e-8
->
-> 14 \--no-full
->
-> 15 \--fastscore
->
-> 16 \--out Results/Height.gws
+Use the commands below to run PRSice with GIANT Height GWAS as base data and the height phenotype target data. PRSice will calculate Height PRS in the target data and then perform a regression of the Height PRS against the target individual's true height values. From the **PRS_Workshop/Day_2** directory, run the following command in the terminal:
+```
+Rscript ./Software/PRSice.R \
+--prsice Software/PRSice_linux \
+--base Base_Data/GIANT_Height.txt \
+--target Target_Data/TAR \
+--snp MarkerName \
+--A1 Allele1 \
+--A2 Allele2
+--stat b \
+--beta \
+--pvalue p \
+--pheno Target_Data/TAR.height \
+--binary-target F \
+--bar-levels 5e-8 \
+--no-full \
+--fastscore \
+--out Results/Height.gws
+
+```
 >
 > This command takes the Height GWAS summary statistic file (\--base),
 > informs PRSice of the column name for the column containing the SNP ID
