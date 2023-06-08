@@ -135,7 +135,7 @@
 >
 > PRSice.R PRSice_mac PRSice_linux PRSice_win64.exe
 
-![](media/image5.jpeg){width="0.3229166666666667in"
+![](media/image5.jpeg)({width="0.3229166666666667in"
 height="0.3229166666666667in"}
 
 ## Introduction
