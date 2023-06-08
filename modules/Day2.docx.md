@@ -30,13 +30,13 @@
         sets](#matching-the-base-and-target-data-sets) 
   7. [Linkage Disequilibrium in PRS
         Analyses](#linkage-disequilibrium-in-prs-analyses) 
-        1.  [Performing Clumping](#performing-clumping) 
+        7.1.  [Performing Clumping](#performing-clumping) 
   8. [P-Value Thresholding](#p-value-thresholding) 
-        1. [Height PRS using GW-significant SNPs
+        8.1. [Height PRS using GW-significant SNPs
             only](#height-prs-using-gw-significant-snps-only) 
-        2. [Height PRS across multiple P-value
+        8.2. [Height PRS across multiple P-value
             thresholds](#height-prs-across-multiple-p-value-thresholds)   
-        3. [High Resolution Scoring](#high-resolution-scoring)
+        8.3. [High Resolution Scoring](#high-resolution-scoring)
   9. [Stratifying Samples by PRS](#stratifying-samples-by-prs) 
   10. [Case Control Studies](#case-control-studies) 
   11. [Cross-Trait Analysis](#cross-trait-analysis)
