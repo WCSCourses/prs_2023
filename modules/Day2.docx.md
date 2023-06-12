@@ -117,13 +117,6 @@ for each copy of the *effect allele*. For example, if the effect
  estimate of a Risk Ratio, which cannot be calculated from a
  case/control study)
 
-```
-The relationship between the 𝛽 coefficient from a logistic regression and the OR is:
-𝑂𝑅 = 𝑒𝛽
-𝑙𝑜𝑔𝑒 (𝑂𝑅) = 𝛽
-While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽’s (𝑙𝑜𝑔𝑒(𝑂𝑅)) to allow simple addition of
-𝑙𝑜𝑔𝑒(𝑂𝑅)’s.
-```
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
 
