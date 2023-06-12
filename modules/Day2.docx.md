@@ -350,41 +350,25 @@ height="2.4674989063867017in"}
 
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
-
-> 1 Rscript ./Software/PRSice.R
->
-> 2 \--prsice Software/PRSice_linux
->
-> 3 \--base Base_Data/GIANT_Height.txt
->
-> 4 \--target Target_Data/TAR
->
-> 5 \--snp MarkerName
->
-> 6 \--A1 Allele1
->
-> 7 \--A2 Allele2
->
-> 8 \--stat b
->
-> 9 \--beta
->
-> 10 \--pvalue p
->
-> 11 \--pheno Target_Data/TAR.height
->
-> 12 \--binary-target F
->
-> 13 \--cov Target_Data/TAR.covariate
->
-> 14 \--cov-col Sex
->
-> 15 \--plot
->
-> 16 \--quantile 10
->
-> 17 \--out Results/Height.sex
-
+```
+Rscript ./Software/PRSice.R
+--prsice Software/PRSice_linux
+--base Base_Data/GIANT_Height.txt
+--target Target_Data/TAR
+--snp MarkerName
+--A1 Allele1
+--A2 Allele2
+--stat b
+--beta
+--pvalue p
+--pheno Target_Data/TAR.height
+--binary-target F
+--cov Target_Data/TAR.covariate
+--cov-col Sex
+--plot
+--quantile 10
+--out Results/Height.sex
+```
 ![](media/image10.jpeg){width="0.34781167979002625in"
 height="0.34781167979002625in"}
 
@@ -403,45 +387,27 @@ height="2.4674989063867017in"}
 > percentile). We can mimic their table by using \--quant-break, which
 > represents the upper bound of each strata, and \--quant-ref, which
 > represents the upper bound of the reference quantile:
->
-> 1 Rscript ./Software/PRSice.R
->
-> 2 \--prsice Software/PRSice_linux
->
-> 3 \--base Base_Data/GIANT_Height.txt
->
-> 4 \--target Target_Data/TAR
->
-> 5 \--snp MarkerName
->
-> 6 \--A1 Allele1
->
-> 7 \--A2 Allele2
->
-> 8 \--stat b
->
-> 9 \--beta
->
-> 10 \--pvalue p
->
-> 11 \--pheno Target_Data/TAR.height
->
-> 12 \--binary-target F
->
-> 13 \--cov Target_Data/TAR.covariate
->
-> 14 \--cov-col Sex
->
-> 15 \--plot
->
-> 16 \--quantile 100
->
-> 17 \--quant-break 1,5,10,20,40,60,80,90,95,99,100
->
-> 18 \--quant-ref 60
->
-> 19 \--out Results/Height.sex
-
+```
+Rscript ./Software/PRSice.R
+--prsice Software/PRSice_linux
+--base Base_Data/GIANT_Height.txt
+--target Target_Data/TAR
+--snp MarkerName
+--A1 Allele1
+--A2 Allele2
+--stat b
+--beta
+--pvalue p
+--pheno Target_Data/TAR.height
+--binary-target F
+--cov Target_Data/TAR.covariate
+--cov-col Sex
+--plot
+--quantile 100
+--quant-break 1,5,10,20,40,60,80,90,95,99,100
+--quant-ref 60
+--out Results/Height.sex
+```
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
 
@@ -464,37 +430,23 @@ height="0.3281244531933508in"}
 
 ![](media/image10.jpeg){width="0.34781167979002625in"
 height="0.34781167979002625in"}
-
-> 1 Rscript ./Software/PRSice.R
->
-> 2 \--prsice Software/PRSice_linux
->
-> 3 \--base Base_Data/cad.add.txt
->
-> 4 \--target Target_Data/TAR
->
-> 5 \--snp markername
->
-> 6 \--A1 effect_allele
->
-> 7 \--A2 noneffect_allele
->
-> 8 \--chr chr
->
-> 9 \--bp bp_hg19
->
-> 10 \--stat beta
->
-> 11 \--beta
->
-> 12 \--pvalue p_dgc
->
-> 13 \--pheno Target_Data/CAD.pheno
->
-> 14 \--binary-target T
->
-> 15 \--out Results/CAD.highres
-
+```
+Rscript ./Software/PRSice.R
+--prsice Software/PRSice_linux
+--base Base_Data/cad.add.txt
+--target Target_Data/TAR
+--snp markername
+--A1 effect_allele
+--A2 noneffect_allele
+--chr chr
+--bp bp_hg19
+--stat beta
+--beta
+--pvalue p_dgc
+--pheno Target_Data/CAD.pheno
+--binary-target T
+--out Results/CAD.highres
+```
 ![](media/image10.jpeg){width="0.34781167979002625in"
 height="0.34781167979002625in"}
 
@@ -520,32 +472,20 @@ height="0.3593744531933508in"}
 
 ![](media/image10.jpeg){width="0.34781167979002625in"
 height="0.34781167979002625in"}
-
-> 1 Rscript ./Software/PRSice.R
->
-> 2 \--prsice Software/PRSice_linux
->
-> 3 \--base Base_Data/GIANT_Height.txt
->
-> 4 \--target Target_Data/TAR
->
-> 5 \--snp MarkerName
->
-> 6 \--A1 Allele1
->
-> 7 \--A2 Allele2
->
-> 8 \--stat b
->
-> 9 \--beta
->
-> 10 \--pvalue p
->
-> 11 \--pheno Target_Data/CAD.pheno
->
-> 12 \--binary-target T
->
-> 13 \--out Results/Cross.highres
-
+```
+Rscript ./Software/PRSice.R
+--prsice Software/PRSice_linux
+--base Base_Data/GIANT_Height.txt
+--target Target_Data/TAR
+--snp MarkerName
+--A1 Allele1
+--A2 Allele2
+--stat b
+--beta
+--pvalue p
+--pheno Target_Data/CAD.pheno
+--binary-target T
+--out Results/Cross.highres
+```
 ![](media/image7.jpeg){width="0.3541655730533683in"
 height="0.3593744531933508in"}
