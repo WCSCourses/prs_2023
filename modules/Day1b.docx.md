@@ -28,7 +28,6 @@ sophisticated analyses through these PLINK tutorials.
 ## Command line basics
 
 In all of the instructions below:
-- *italics* indicate commands - they can be directly copy and pasted. 
 - Anything in between the symbols *\<\>* needs to be changed in some way. For example, \<file_name\>
   indicates that you should replace that entire statement (including the *\<\>* symbols) with the appropriate file name. 
 - **Bold** indicates non- command-line instructions (e.g. **right-click**)
@@ -37,15 +36,23 @@ In all of the instructions below:
 
 1.  Open up a terminal
 
-2.  Navigate to the Practical/ folder and then the Day 1 working
-    directory (cd \<directory_name\>)
+2.  Navigate to the Practical/ folder and then the Day 1 working directory
+    
+            cd\<directory_name|>
+            
+3.  List all files in this directory by typing 
+   
+            ls
 
-3.  List all files in this directory by typing *ls*
+4.  Test PLINK with no input by typing 
 
-4.  Test PLINK with no input by typing *./Software/plink*
+         ./Software/plink
 
 5.  Note that you can see lots of PLINK options by using the built-in
-    help function: > *./Software/plink --help*
+    help function: 
+    
+         ./Software/plink --help
+         
 ----    
  📝 Calling PLINK with no output will test if PLINK is installed and available in the directory, because you should see some 
  output showing the PLINK license and some commands. If you do not see this, then please ask for help now!
@@ -71,26 +78,22 @@ In all of the instructions below:
 4.  Go to the PLINK website and investigate the format of the MAP/PED
     files (<http://zzz.bwh.harvard.edu/plink/download.shtml)>
     (Look in the blue column on the left side)
-    
- ----  
- 󠁑
-❓ What are the 4 columns in the map file?
 
-   What are the first 6 columns in a ped file?
+󠁑
+What do you observe?
+- What are the 4 columns in the map file?
+- What are the first 6 columns in a ped file?
+- What information is in the remaining columns of the ped file?
    
-   What information is in the remaining columns of the ped file?
-   
-----
-
 5.  Create 'binary' format PLINK files using the recode command:
 
-> 1 *./Software/plink*
-
-> 2 *--file Data/D1D*
-
-> 3 *--make-bed*
-
-> 4 *--out Data/D1D*
+         ./Software/plink
+   
+         --file Data/D1D
+       
+         --make-bed
+       
+         --out Data/D1D
 
 6.  List files (*ls*) and check which new files have appeared
 
