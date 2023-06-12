@@ -1,82 +1,10 @@
 **Polygenic Risk Score Analyses Workshop 2023**
-
-
-
-
-
-1.  [Introduction to PLINK I: Basics](#introduction-to-plink-i-basics) 3
-
-    1.  [Key Learning Outcomes](#key-learning-outcomes) . . . . . . . .
-        . . . . . . . . . . . . . . . . 3
-
-    2.  [Introduction](#introduction) . . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . 3
-
-    3.  [Command line basics](#command-line-basics) . . . . . . . . . .
-        . . . . . . . . . . . . . . . . 3
-
-    4.  [Exploring Data Sets](#exploring-data-sets) . . . . . . . . . .
-        . . . . . . . . . . . . . . . . 4
-
-    5.  [Recoding alleles as counts](#recoding-alleles-as-counts) . . .
-        . . . . . . . . . . . . . . . . . . . . 5
-
-    6.  [PLINK website](#plink-website) . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . 6
-
-    7.  [Write SNP list and extract
-        SNPs](#write-snp-list-and-extract-snps) . . . . . . . . . . . .
-        . . . . . . . 6
-
-2.  [Introduction to PLINK II: Performing QC &
-    > GWAS](#introduction-to-plink-ii-performing-qc-gwas) 8
-
-    1.  [Key Learning Outcomes](#key-learning-outcomes-1) . . . . . . .
-        . . . . . . . . . . . . . . . . . 8
-
-    2.  [Generate summaries to perform
-        QC](#generate-summaries-to-perform-qc) . . . . . . . . . . . . .
-        . . . . . 8
-
-        1.  [Individual missingness](#individual-missingness) . . . . .
-            . . . . . . . . . . . . . . . . 8
-
-        2.  [SNP Missingness](#snp-missingness) . . . . . . . . . . . .
-            . . . . . . . . . . . . 9
-
-        3.  [Hardy-Weinberg Equilibrium](#hardy-weinberg-equilibrium) .
-            . . . . . . . . . . . . . . . . . 9
-
-        4.  [Allele frequencies](#allele-frequencies) . . . . . . . . .
-            . . . . . . . . . . . . . . . 9
-
-    3.  [Apply QC filters](#apply-qc-filters) 10
-
-        1.  [Apply individual missingness
-            thresholds](#apply-individual-missingness-thresholds) 10
-
-        2.  [Apply SNP missingness and MAF
-            thresholds](#apply-snp-missingness-and-maf-thresholds) 11
-
-        3.  [Apply Hardy-Weinberg
-            thresholds](#apply-hardy-weinberg-thresholds) 11
-
-    4.  [Perform GWAS](#perform-gwas) 12
-
-        1.  [Case/Control GWAS - no
-            covariates](#casecontrol-gwas---no-covariates) 12
-
-        2.  [Case/Control GWAS - with
-            covariates](#casecontrol-gwas---with-covariates) 12
-
-[License](#license) 14
-
 # Practical 1
 ## Introduction to PLINK I: basics
 
 ## Key Learning Outcomes
 
-> After completing this practical, you should be able to:
+After completing this practical, you should be able to:
 
 1.  Explore and generate genetic data sets needed for GWAS
 
@@ -99,10 +27,11 @@ sophisticated analyses through these PLINK tutorials.
 
 ## Command line basics
 
-> In all of the instructions below, *italics* indicate commands - they can be directly copy and pasted. 
-> Anything in between the symbols *\<\>* needs to be changed in some way. For example, \<file_name\>
-> indicates that you should replace that entire statement (including the *\<\>* symbols) with the appropriate file name. 
-> **Bold** indicates non- command-line instructions (e.g. **right-click**)
+In all of the instructions below:
+- *italics* indicate commands - they can be directly copy and pasted. 
+- Anything in between the symbols *\<\>* needs to be changed in some way. For example, \<file_name\>
+  indicates that you should replace that entire statement (including the *\<\>* symbols) with the appropriate file name. 
+- **Bold** indicates non- command-line instructions (e.g. **right-click**)
 
 ### Let's begin
 
