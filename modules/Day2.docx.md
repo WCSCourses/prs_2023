@@ -41,6 +41,8 @@
       11. [Cross-Trait Analysis](#cross-trait-analysis)
 
 ---
+<a href="#top">Back to Table of Contents</a>
+
 
 # Introduction to Polygenic Score Analyses
 
