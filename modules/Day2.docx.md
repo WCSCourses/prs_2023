@@ -69,6 +69,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - GIANT_Height.txt,
   - cad.add.txt,
   - cad.add.readme.
+
  :file_folder: Target_Data
   - TAR.fam
   - TAR.bim
@@ -76,6 +77,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - TAR.height
   - TAR.cad 
   - TAR.covariate
+
  :hammer_and_wrench: Software
   - plink_mac
   - plink_linux
