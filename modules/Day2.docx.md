@@ -179,7 +179,7 @@ Use the command below to perform clumping of the Height GWAS data using PLINK([*
 ![](media/image5.jpeg){width="0.3229155730533683in"
 height="0.3229166666666667in"}
 
-The command above performs clumping on the height GWAS using LD calculated based on the **TAR** genotype file. SNPs that have 𝑟<sup>2</sup>^>0.1 within a 250 kb window of the index SNP are removed. This will generate the **Height.clumped** file, which contains the SNPs retained after clumping.
+The command above performs clumping on the height GWAS using LD calculated based on the **TAR** genotype file. SNPs that have 𝑟<sup>2</sup>>0.1 within a 250 kb window of the index SNP are removed. This will generate the **Height.clumped** file, which contains the SNPs retained after clumping.
 
 ![](media/image7.jpeg){width="0.3541655730533683in"
 height="0.3593744531933508in"}
@@ -214,7 +214,7 @@ Rscript ./Software/PRSice.R \
 
 ```
 
-This command takes the Height GWAS summary statistic file (\--base), informs PRSice of the column name for the column containing the SNP ID(\--snp), the effect allele (--A1), the non-effect allele (\--A2),the effect size (\--stat) and the 𝑃-value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addition, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10^*−*8^.
+This command takes the Height GWAS summary statistic file (\--base), informs PRSice of the column name for the column containing the SNP ID(\--snp), the effect allele (--A1), the non-effect allele (\--A2),the effect size (\--stat) and the 𝑃-value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addition, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10<sup>−8</sup>.
 
 ![](media/image6.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
