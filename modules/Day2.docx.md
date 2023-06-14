@@ -192,9 +192,13 @@ Use the command below to perform clumping of the Height GWAS data using PLINK([*
 The command above performs clumping on the height GWAS using LD calculated based on the **TAR** genotype file. SNPs that have 𝑟<sup>2</sup>>0.1 within a 250 kb window of the index SNP are removed. This will generate the **Height.clumped** file, which contains the SNPs retained after clumping.
 
 > ❓
+> 
 > How many SNPs were in the GIANT_Height.txt file before clumping?
+> 
 > How many SNPs remain after clumbing?
+> 
 > If we change the r<sup>2</sup> threshold to 0.2, how many SNPs remain? Why are there, now, more SNPs remaining?
+> 
 > Why is clumping performed for calculation of PRS? (in the standard approach).
 > 
 ---
