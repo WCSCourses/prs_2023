@@ -125,12 +125,12 @@ for each copy of the *effect allele*. For example, if the effect
  >
  > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 𝑂𝑅 = 𝑒<sup>𝛽</sup> and 𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅) = 𝛽.
  >  While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
- > 
----
  >
  > 📜 Column names are not standardised across reported GWAS results, thus it is important to check which column is the effect (coded) allele and which is the non-effect allele. For example, in the height GWAS conducted by the GIANT consortium, the effect allele is in the column Allele1, while Allele2 represents the non-effect allele.
- >
+
+
 ![](images/Day2.docx_folder/images-006.png)
+
  > Let us open the Height GWAS file (**GIANT_Height.txt**) and inspect the SNPs at the top of the file. If we only consider SNPs *rs4747841* and *rs878177*, what will the ‘PRS’ of an individual with genotypes **AA** and **TC**, respectively, be? And what about for an individual with **AG** and **CC**, respectively? (Careful these are not easy to get correct! This shows how careful PRS algorithms/code need to be).
  > 
  > ❓❓What do these PRS values mean in terms of the height of those individuals?
