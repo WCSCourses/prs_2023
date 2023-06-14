@@ -87,11 +87,11 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - PRSice_linux
   - PRSice_win64.exe
 
-   ---
+---
 > 
 > ‼️ All target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. 
 > 
-   ---
+---
 <a href="#top">Back to top</a>
 
 
@@ -122,7 +122,8 @@ for each copy of the *effect allele*. For example, if the effect
  someone with the **AA** genotype (\*an Odds Ratio is itself an
  estimate of a Risk Ratio, which cannot be calculated from a
  case/control study)
- 
+
+---
 >
 >
 > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 
@@ -135,7 +136,7 @@ for each copy of the *effect allele*. For example, if the effect
 > 
 > 🔎 Let us open the Height GWAS file (**GIANT_Height.txt**) and inspect the SNPs at the top of the file. If we only consider SNPs *rs4747841* and *rs878177*, what will the ‘PRS’ of an individual with genotypes **AA** and **TC**, respectively, be? And what about for an individual with **AG** and **CC**, respectively? (Careful these are not easy to get correct! This shows how careful PRS algorithms/code need to be).
 > 
-> ❓What do these PRS values mean in terms of the height of those individuals?
+>❓What do these PRS values mean in terms of the height of those individuals?
 >
 ---
 <a href="#top">Back to top</a>
@@ -147,6 +148,7 @@ for each copy of the *effect allele*. For example, if the effect
  
  The next, more tricky issue, is that the genotype encoding between the data sets may differ. For example, while the effect allele of a SNP is **T** in the base data, the effect allele in the target might be **G** instead. When this occurs, *allele flipping* should be performed,where the genotype encoding in the target data is reversed so that **TT**, **TG** and **GG** are coded as 2, 1 and 0. Again, this is usually performed automatically by PRS software.
 
+---
 >
 > ‼️For SNPs that have complementary alleles, e.g. **A|T**, **G|C**, we cannot be certain that the alleles referred to in the target data correspond to those of the base data or whether they are the 'other way around' due to being on the other DNA strand (unless the same genotyping chip was used for all data). These SNPs are known as ***ambiguous SNPs***, and while allele frequency information can be used to match the alleles, we remove ambiguous SNPs in PRSice to avoid the possibility of introducting unknown bias.
 >  
