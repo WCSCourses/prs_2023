@@ -122,25 +122,24 @@ for each copy of the *effect allele*. For example, if the effect
  estimate of a Risk Ratio, which cannot be calculated from a
  case/control study)
 
->
-> 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is:
->        𝑂𝑅 = 𝑒<sup>𝛽</sup>
->        𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅) = 𝛽
-> While GWAs usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
-> 
----
-     > 📜 Column names are not standardised across reported GWAS results, thus it is 
-     > important to check which column is the effect (coded) allele and which is the 
-     > non-effect allele. For example, in the height GWAS conducted by the GIANT consortium, 
-     > the effect allele is in the column Allele1, while Allele2 represents the non-effect allele.
 
+     >
+     > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 
+          𝑂𝑅 = 𝑒<sup>𝛽</sup>
+          𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅) = 𝛽
+     > While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
+     > 
+---
+     >
+     > 📜 Column names are not standardised across reported GWAS results, thus it is important to check which column is the effect (coded) allele and which is the non-effect allele. For example, in the height GWAS conducted by the GIANT consortium, the effect allele is in the column Allele1, while Allele2 represents the non-effect allele.
+     >
      > Let us open the Height GWAS file (**GIANT_Height.txt**) and inspect the SNPs at the top of the file.
      > If we only consider SNPs *rs4747841* and *rs878177*, what will the ‘PRS’ of an individual with genotypes **AA** and **TC**, respectively, be? And what about for an individual with **AG** and **CC**, respectively? (Careful these are not easy to get correct! This shows how careful PRS algorithms/code need to be)
         > ❓❓What do these PRS values mean in terms of the height of those individuals?
->
+        >
 > ![](media/image7.jpeg){width="0.3541655730533683in"
 > height="0.3593744531933508in"}
-
+>
 ---
 <a href="#top">Back to top</a>
 
