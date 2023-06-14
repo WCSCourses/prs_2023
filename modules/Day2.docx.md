@@ -125,7 +125,7 @@ for each copy of the *effect allele*. For example, if the effect
 
 >
 > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 
-> **OR = *e*<sup>**𝛽**</sup>** and 
+> **OR = *e*<sup>**$\beta$**</sup>** and 
 > **log<sub>*e*</sub>(OR)** **=** 𝛽.
 >  While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
 >
