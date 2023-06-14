@@ -87,7 +87,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - PRSice_linux
   - PRSice_win64.exe
 
-![exclamation point](images/Day2.docx_folder/images-002.png)
+>![exclamation point](prs_2023/images/Day2.docx_folder/images-002.png)
 > All target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only.
 
 ---
