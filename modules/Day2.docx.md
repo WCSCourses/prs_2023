@@ -28,8 +28,7 @@
 After completing this practical, you should be able to:
 
 1.  Perform basic Polygenic Risk Score (PRS) analyses using PRSice:
-    ([Euesden, Lewis & O'Reilly 2015](https://doi:10.1093/bioinformatics/btu848); 
-    ([Choi & O'Reilly 2019](https://doi: 10.1093/gigascience/giz082))
+    ([Euesden, Lewis & O'Reilly 2015](https://doi:10.1093/bioinformatics/btu848);[Choi & O'Reilly 2019](https://doi:10.1093/gigascience/giz082))
 2.  Interpret results generated from PRS analyses
 3.  Customise visualisation of results
 
