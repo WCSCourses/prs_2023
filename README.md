@@ -13,7 +13,7 @@ The course will begin with an overview of genome-wide association studies, an in
 
 ## Instructors
 - [Marion Amujal](https://h3africa.org/index.php/19th-meeting-attendees/marion-amujal-picture/), Makerere University, Uganda
-- [Shakuntala Baichoo]([https://www.uom.ac.mu/foicdt/index.php/facultystaff/academic), University of Mauritius, Mauritius
+- [Shakuntala Baichoo](https://www.uom.ac.mu/foicdt/index.php/facultystaff/academic), University of Mauritius, Mauritius
 - [Palwende Boua](https://crun.bf/researchers/palwende-romuald-boua/), Institut de Recherche en Sciences de la Santé, Burkina Faso
 - [Tinashe Chikowore](https://africanscientists.africa/business-directory/chikowore/), University of the Witwatersrand, South Africa
 - [Itunuoluwa Isewon](https://scholar.google.com/citations?user=haW6Ux8AAAAJ&hl=en), Covenant University, Nigeria
@@ -22,7 +22,6 @@ The course will begin with an overview of genome-wide association studies, an in
 - [Carene Ndong Sima](https://www.linkedin.com/in/carene-anne-alene-ndong-sima),Stellenbosch University, South Africa 
 - Tsaone Tamuhla, University of Cape Town, South Africa
 - [Lesedi Williams](https://www.ub.bw/connect/staff/2053), University of Botswana
-- 
 
 ### Overview
 
@@ -33,22 +32,34 @@ The course will begin with an overview of genome-wide association studies, an in
 
 
 ## Course manual
-**Module 1 - Mod 1**   
-[PDF Manual - Mod 1](Modules/)     
+
+**Day 1 - GWAS and Relevant Statistics**   
+[Day 1 Part A Online Manual](modules/Day1a.docx.md)     
+
+[Day 1 Part B Online Manual](modules/Day1b.docx.md)     
 
 
+**Day 2 - Introduction to PRS**  
+[Day 2 Online Manual - Introduction to PRS](modules/Day2.docx.md)
 
-**Module 3 - **  
-[Online Manual - Introduction to NGS](Modules/)
-  
-**Module 4 -*  
-[Online Manual - Mod4l QC](Modules/)
+
+**Day 3 - Advanced PRS Analyses**  
+[Day 3 Online Manual - Introduction to PRS](modules/Day3.docx.md)
+
+
+**Day 4 - Genetic Variation and Population Genetics**  
+[Day 4 Online Manual - Introduction to PRS](modules/Day4.docx.md)
+
+
+**Day 5 - Group Projects**  
+Group projects revealed on Day 3
+<!---- [Group Projects Online Manual](modules/Day5_Projects.md) ---->
+
 
 
 
 
 **Appendix**      
-  
 
 
 Any reuse of the course materials, data or code is encouraged with due acknowledgement.
