@@ -129,7 +129,7 @@ for each copy of the *effect allele*. For example, if the effect
  > 📜 Column names are not standardised across reported GWAS results, thus it is important to check which column is the effect (coded) allele and which is the non-effect allele. For example, in the height GWAS conducted by the GIANT consortium, the effect allele is in the column Allele1, while Allele2 represents the non-effect allele.
 
 
-![](/images/Day2.docx_folder/images-039.png){width="0.3281244531933508in"
+![](/images/Day2.docx_folder/images-044.png){width="0.3281244531933508in"
 height="0.3281244531933508in"}
 
  > Let us open the Height GWAS file (**GIANT_Height.txt**) and inspect the SNPs at the top of the file. If we only consider SNPs *rs4747841* and *rs878177*, what will the ‘PRS’ of an individual with genotypes **AA** and **TC**, respectively, be? And what about for an individual with **AG** and **CC**, respectively? (Careful these are not easy to get correct! This shows how careful PRS algorithms/code need to be).
