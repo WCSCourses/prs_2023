@@ -87,9 +87,10 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - PRSice_linux
   - PRSice_win64.exe
 
->
-> ‼️ All target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only.
-> 
+---
+> <
+> ‼️ All target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. <
+> <
 ---
 <a href="#top">Back to top</a>
 
