@@ -122,13 +122,12 @@ for each copy of the *effect allele*. For example, if the effect
  estimate of a Risk Ratio, which cannot be calculated from a
  case/control study)
 
-
-     >
-     > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 
-          𝑂𝑅 = 𝑒<sup>𝛽</sup>
-          𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅) = 𝛽
-     > While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
-     > 
+ >
+ > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 
+ > 𝑂𝑅 = 𝑒<sup>𝛽</sup>
+ > 𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅) = 𝛽
+ > While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
+ > 
 ---
      >
      > 📜 Column names are not standardised across reported GWAS results, thus it is important to check which column is the effect (coded) allele and which is the non-effect allele. For example, in the height GWAS conducted by the GIANT consortium, the effect allele is in the column Allele1, while Allele2 represents the non-effect allele.
