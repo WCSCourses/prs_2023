@@ -12,7 +12,7 @@
 |11:00 - 12:00| ***Practical***: PRS I - continued |Carene + Marion | 
 |12:00 - 13:00| Seminar | Abdel |
 |13:00 - 14:00| Lunch |
-|14:00 - 15:30| ***Lecture***: Introduction to PRS II| Carene Ndong Sima|
+|14:00 - 15:30| ***Lecture***: Introduction to PRS II| Carene|
 |             | ***Practical***: PRS prediction + cross-trait analyses, visualizing results| Carene + Marion | 
 |15:30 - 16:00| Break|
 |16:00 - 17:00| ***Practical***: Intro to PRS II - continued| Carene + Marion |
