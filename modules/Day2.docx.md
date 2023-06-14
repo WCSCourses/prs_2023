@@ -122,18 +122,19 @@ for each copy of the *effect allele*. For example, if the effect
  estimate of a Risk Ratio, which cannot be calculated from a
  case/control study)
  
-
+>
 >
 > 📜 The relationship between the 𝛽 coefficient from the logistic regression and the OR is: 
-> **OR = *e*<sup>**$\beta$**</sup>** and 
+> **OR = *e*<sup>𝛽</sup>** and 
 > **log<sub>*e*</sub>(OR)** **=** 𝛽.
+> 
 >  While GWAS usually convert from the 𝛽 to the OR when reporting results, most PRS software convert OR back to 𝛽's(𝑙𝑜𝑔<sub>𝑒</sub>(𝑂𝑅)) to allow simple addition.
 >
 > 📜 Column names are not standardised across reported GWAS results, thus it is important to check which column is the effect (coded) allele and which is the non-effect allele. For example, in the height GWAS conducted by the GIANT consortium, the effect allele is in the column Allele1, while Allele2 represents the non-effect allele.
 > 
 > 🔎 Let us open the Height GWAS file (**GIANT_Height.txt**) and inspect the SNPs at the top of the file. If we only consider SNPs *rs4747841* and *rs878177*, what will the ‘PRS’ of an individual with genotypes **AA** and **TC**, respectively, be? And what about for an individual with **AG** and **CC**, respectively? (Careful these are not easy to get correct! This shows how careful PRS algorithms/code need to be).
 > 
-> ❓❓What do these PRS values mean in terms of the height of those individuals?
+> ❓What do these PRS values mean in terms of the height of those individuals?
 >
 ---
 <a href="#top">Back to top</a>
@@ -145,10 +146,9 @@ for each copy of the *effect allele*. For example, if the effect
  
  The next, more tricky issue, is that the genotype encoding between the data sets may differ. For example, while the effect allele of a SNP is **T** in the base data, the effect allele in the target might be **G** instead. When this occurs, *allele flipping* should be performed,where the genotype encoding in the target data is reversed so that **TT**, **TG** and **GG** are coded as 2, 1 and 0. Again, this is usually performed automatically by PRS software.
 
-![](/images/Day2.docx_folder/images-044.png)
-![](media/image5.jpeg){width="0.3229166666666667in"
-height="0.3229166666666667in"}
-
+>
+> ‼️For SNPs that have complementary alleles, e.g. **A|T**, **G|C**, we cannot be certain that the alleles referred to in the target data correspond to those of the base data or whether they are the 'other way around' due to being on the other DNA strand (unless the same genotyping chip was used for all data). These SNPs are known as ***ambiguous SNPs***, and while allele frequency information can be used to match the alleles, we remove ambiguous SNPs in PRSice to avoid the possibility of introducting unknown bias.
+>  
 ---
 <a href="#top">Back to top</a>
 
@@ -185,14 +185,18 @@ Use the command below to perform clumping of the Height GWAS data using PLINK([*
   --clump-r2 0.1 \
   --out Results/Height
 ```
-![](media/image5.jpeg){width="0.3229155730533683in"
-height="0.3229166666666667in"}
+>
+> ‼️You can copy & paste code from this document directly to the terminal, but this can cause problems (e.g. when opened by Preview in Mac) and distort the code. Try using Adobe Reader or first copy & pasting to a text editor (e.g. notepad) or use the script file provided that contains all the commands.
+> 
 
 The command above performs clumping on the height GWAS using LD calculated based on the **TAR** genotype file. SNPs that have 𝑟<sup>2</sup>>0.1 within a 250 kb window of the index SNP are removed. This will generate the **Height.clumped** file, which contains the SNPs retained after clumping.
 
-![](media/image7.jpeg){width="0.3541655730533683in"
-height="0.3593744531933508in"}
-
+> ❓
+> How many SNPs were in the GIANT_Height.txt file before clumping?
+> How many SNPs remain after clumbing?
+> If we change the r<sup>2</sup> threshold to 0.2, how many SNPs remain? Why are there, now, more SNPs remaining?
+> Why is clumping performed for calculation of PRS? (in the standard approach).
+> 
 ---
 <a href="#top">Back to top</a>
 
@@ -451,8 +455,8 @@ height="0.3281244531933508in"}
 
  Here, we will use CAD as an example. You will find the summary statistic under *Base_Data* (**cad.add.txt**) and the phenotype file (**TAR.cad**) under *Target_Data*. You will also need to specify *\--binary-target T* in the PRSice command to indicate that the phenotype is binary.
 
-![](media/image10.jpeg){width="0.34781167979002625in"
-height="0.34781167979002625in"}
+>![](/images/Day2.docx_folder/images-044.png)
+
 ```
 Rscript ./Software/PRSice.R
 --prsice Software/PRSice_linux
