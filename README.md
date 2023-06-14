@@ -2,18 +2,33 @@
 Base for the Polygenic Risk Scores course Repository
 
 ## Course overview
+The boost in collections of African genomic datasets is providing opportunities for further in-depth understanding of the causes of human diseases. As African genomic data from genome-wide analytical studies continues to grow, it is imperative that African scientists are empowered with skills to analyse these data using the latest tools and approaches for advancing research and genomics applications in Africa and globally. 
+
+This short course will equip scientists based in Africa with tools and approaches for polygenic risk scores (PRS) analysis. The course will cover both applied and theoretical topics in PRS research, delivered across a variety of lectures, tutorials, computational practicals and special guest seminars from experts in the field. By the end of the workshop, attendees should have an in-depth theoretical understanding and practical skills in PRS analysis of global populations. 
+
+The course will begin with an overview of genome-wide association studies, an introduction to PRS analysis, advanced topics in PRS (e.g., pathway-based PRS, PRS Environment interactions, PRS to identify rare variants). This will be followed by the key topic of the ‘PRS Portability Problem’ and how to address it using PRS methods developed for application to diverse and admixed ancestry samples. Finally, attendees will devise, perform and present their own research project as part of a group on a topic relevant to the content of the course, with feedback from the workshop team. 
 
 
-[Course website]()
+[PRS Course website](https://coursesandconferences.wellcomeconnectingscience.org/event/polygenic-risk-score-analysis-africa-20230702/)
 
 ## Instructors
-- [Instructor](link),Affiliation
+- [Marion Amujal](https://h3africa.org/index.php/19th-meeting-attendees/marion-amujal-picture/), Makerere University, Uganda
+- [Shakuntala Baichoo]([https://www.uom.ac.mu/foicdt/index.php/facultystaff/academic), University of Mauritius, Mauritius
+- [Palwende Boua](https://crun.bf/researchers/palwende-romuald-boua/), Institut de Recherche en Sciences de la Santé, Burkina Faso
+- [Tinashe Chikowore](https://africanscientists.africa/business-directory/chikowore/), University of the Witwatersrand, South Africa
+- [Itunuoluwa Isewon](https://scholar.google.com/citations?user=haW6Ux8AAAAJ&hl=en), Covenant University, Nigeria
+- [Conrad Iyegbe](https://labs.icahn.mssm.edu/oreillylab/), Icahn School of Medicine, USA
+- [Christopher Kintu](https://www.researchgate.net/scientific-contributions/Christopher-Kintu-2149755900),Makerere University, Uganda
+- [Carene Ndong Sima](https://www.linkedin.com/in/carene-anne-alene-ndong-sima),Stellenbosch University, South Africa 
+- Tsaone Tamuhla, University of Cape Town, South Africa
+- [Lesedi Williams](https://www.ub.bw/connect/staff/2053), University of Botswana
+- 
 
 ### Overview
 
 
 ### Detailed timetable
-[View Timetable here]()
+[View Timetable here - "in dev" ]()
 
 
 
