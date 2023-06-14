@@ -121,7 +121,7 @@ for each copy of the *effect allele*. For example, if the effect
  someone with the **AA** genotype (\*an Odds Ratio is itself an
  estimate of a Risk Ratio, which cannot be calculated from a
  case/control study)
-
+ >
      > 📜 The relationship between the 𝛽 coefficient from the logistic regression and 
      > the OR is:
      >        𝑂𝑅 = 𝑒<sup>𝛽</sup>
@@ -137,7 +137,7 @@ for each copy of the *effect allele*. For example, if the effect
      > Let us open the Height GWAS file (**GIANT_Height.txt**) and inspect the SNPs at the top of the file.
      > If we only consider SNPs *rs4747841* and *rs878177*, what will the ‘PRS’ of an individual with genotypes **AA** and **TC**, respectively, be? And what about for an individual with **AG** and **CC**, respectively? (Careful these are not easy to get correct! This shows how careful PRS algorithms/code need to be)
         > ❓❓What do these PRS values mean in terms of the height of those individuals?
-
+>
 > ![](media/image7.jpeg){width="0.3541655730533683in"
 > height="0.3593744531933508in"}
 
