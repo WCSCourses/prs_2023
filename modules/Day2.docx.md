@@ -185,21 +185,24 @@ Use the command below to perform clumping of the Height GWAS data using PLINK([*
   --clump-r2 0.1 \
   --out Results/Height
 ```
+
+---
 >
 > ‼️You can copy & paste code from this document directly to the terminal, but this can cause problems (e.g. when opened by Preview in Mac) and distort the code. Try using Adobe Reader or first copy & pasting to a text editor (e.g. notepad) or use the script file provided that contains all the commands.
 > 
+---
 
 The command above performs clumping on the height GWAS using LD calculated based on the **TAR** genotype file. SNPs that have 𝑟<sup>2</sup>>0.1 within a 250 kb window of the index SNP are removed. This will generate the **Height.clumped** file, which contains the SNPs retained after clumping.
 
-> ❓
+---
+>
+>❓How many SNPs were in the GIANT_Height.txt file before clumping?
 > 
-> How many SNPs were in the GIANT_Height.txt file before clumping?
+>❓How many SNPs remain after clumbing?
 > 
-> How many SNPs remain after clumbing?
+>❓If we change the r<sup>2</sup> threshold to 0.2, how many SNPs remain? Why are there, now, more SNPs remaining?
 > 
-> If we change the r<sup>2</sup> threshold to 0.2, how many SNPs remain? Why are there, now, more SNPs remaining?
-> 
-> Why is clumping performed for calculation of PRS? (in the standard approach).
+>❓Why is clumping performed for calculation of PRS? (in the standard approach).
 > 
 ---
 <a href="#top">Back to top</a>
@@ -233,9 +236,19 @@ Rscript ./Software/PRSice.R \
 
 This command takes the Height GWAS summary statistic file (\--base), informs PRSice of the column name for the column containing the SNP ID(\--snp), the effect allele (--A1), the non-effect allele (\--A2),the effect size (\--stat) and the 𝑃-value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addition, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10<sup>−8</sup>.
 
-![](media/image6.jpeg){width="0.3281244531933508in"
-height="0.3281244531933508in"}
-
+---
+>
+> 📜The default of PRSice is to perform clumping with r<sup>2</sup> threshold of 0.1 and a window size of 250kb.
+> 
+> To see a full list of commond line options available in PRSice, type: 
+> 
+>  ```
+> ./Software/PRSice_linux -h
+>  ```
+>  
+>  Take some time to have a look through some of thses user options. By looking at the uber options, work out whihc user option or options were used to ensure that the command above only calculated 1 PRS at genome-wide significance of \< 5*×*10<sup>−8</sup>.
+>  
+---
 PRSice performs strand flipping and clumping automatically and generates the **Height.gws.summary** file, together with other output that we will look into later in the practical. The summary file contains the following columns:
 
 1.  **Phenotype** - Name of Phenotype.
@@ -253,9 +266,12 @@ PRSice performs strand flipping and clumping automatically and generates the **H
 
 For now, we can ignore most columns and focus on the **PRS.R2** and the **P** column, which provide information on the model fit.
 
-![](media/image7.jpeg){width="0.3541666666666667in"
-height="0.3593744531933508in"}
-
+---
+>
+> ❓What is the R<sup>2</sup> for the PRS constructed using only genome-wide significant SNPs?
+> 
+> ❓What is the P-value for the association between the PRS and the outcome? Is this significant? (explain your answer)
+> 
 ---
 <a href="#top">Back to top</a>
 
