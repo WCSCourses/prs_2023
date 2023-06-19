@@ -69,17 +69,13 @@ In all of the instructions below:
 
 ----
 
-2.  Open the file called 'D1D.map' with a Text Editor e.g. by typing
-    **right-click \> Open**.
+2.  Open the file called 'D1D.map' with a Text Editor e.g. by typing **right-click \> Open**.
 
-3.  Open the file 'D1D.ped'. Note this is a large file - if it will not
-    open or is very slow, skip this step.
+3.  Open the file 'D1D.ped'. Note this is a large file - if it will not open or is very slow, skip this step.
 
-4.  Go to the PLINK website and investigate the format of the MAP/PED
-    files (<http://zzz.bwh.harvard.edu/plink/download.shtml)>
+4.  Go to the PLINK website http://zzz.bwh.harvard.edu/plink/download.shtml and investigate the format of the MAP/PED files 
     (Look in the blue column on the left side)
 
-󠁑
 What do you observe?
 - What are the 4 columns in the map file?
 - What are the first 6 columns in a ped file?
@@ -194,30 +190,31 @@ summary statistics that can be used to perform QC.
 
 ### Individual missingness
 
-1.  Use the D1D binary files to generate files containing missingness information (*\--*missing*). Use the output file name 'D1D_miss'
+1.  Use the D1D binary files to generate files containing missingness information (--missing). Use the output file name 'D1D_miss'
 
 2.  Open the 2 files that were generated (lmiss & imiss).
 
-![](media/image4.jpeg){width="0.3541666666666667in"
-height="0.3593744531933508in"}
+- What do the two output files contain?
+- In the imiss file, what is the meaning of the data in the column headed "F_MISS"?
+
 
 ### SNP Missingness
 
-1.  Use the D1D binary files to generate files containing missingness information (*\--*missing). Use the output file name 'D1D_miss'
+1.  Use the D1D binary files to generate files containing missingness information (--missing). Use the output file name 'D1D_miss'
 
 2.  Look inside the file containing SNP missingness information: D1D_miss.lmiss.
 
-![](media/image4.jpeg){width="0.3541655730533683in"
-height="0.3593744531933508in"}
+- What is the meaning of the value under F_MISS?
+- What does the command --test-missing do and why might it be useful?
 
 ### Hardy-Weinberg Equilibrium
 
-1.  Generate HWE statistics using the *\--*hardy option. Use output file name D1D_hardy.
+1.  Generate HWE statistics using the --hardy option. Use output file name D1D_hardy.
 
 2.  Open and examine results.
 
-![](media/image4.jpeg){width="0.3541666666666667in"
-height="0.3593744531933508in"}
+- Why are there multiple rows for each SNP and what does each mean?
+- Which of the rows do you think should be used to exclude SNPs from the subsequent analysis (if any) for failing the HWE test? Why?
 
 ### Allele frequencies
 
@@ -226,25 +223,27 @@ height="0.3593744531933508in"}
 
 2.  Examine the output.
 
-![](media/image4.jpeg){width="0.3541655730533683in"
-height="0.3593744531933508in"}
+- What is the heading of the column that tells you which nucleotide is the minor allele?
+  
+ 📝 **This information is important to remember as many PLINK files use this notation. The minor allele is always labeled the same way** 
+
 
 ## Apply QC filters
 
-#### There are diﬀerent strategies for performing QC on your data: {#there-are-diﬀerent-strategies-for-performing-qc-on-your-data .unnumbered}
+#### There are diﬀerent strategies for performing QC on your data:
 
-(a) create lists of SNPs and individuals and use *\--*remove,
-    *\--*extract, *\--*exclude,
+(a) Create lists of SNPs and individuals and use --remove, --extract, --exclude, --include to create new file sets (good for documentation, collaboration)
 
-    *\--*include to create new file sets (good for documentation, collaboration)
+(b) Apply thresholds one at a time and generate new bed/bim/fam file (good for applying sequential filters)
 
-(b) apply thresholds one at a time and generate new bed/bim/fam files
-    (good for applying sequential filters)
+(c) Use options (e.g. --maf ) in other commands (e.g. --assoc) to remove SNPs or samples at required QC thresholds during analysis.
 
-(c) use options (e.g. *\--*maf ) in other commands (e.g. *\--*assoc) to remove SNPs or samples at required QC thresholds during analysis.
+----
+📝 We have already seen how to select or exclude individuals or SNPs by first creating lists (a), so in this section we will set thresholds to generate new files 
+   sets in a single command. However, it is useful to have lists of all SNPs and individuals excluded pre-analysis, according to the reason for exclusion, so 
+   generating and retaining such files using the techniques that we used before for good practice.
 
-![](media/image3.jpeg){width="0.3281244531933508in"
-height="0.3281244531933508in"}
+----
 
 ### Apply individual missingness thresholds
 
@@ -253,8 +252,7 @@ height="0.3281244531933508in"}
 
 2.  Examine the output files (no need to open, and remember the bed file cannot be read) and the log file
 
-> ![](media/image4.jpeg){width="0.3541655730533683in"
-> height="0.3593744531933508in"}
+
 
 ### Apply SNP missingness and MAF thresholds
 
