@@ -171,7 +171,7 @@ Sample ID lists can also be used to 'keep' or 'remove' individuals in the same '
 
 ## Key Learning Outcomes
 
-> After completing this practical, you should be able to:
+After completing this practical, you should be able to:
 
 1.  Generate summaries of the data needed for QC
 
@@ -197,19 +197,16 @@ height="0.3593744531933508in"}
 
 ### SNP Missingness
 
-1.  Use the D1D binary files to generate files containing missingness
-    information (*\--*missing). Use the output file name 'D1D_miss'
+1.  Use the D1D binary files to generate files containing missingness information (*\--*missing). Use the output file name 'D1D_miss'
 
-2.  Look inside the file containing SNP missingness information:
-    D1D_miss.lmiss.
+2.  Look inside the file containing SNP missingness information: D1D_miss.lmiss.
 
 ![](media/image4.jpeg){width="0.3541655730533683in"
 height="0.3593744531933508in"}
 
 ### Hardy-Weinberg Equilibrium
 
-1.  Generate HWE statistics using the *\--*hardy option. Use output file
-    name D1D_hardy.
+1.  Generate HWE statistics using the *\--*hardy option. Use output file name D1D_hardy.
 
 2.  Open and examine results.
 
@@ -233,39 +230,30 @@ height="0.3593744531933508in"}
 (a) create lists of SNPs and individuals and use *\--*remove,
     *\--*extract, *\--*exclude,
 
-> *\--*include to create new file sets (good for documentation,
-> collaboration)
+    *\--*include to create new file sets (good for documentation, collaboration)
 
 (b) apply thresholds one at a time and generate new bed/bim/fam files
     (good for applying sequential filters)
 
-(c) use options (e.g. *\--*maf ) in other commands (e.g. *\--*assoc) to
-    remove SNPs or samples at required QC thresholds during analysis.
+(c) use options (e.g. *\--*maf ) in other commands (e.g. *\--*assoc) to remove SNPs or samples at required QC thresholds during analysis.
 
 ![](media/image3.jpeg){width="0.3281244531933508in"
 height="0.3281244531933508in"}
 
 ### Apply individual missingness thresholds
 
-1.  Generate new binary file sets (*\--*make*-*bed) from the 'D1D'
-    binary file set, removing individuals with missingness greater than
-    3% using a single command (hint: In the 'Inclusion thresholds'
-    section, see the 'Missing/person' sub-section). Use the output file
-    name 'D1D_imiss3pc'
+1.  Generate new binary file sets (*\--*make*-*bed) from the 'D1D' binary file set, removing individuals with missingness greater than 3% using a single command 
+    (hint: In the 'Inclusion thresholds' section, see the 'Missing/person' sub-section). Use the output file name 'D1D_imiss3pc'
 
-2.  Examine the output files (no need to open, and remember the bed file
-    can not be read) and the log file
+2.  Examine the output files (no need to open, and remember the bed file cannot be read) and the log file
 
 > ![](media/image4.jpeg){width="0.3541655730533683in"
 > height="0.3593744531933508in"}
 
 ### Apply SNP missingness and MAF thresholds
 
-1.  Create new binary file sets from the 'D1D_imiss3pc' binary file set
-    (NOT the original D1D files) by setting MAF threshold to 0.05 and
-    SNP missingness threshold to 0.02 (See 'Inclusion thresholds' to
-    obtain the correct threshold flags). Use the output file name
-    'D1D_imiss3pc_lmiss2pc_maf5pc
+1.  Create new binary file sets from the 'D1D_imiss3pc' binary file set (NOT the original D1D files) by setting MAF threshold to 0.05 and
+    SNP missingness threshold to 0.02 (See 'Inclusion thresholds' to obtain the correct threshold flags). Use the output file name'D1D_imiss3pc_lmiss2pc_maf5pc
 
 2.  Examine the output files and the log file
 
@@ -274,9 +262,7 @@ height="0.3593744531933508in"}
 
 ### Apply Hardy-Weinberg thresholds
 
-1.  Generate a new binary file set called 'D1D_QC' from the
-    D1D_imiss3pc_lmiss2pc_maf5pc file, applying a HWE threshold of
-    0.0001.
+1.  Generate a new binary file set called 'D1D_QC' from the D1D_imiss3pc_lmiss2pc_maf5pc file, applying a HWE threshold of 0.0001.
 
 2.  This is our final, QC'ed file set.
 
@@ -289,49 +275,20 @@ height="0.3593744531933508in"}
 
 ### Case/Control GWAS - no covariates
 
-> Run the following code, which performs a genetic association study
-> using logistic regression on some case/control data:
->
-> 1 ./Software/plink
->
-> 2 \--plink
->
-> 3 \--bfile D1D_QC
->
-> 4 \--logistic
->
-> 5 \--adjust
->
-> 6 \--pheno D1D.pheno1
->
-> 7 \--out Results/D1D_CC
+Run the following code, which performs a genetic association study using logistic regression on some case/control data:
+
+        ./Software/plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --out Results/D1D_CC
 
 ![](media/image4.jpeg){width="0.3541666666666667in"
 height="0.3593744531933508in"}
 
 ### Case/Control GWAS - with covariates
 
-> Here we repeat the previous analysis but this time including some
-> covariates. The file D1D.pcs1234 contains the first 4 principal
-> components from a PCA on the ge- netic data.
->
-> 1\. Run the analysis specifying the covariates file:
->
-> 1 ./Software/plink
->
-> 2 \--plink
->
-> 3 \--bfile D1D_QC
->
-> 4 \--logistic
->
-> 5 \--adjust
->
-> 6 \--pheno D1D.pheno1
->
-> 7 \--covar D1D.pcs.1234
->
-> 8 \--out Results/D1D_CC_PCadj
+Here we repeat the previous analysis but this time including some covariates. The file D1D.pcs1234 contains the first 4 principal components from a PCA on the genetic data.
+
+Run the analysis specifying the covariates file:
+
+      ./Software/plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --covar D1D.pcs.1234 --out Results/D1D_CC_PCadj
 
 ![](media/image4.jpeg){width="0.3541655730533683in"
 height="0.3593744531933508in"}
