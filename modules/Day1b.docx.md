@@ -113,10 +113,16 @@ Generate the D1D data in allele count format:
 
 📝 There are several options for recoding SNPs in different ways - more information on the PLINK website (see next section).
     Again note that a log file was created - skim the log file or screen output
+
+Look inside the .raw file. 
+
+- What do you think the 0/1/2 represent?
+- Do there appear to be more 0s or 2s?
+- Why might this be?
     
 ## PLINK website
 
-Go to <http://zzz.bwh.harvard.edu/plink/download.shtml> and skim through the front page to get an idea of PLINK's functionality. Note
+Go to http://zzz.bwh.harvard.edu/plink/download.shtml and skim through the front page to get an idea of PLINK's functionality. Note
 the list of clickable links on the left side of the website. 
 
 Under 'Data Management' (click the heading on the left) and read the list of the diﬀerent ways you may want to recode and reorder data sets. Don't attempt to read much further as this is a very large and detailed section - a useful future resource but too much for today. 
