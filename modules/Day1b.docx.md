@@ -87,13 +87,7 @@ What do you observe?
    
 5.  Create 'binary' format PLINK files using the recode command:
 
-         ./Software/plink
-   
-         --file Data/D1D
-       
-         --make-bed
-       
-         --out Data/D1D
+         ./Software/plink --file Data/D1D --make-bed --out Data/D1D
 
 6.  List files (*ls*) and check which new files have appeared
 
@@ -102,33 +96,24 @@ What do you observe?
 
 8.  Open and skim the '.log' file.
 
-----
-❓ How is the fam file similar to the ped file? How is it different? 
+What do you observe?
 
-   How is the bim file similar to the map file? How is it different?
-   
-  (Use the PLINK website if necessary)
+- How is the fam file similar to the ped file?
+- How is it different?
+- How is the bim file similar to the map file?
+- How is it different?
+   (Use the PLINK website if necessary)
   
-----
 ## Recoding alleles as counts
 
 Genotype data in allele count format is very useful, for example to use in regression modelling in statistical software such as R.
 Generate the D1D data in allele count format:
 
-> 1 *./Software/plink
-> 
-> 2 *--bfile Data/D1D
-> 
-> 3 *--recodeA
-> 
-> 4 *--out Data/D1D_AC*
+       ./Software/plink --bfile Data/D1D --recodeA --out Data/D1D_AC
 
-----
 📝 There are several options for recoding SNPs in different ways - more information on the PLINK website (see next section).
     Again note that a log file was created - skim the log file or screen output
     
-----
-
 ## PLINK website
 
 Go to <http://zzz.bwh.harvard.edu/plink/download.shtml> and skim through the front page to get an idea of PLINK's functionality. Note
@@ -172,32 +157,14 @@ Sample ID lists can also be used to 'keep' or 'remove' individuals in the same '
 
 ----
 
-**Solutions:**
+**Solution 1:**
 
-<---
-> 1 *./Software/plink
->
-> 2 *--bfile Data/D1D
->
-> 3 *--maf 0.05
->
-> 4 *--geno 0.05
->
-> 5 *--write-snplist
->
-> 6 *--out Data/D1D_snps*
+       ./Software/plink --bfile Data/D1D --maf 0.05 --geno 0.05 --write-snplist --out Data/D1D_snps
 
+**Solution 2:**
 
-> 1 *./Software/plink
->
-> 2 *--bfile Data/D1D
->
-> 3 *--extract Data/D1D_snps.snplist
->
-> 4 *--make-bed
->
-> 5 *--out Data/D1D_MAF_MISS*
----!> 
+       ./Software/plink --bfile Data/D1D --extract Data/D1D_snps.snplist --make-bed --out Data/D1D_MAF_MISS
+       
 # Practical 2 
 
 ## Introduction to PLINK II: Performing QC & GWAS
