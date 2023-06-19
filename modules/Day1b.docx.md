@@ -59,7 +59,6 @@ In all of the instructions below:
  
  ----
 
-
 ## Exploring Data Sets
 
 1.  Open an Explorer window ('Finder' on a Mac) and navigate to your PLINK working directory.
@@ -247,12 +246,14 @@ summary statistics that can be used to perform QC.
 
 ### Apply individual missingness thresholds
 
-1.  Generate new binary file sets (*\--*make*-*bed) from the 'D1D' binary file set, removing individuals with missingness greater than 3% using a single command 
+1.  Generate new binary file sets (--make-bed) from the 'D1D' binary file set, removing individuals with missingness greater than 3% using a single command 
     (hint: In the 'Inclusion thresholds' section, see the 'Missing/person' sub-section). Use the output file name 'D1D_imiss3pc'
 
 2.  Examine the output files (no need to open, and remember the bed file cannot be read) and the log file
 
-
+- How many individuals were in the original file?
+- How many individuals were removed?
+- How many males and females were left after screening?
 
 ### Apply SNP missingness and MAF thresholds
 
@@ -261,8 +262,9 @@ summary statistics that can be used to perform QC.
 
 2.  Examine the output files and the log file
 
-![](media/image4.jpeg){width="0.3541666666666667in"
-height="0.3593744531933508in"}
+- How many SNPs were in the original files?
+- How many SNPs were removed for low minor allele frequency?
+- How many SNPs were removed for missingness?
 
 ### Apply Hardy-Weinberg thresholds
 
@@ -272,8 +274,9 @@ height="0.3593744531933508in"}
 
 3.  Examine log and output files.
 
-![](media/image4.jpeg){width="0.3541655730533683in"
-height="0.3593744531933508in"}
+-How many SNPs were removed for HWE *p-values* below the threshold?
+
+📝 **It is useful to know how to do this, but be careful about setting this threshold - strong association signals can cause departure from HWE and you may remove great results! Use a lenient threshold and apply to controls only to avoid this problem. HWE can also be checked post-hoc for each SNP.**
 
 ## Perform GWAS
 
@@ -283,8 +286,9 @@ Run the following code, which performs a genetic association study using logisti
 
         ./Software/plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --out Results/D1D_CC
 
-![](media/image4.jpeg){width="0.3541666666666667in"
-height="0.3593744531933508in"}
+- What are the raw and Bonferroni-adjusted p-values for the top hit?
+- What does this mean - is there a significant association?
+- Are there any other significant associations?
 
 ### Case/Control GWAS - with covariates
 
@@ -294,54 +298,33 @@ Run the analysis specifying the covariates file:
 
       ./Software/plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --covar D1D.pcs.1234 --out Results/D1D_CC_PCadj
 
-![](media/image4.jpeg){width="0.3541655730533683in"
-height="0.3593744531933508in"}
+- What are the raw and Bonferroni-adjusted p-values for the top hit?
+- What does this mean - is there a significant association?
+- Suggest a reason for the different results when adjusting for the 4 PCs?
 
-# License {#license .unnumbered}
+# License
 
-> This work is licensed under Creative Commons
-> Attribution-NonCommercial-ShareAlike
->
-> 4.0 International Public License and the below text is a summary of
-> the main terms of the full Legal Code (the full licence) available at
-> [https://creativecommons.](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
-> [org/licenses/by-nc-sa/4.0/legalcode](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+This work is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License and the below text is a summary of
+the main terms of the full Legal Code (the full licence) available at https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
-#### You are free to: {#you-are-free-to .unnumbered}
+#### You are free to:
 
--   **Share** --- copy and redistribute the material in any medium or
-    > format
+-   **Share** --- copy and redistribute the material in any medium or format
 
 -   **Adapt** --- remix, transform, and build upon the material
 
-> The licensor cannot revoke these freedoms as long as you follow the
-> license terms.
+The licensor cannot revoke these freedoms as long as you follow the license terms.
 
 #### Under the following terms: {#under-the-following-terms .unnumbered}
 
--   **Attribution** --- You must give appropriate credit, providea link
-    > to the license, and indicate if changes were made. You may do so
-    > in any reasonable manner, but not in any way that suggests the
-    > licensor endorses you or your use.
+-   **Attribution** --- You must give appropriate credit, providea link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
--   **NonCommercial** --- You may not use the material for commercial
-    > purposes.
+-   **NonCommercial** --- You may not use the material for commercial purposes.
 
--   **ShareAlike** --- If you remix, transform, or build upon the
-    > material, you must distribute your contributions under the same
-    > license as the original.
+-   **ShareAlike** --- If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
-> No additional restrictions --- You may not apply legal terms or
-> technological mea- sures that legally restrict others from doing
-> anything the license permits.
+No additional restrictions --- You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
-#### Notices: {#notices .unnumbered}
+#### Notices:
 
-> You do not have to comply with the license for elements of the
-> material in the public domain or where your use is permitted by an
-> applicable exception or limitation.
->
-> No warranties are given. The license may not give you all of the
-> permissions neces- sary for your intended use. For example, other
-> rights such as publicity, privacy, or moral rights may limit how you
-> use the material.
+You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
