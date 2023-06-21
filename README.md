@@ -27,7 +27,7 @@ The course will begin with an overview of genome-wide association studies, an in
 
 
 ### Detailed timetable
-[View Timetable here - "in dev" ]()
+[View Timetable here - "in dev" ](modules/PolygenicRiskScores2023Timetable-export21June.pdf)
 
 
 
