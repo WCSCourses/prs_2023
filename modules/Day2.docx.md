@@ -596,14 +596,26 @@ Rscript ./Software/PRSice.R
 >
 ---
 
-   **Figure 1.5: Plot taken from [Ruderfer et al. 2014](https://doi:10.1038/mp.2013.138)** 
-![](/images/Day2.docx_folder/images-044.png)
+   **Figure 1.5: BARPLOT generated from PRSice** 
+![Figure 1.5](/images/Day2.docx_folder/CAD.highres_BARPLOT_2023-06-23.png)
 
 ---
 >
 >❓What is the R<sup>2</sup> and P-value of the best-fit PRS?
+><details>
+> <summary>Hint</summary>     
+>
+> 0.39 and 0.001, respectively
+>
+></details>
 >
 >❓Does this suggest that there is a significant association between the CAD PRS and CAD status in the target sample?
+><details>
+> <summary>Hint</summary>     
+>
+> The p-value does not suggest a significant association between the CAD PRS and CAD status.
+>
+></details>
 >
 ---
 ## Cross-Trait Analysis
@@ -635,10 +647,26 @@ Rscript ./Software/PRSice.R
 ```
 
 ---
->
+
+**Figure 1.6: BARPLOT generated from PRSice** 
+![Figure 1.6](images/Day2.docx_folder/Cross.high_BARPLOT_2023-06-23.png)
+
+
 >❓What is the R<sup>2</sup> for the most predictive threshold when using height as the base phenotype and CAD as the target phenotype?
+><details>
+> <summary>Hint</summary>     
+>
+> 0.032
+>
+></details>
 >
 >❓Now try using CAD as the base to predict height as the target trait? What is the PRS R<sup>2</sup> for that?
+><details>
+> <summary>Hint</summary>     
+>
+> 
+>
+></details>
 >
 ---
 <a href="#top">Back to top</a>
