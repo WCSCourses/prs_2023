@@ -603,7 +603,7 @@ Rscript ./Software/PRSice.R
 >
 >❓What is the R<sup>2</sup> and P-value of the best-fit PRS?
 ><details>
-> <summary>Hint</summary>     
+> <summary>Answer</summary>     
 >
 > 0.39 and 0.001, respectively
 >
@@ -611,7 +611,7 @@ Rscript ./Software/PRSice.R
 >
 >❓Does this suggest that there is a significant association between the CAD PRS and CAD status in the target sample?
 ><details>
-> <summary>Hint</summary>     
+> <summary>Answer</summary>     
 >
 > The p-value does not suggest a significant association between the CAD PRS and CAD status.
 >
@@ -654,7 +654,7 @@ Rscript ./Software/PRSice.R
 
 >❓What is the R<sup>2</sup> for the most predictive threshold when using height as the base phenotype and CAD as the target phenotype?
 ><details>
-> <summary>Hint</summary>     
+> <summary>Answer</summary>     
 >
 > 0.032
 >
@@ -662,7 +662,7 @@ Rscript ./Software/PRSice.R
 >
 >❓Now try using CAD as the base to predict height as the target trait? What is the PRS R<sup>2</sup> for that?
 ><details>
-> <summary>Hint</summary>     
+> <summary>Answer</summary>     
 >
 > 
 >
