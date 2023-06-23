@@ -70,7 +70,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
 > ‼️ All target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. 
 > 
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ## Introduction
@@ -120,7 +120,7 @@ for each copy of the *effect allele*. For example, if the effect
 >❓What do these PRS values mean in terms of the height of those individuals?
 >
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ## Matching the Base and Target Data sets
@@ -134,7 +134,7 @@ for each copy of the *effect allele*. For example, if the effect
 > ‼️For SNPs that have complementary alleles, e.g. **A|T**, **G|C**, we cannot be certain that the alleles referred to in the target data correspond to those of the base data or whether they are the 'other way around' due to being on the other DNA strand (unless the same genotyping chip was used for all data). These SNPs are known as ***ambiguous SNPs***, and while allele frequency information can be used to match the alleles, we remove ambiguous SNPs in PRSice to avoid the possibility of introducting unknown bias.
 >  
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ## Linkage Disequilibrium in PRS Analyses
@@ -144,7 +144,7 @@ for each copy of the *effect allele*. For example, if the effect
  While option 2 is statistically appealing, option 1 has been most adopted in PRS studies so far, most likely due to its simplicity and the similarity of results of methods using the different options to date ([**mak_polygenic_2017**](https://doi.org/10.1002/gepi.22050)). In this workshop we will consider option 1, implemented in PRSice, but if you are interested in how LD can be incorporated as a parameter in PRS calculation then see the LDpred ([**vilhjalmsson_modeling_2015**](https://doi.org/10.1016/j.ajhg.2015.09.001))and lassosum ([**mak_polygenic_2017**](https://doi.org/10.1002/gepi.22050)) papers.
 
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ### Performing Clumping
@@ -189,7 +189,7 @@ The command above performs clumping on the height GWAS using LD calculated based
 >❓Why is clumping performed for calculation of PRS? (in the standard approach).
 > 
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 ## P-Value Thresholding
 
@@ -258,7 +258,7 @@ For now, we can ignore most columns and focus on the **PRS.R2** and the **P** co
 > ❓What is the P-value for the association between the PRS and the outcome? Is this significant? (explain your answer)
 > 
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 ### Height PRS across multiple P-value thresholds
 
@@ -297,7 +297,7 @@ By removing the \--bar-levels and \--no-full command, we ask PRSice to perform P
 >❓What is the R<sup>2</sup> of the most predictive threshold and how does it compare to PRS generated using genome-wide significant SNPs?
 >
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ### High Resolution Scoring
@@ -336,7 +336,7 @@ If we limit ourselves to a small number of 𝑃-value thresholds, we might \"mis
 >❓The default of PRSice is to iterate the P-value threshold from \< 5*×*10<sup>−8</sup> to 0.5 with a step size of 0.00005, and to inlcude the P-value threshold of 1. Can you identify the commands controlling these parameters?
 >
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 **Accounting for Covariates**
@@ -395,7 +395,7 @@ Rscript ./Software/PRSice.R
 ![Figure 1.3](/images/Day2.docx_folder/images-030.png)
 
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ## Stratifying Samples by PRS
@@ -466,7 +466,7 @@ Rscript ./Software/PRSice.R
 >📜 See the quantile results in Table from in the *_QUANTILES_* file, and the plots in the *_QUANTILES_PLOT_* file. Due to the small sample size of the target data the results here are underwhelming, but with high power we may observe strong deviation in the extreme quantiles.
 >
 ---
-<a href="#top">Back to top</a>
+<a href="#top">[Back to Table of Contents](#table-of-contents)</a>
 
 
 ## Case Control Studies
