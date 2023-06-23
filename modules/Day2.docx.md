@@ -38,7 +38,7 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 |**Phenotype**|**Provider**|**Description**|**Download Link**|
 |:---:|:---:|:---:|:---:|
 |Height|[GIANT Consortium](https://portals.broadinstitute.org/collaboration/giant/index.php/GIANT_consortium_data_files)|GWAS of height on 253,288 individuals| [Link](https://portals.broadinstitute.org/collaboration/giant/images/0/01/GIANT_HEIGHT_Wood_et_al_2014_publicrelease_HapMapCeuFreq.txt.gz)|
-|Coronary artery disease (CAD)|[CARDIoGRAM plus C4D Consortium](http://www.cardiogramplusc4d.org/)|GWAS on 60,801 CAD cases and 123,504 controls| [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)|
+|Coronary artery disease (CAD)|[CARDIoGRAMplusC4D Consortium](http://www.cardiogramplusc4d.org/)|GWAS on 60,801 CAD cases and 123,504 controls| [Link](http://www.cardiogramplusc4d.org/media/cardiogramplusc4d-consortium/data-downloads/cad.additive.Oct2015.pub.zip)|
 
 ## Data Structure
 You will find all practical materials in the **PRS_Workshop/Day_2** directory. Relevant materials that you should see there at the start of the practical are as follows:
