@@ -637,6 +637,7 @@ Rscript ./Software/PRSice.R
 ---
 >
 >❓What is the R<sup>2</sup> for the most predictive threshold when using height as the base phenotype and CAD as the target phenotype?
+>
 >❓Now try using CAD as the base to predict height as the target trait? What is the PRS R<sup>2</sup> for that?
 >
 ---
