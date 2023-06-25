@@ -38,7 +38,7 @@ In all of the instructions below:
 
 2.  Navigate to the Practical/ folder and then the Day 1 working directory
     
-            cd\<directory_name|>
+            cd 
             
 3.  List all files in this directory by typing 
    
@@ -46,12 +46,12 @@ In all of the instructions below:
 
 4.  Test PLINK with no input by typing 
 
-         ./Software/plink
+         plink
 
 5.  Note that you can see lots of PLINK options by using the built-in
     help function: 
     
-         ./Software/plink --help
+         plink --help
          
 ----    
  📝 Calling PLINK with no output will test if PLINK is installed and available in the directory, because you should see some 
@@ -82,7 +82,7 @@ What do you observe?
    
 5.  Create 'binary' format PLINK files using the recode command:
 
-         ./Software/plink --file Data/D1D --make-bed --out Data/D1D
+         plink --file D1D --make-bed --out D1D
 
 6.  List files (*ls*) and check which new files have appeared
 
@@ -104,7 +104,7 @@ What do you observe?
 Genotype data in allele count format is very useful, for example to use in regression modelling in statistical software such as R.
 Generate the D1D data in allele count format:
 
-       ./Software/plink --bfile Data/D1D --recodeA --out Data/D1D_AC
+       plink --bfile D1D --recodeA --out D1D_AC
 
 📝 There are several options for recoding SNPs in different ways - more information on the PLINK website (see next section).
     Again note that a log file was created - skim the log file or screen output
@@ -160,11 +160,11 @@ Sample ID lists can also be used to 'keep' or 'remove' individuals in the same '
 
 **Solution 1:**
 
-       ./Software/plink --bfile Data/D1D --maf 0.05 --geno 0.05 --write-snplist --out Data/D1D_snps
+       plink --bfile D1D --maf 0.05 --geno 0.05 --write-snplist --out D1D_snps
 
 **Solution 2:**
 
-       ./Software/plink --bfile Data/D1D --extract Data/D1D_snps.snplist --make-bed --out Data/D1D_MAF_MISS
+       plink --bfile D1D --extract D1D_snps.snplist --make-bed --out D1D_MAF_MISS
        
 # Practical 2 
 
@@ -284,7 +284,7 @@ summary statistics that can be used to perform QC.
 
 Run the following code, which performs a genetic association study using logistic regression on some case/control data:
 
-        ./Software/plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --out Results/D1D_CC
+        plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --out D1D_CC
 
 - What are the raw and Bonferroni-adjusted p-values for the top hit?
 - What does this mean - is there a significant association?
@@ -296,7 +296,7 @@ Here we repeat the previous analysis but this time including some covariates. Th
 
 Run the analysis specifying the covariates file:
 
-      ./Software/plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --covar D1D.pcs.1234 --out Results/D1D_CC_PCadj
+  plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --covar D1D.pcs.1234 --out D1D_CC_PCadj
 
 - What are the raw and Bonferroni-adjusted p-values for the top hit?
 - What does this mean - is there a significant association?
