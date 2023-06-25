@@ -36,9 +36,9 @@ In all of the instructions below:
 
 1.  Open up a terminal
 
-2.  Navigate to the Practical/ folder and then the Day 1 working directory
+2.  Navigate to the Day 1b working directory
     
-            cd 
+            cd ~/data/Data_Day1b/
             
 3.  List all files in this directory by typing 
    
