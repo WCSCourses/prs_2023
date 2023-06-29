@@ -56,7 +56,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - TAR.cad 
   - TAR.covariate
 
- :hammer_and_wrench: Software
+ 📁: Software
   - plink_mac
   - plink_linux
   - plink.exe
