@@ -521,7 +521,7 @@ Rscript ./Software/PRSice.R
 ![Figure 1.4](/images/Day2.docx_folder/images-036.png)
 
 
- A disadvantage of the quantile plot is that it only separate samples into quantiles of equal size. However, it is sometimes interesting to investigate whether a specific strata (e.g. top 5% of samples),contain a higher PRS than the reference strata. For example, ([**Mavaddat, N et al., 2015**](https://doi:10.1093/jnci/djv036)) found that samples in the highest 1% of PRS distribution have a 2.81 increased OR of breast cancer when comparing to samples at the middle quantiles (40th to 60th percentile). We can mimic their table by using *\--quant-break*, which represents the upper bound of each strata, and *\--quant-ref*, which represents the upper bound of the reference quantile:
+ A disadvantage of the quantile plot is that it only separate samples into quantiles of equal size. However, it is sometimes interesting to investigate whether a specific strata (e.g. top 5% of samples),contain a higher PRS than the reference strata. For example, ([**Mavaddat, N et al., 2015**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4754625/?report=reader)) found that samples in the highest 1% of PRS distribution have a 2.81 increased OR of breast cancer when comparing to samples at the middle quantiles (40th to 60th percentile). We can mimic their table by using *\--quant-break*, which represents the upper bound of each strata, and *\--quant-ref*, which represents the upper bound of the reference quantile:
 ```
 Rscript ./Software/PRSice.R
 --prsice Software/PRSice_linux
@@ -615,13 +615,13 @@ Rscript ./Software/PRSice.R
 ---
 ## Cross-Trait Analysis
 
- A popular application of PRS is in performing cross-trait analyses. This allows some interesting analyses such as those performed by ([**Ruderfer, D et al., 2014**](https://doi:10.1038/mp.2013.138)) (fig. [1.5](#_bookmark19)) which used the bipolar PRS to predict into different clinical dimensions of schizophrenia.
+ A popular application of PRS is in performing cross-trait analyses. This allows some interesting analyses such as those performed by ([**Ruderfer, D et al., 2014**](https://www.nature.com/articles/mp2013138)) which used the bipolar PRS to predict into different clinical dimensions of schizophrenia.
 
  In this practical, we will perform cross-trait analyses between CAD and Height, using height as the base and CAD as the target.
 
 ---
 >
->ℹ️ We will only focus on the simplest form of cross-trait analysis in this practical. To perform the multi-phenotype cross-trait analysis similar to that of ([**Ruderfer, D et al., 2014**](https://doi:10.1038/mp.2013.138)), you can use the --pheno-col to include multiple target phenotype into the analysis.
+>ℹ️ We will only focus on the simplest form of cross-trait analysis in this practical. To perform the multi-phenotype cross-trait analysis similar to that of ([**Ruderfer, D et al., 2014**](https://www.nature.com/articles/mp2013138)), you can use the --pheno-col to include multiple target phenotype into the analysis.
 > 
 ---
 
