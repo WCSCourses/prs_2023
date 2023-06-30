@@ -43,12 +43,12 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 ## Data Structure
 You will find all practical materials in the **PRS_Workshop/Day_2** directory. Relevant materials that you should see there at the start of the practical are as follows:
 
- :file_folder: Base_Data
+ 📂: Base_Data
   - GIANT_Height.txt,
   - cad.add.txt,
   - cad.add.readme.
 
- :file_folder: Target_Data
+ 📂: Target_Data
   - TAR.fam
   - TAR.bim
   - TAR.bed
@@ -56,7 +56,7 @@ You will find all practical materials in the **PRS_Workshop/Day_2** directory. R
   - TAR.cad 
   - TAR.covariate
 
- 📁: Software
+ 🛠️: Software
   - plink_mac
   - plink_linux
   - plink.exe
@@ -157,7 +157,7 @@ for each copy of the *effect allele*. For example, if the effect
 
  GWAS are typically performed one-SNP-at-a-time, which, combined with the strong correlation structure across the genome (Linkage Disequilibrium (LD)), makes identifying the independent genetic effects (or their best proxies if these are not genotyped/imputed) challenging. There are two main options for approximating the PRS that would have been generated from full conditional GWAS: 1. SNPs are *clumped* so that the retained SNPs are largely independent of each other, allowing their effects to be summed, assuming additive effects, 2. all SNPs are included and the LD between them is accounted for.
 
- While option 2 is statistically appealing, option 1 has been most adopted in PRS studies so far, most likely due to its simplicity and the similarity of results of methods using the different options to date ([**mak_polygenic_2017**](https://doi.org/10.1002/gepi.22050)). In this workshop we will consider option 1, implemented in PRSice, but if you are interested in how LD can be incorporated as a parameter in PRS calculation then see the LDpred ([**vilhjalmsson_modeling_2015**](https://doi.org/10.1016/j.ajhg.2015.09.001))and lassosum ([**mak_polygenic_2017**](https://doi.org/10.1002/gepi.22050)) papers.
+ While option 2 is statistically appealing, option 1 has been most adopted in PRS studies so far, most likely due to its simplicity and the similarity of results of methods using the different options to date ([**Mak, T et al., 2017**](https://doi.org/10.1002/gepi.22050)). In this workshop we will consider option 1, implemented in PRSice, but if you are interested in how LD can be incorporated as a parameter in PRS calculation then see the LDpred ([**Vilhjalmsson, B et al., 2015**](https://doi.org/10.1016/j.ajhg.2015.09.001))and lassosum ([**Mak, T et al., 2017**](https://doi.org/10.1002/gepi.22050)) papers.
 
 ---
 <a href="#top">[Back to Table of Contents](#table-of-contents)</a>
@@ -169,12 +169,8 @@ for each copy of the *effect allele*. For example, if the effect
 
  SNPs are first sorted (i.e. ranked) by their 𝑃 -values. Then, starting from the most significant SNP (denoted as the *index SNP*), any SNPs in high LD (eg. 𝑟<sup>2</sup>>0.1, with 𝑟<sup>2</sup> typically calculated from *phased haplotype* data) with the index SNP are removed. To reduce computational burden, only SNPs that are within e.g. 250 kb of the *index SNP* are 𝑐𝑙𝑢𝑚𝑝𝑒𝑑. This process is continued until no *index SNPs* remain.
 
-Use the command below to perform clumping of the Height GWAS data using PLINK([**chang_second_2015**](https://doi.org/10.1186/s13742-015-0047-8)). First, you will have to navigate to the right folder where the data are stored using the terminal. Open the terminal and type the command below at the terminal prompt:
+Use the command below to perform clumping of the Height GWAS data using PLINK([**Chang, C et al., 2015**](https://doi.org/10.1186/s13742-015-0047-8)). First, you will have to navigate to the right folder where the data are stored using the terminal. Open the terminal and type the command below at the terminal prompt:
 ```
- cd \~/Desktop/PRS\\\_Workshop/
-
-#Next type the following command (NB. See warning below):
-
   ./Software/plink_linux \
   --bfile Target_Data/TAR \
   --clump Base_Data/GIANT_Height.txt \
@@ -185,7 +181,6 @@ Use the command below to perform clumping of the Height GWAS data using PLINK([*
   --clump-r2 0.1 \
   --out Results/Height
 ```
-
 ---
 >
 > ‼️You can copy & paste code from this document directly to the terminal, but this can cause problems (e.g. when opened by Preview in Mac) and distort the code. Try using Adobe Reader or first copy & pasting to a text editor (e.g. notepad) or use the script file provided that contains all the commands.
@@ -308,7 +303,7 @@ For now, we can ignore most columns and focus on the **PRS.R2** and the **P** co
 
 ### Height PRS across multiple P-value thresholds
 
-A disadvantage of using only genome-wide significant SNPs is that there are likely to be many true signals among the SNPs that did not reach genome-wide significance. However, since we do not know what 𝑃-value threshold provides the \"best\" prediction for our particular data, then we can calculate the PRS under several 𝑃-value thresholds and test their prediction accuracy to identify the \"best\" threshold (NB. See [**dudbridge_power_2013**](https://doi.org/10.1371/journal.pgen.1003348) for theory on factors affecting the best-fit PRS)
+A disadvantage of using only genome-wide significant SNPs is that there are likely to be many true signals among the SNPs that did not reach genome-wide significance. However, since we do not know what 𝑃-value threshold provides the \"best\" prediction for our particular data, then we can calculate the PRS under several 𝑃-value thresholds and test their prediction accuracy to identify the \"best\" threshold (NB. See [**Dudbridge, F 2013**](https://doi.org/10.1371/journal.pgen.1003348) for theory on factors affecting the best-fit PRS)
 >
 >
 
@@ -363,7 +358,7 @@ By removing the \--bar-levels and \--no-full command, we ask PRSice to perform P
 If we limit ourselves to a small number of 𝑃-value thresholds, we might \"miss\" the most predictive threshold. In order to identify this \"best\" threshold, we will need \"high-resolution scoring\", that is, to test the predictive power of PRS generated under a larger number of p-value thresholds. We can achieve that by simply removing the \--fastscore command from the PRSice script:
 ```
  Rscript ./Software/PRSice.R
---dir .
+--dir ./
 --prsice Software/PRSice_linux
 --base Base_Data/GIANT_Height.txt
 --target Target_Data/TAR
@@ -526,7 +521,7 @@ Rscript ./Software/PRSice.R
 ![Figure 1.4](/images/Day2.docx_folder/images-036.png)
 
 
- A disadvantage of the quantile plot is that it only separate samples into quantiles of equal size. However, it is sometimes interesting to investigate whether a specific strata (e.g. top 5% of samples),contain a higher PRS than the reference strata. For example, ([**mavaddat_prediction_2015**](https://doi:10.1093/jnci/djv036)) found that samples in the highest 1% of PRS distribution have a 2.81 increased OR of breast cancer when comparing to samples at the middle quantiles (40th to 60th percentile). We can mimic their table by using *\--quant-break*, which represents the upper bound of each strata, and *\--quant-ref*, which represents the upper bound of the reference quantile:
+ A disadvantage of the quantile plot is that it only separate samples into quantiles of equal size. However, it is sometimes interesting to investigate whether a specific strata (e.g. top 5% of samples),contain a higher PRS than the reference strata. For example, ([**Mavaddat, N et al., 2015**](https://doi:10.1093/jnci/djv036)) found that samples in the highest 1% of PRS distribution have a 2.81 increased OR of breast cancer when comparing to samples at the middle quantiles (40th to 60th percentile). We can mimic their table by using *\--quant-break*, which represents the upper bound of each strata, and *\--quant-ref*, which represents the upper bound of the reference quantile:
 ```
 Rscript ./Software/PRSice.R
 --prsice Software/PRSice_linux
@@ -620,13 +615,13 @@ Rscript ./Software/PRSice.R
 ---
 ## Cross-Trait Analysis
 
- A popular application of PRS is in performing cross-trait analyses. This allows some interesting analyses such as those performed by ([**ruderfer_polygenic_2014**](https://doi:10.1038/mp.2013.138)) (fig. [1.5](#_bookmark19)) which used the bipolar PRS to predict into different clinical dimensions of schizophrenia.
+ A popular application of PRS is in performing cross-trait analyses. This allows some interesting analyses such as those performed by ([**Ruderfer, D et al., 2014**](https://doi:10.1038/mp.2013.138)) (fig. [1.5](#_bookmark19)) which used the bipolar PRS to predict into different clinical dimensions of schizophrenia.
 
  In this practical, we will perform cross-trait analyses between CAD and Height, using height as the base and CAD as the target.
 
 ---
 >
->ℹ️ We will only focus on the simplest form of cross-trait analysis in this practical. To perform the multi-phenotype cross-trait analysis similar to that of ([**ruderfer_polygenic_2014**](https://doi:10.1038/mp.2013.138)), you can use the --pheno-col to include multiple target phenotype into the analysis.
+>ℹ️ We will only focus on the simplest form of cross-trait analysis in this practical. To perform the multi-phenotype cross-trait analysis similar to that of ([**Ruderfer, D et al., 2014**](https://doi:10.1038/mp.2013.138)), you can use the --pheno-col to include multiple target phenotype into the analysis.
 > 
 ---
 
@@ -649,7 +644,7 @@ Rscript ./Software/PRSice.R
 ---
 
 **Figure 1.6: BARPLOT generated from PRSice** 
-![Figure 1.6](images/Day2.docx_folder/Cross.high_BARPLOT_2023-06-23.png)
+![Figure 1.6](/images/Day2.docx_folder/Cross.high_BARPLOT_2023-06-23.png)
 
 
 >❓What is the R<sup>2</sup> for the most predictive threshold when using height as the base phenotype and CAD as the target phenotype?
