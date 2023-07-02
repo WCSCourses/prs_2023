@@ -41,7 +41,7 @@
 
        cd ~/Desktop/PRS_Workshop/
 
- [PRACTICAL 1. INTRODUCTION TO BASH]{.underline}
+
 
 ## Looking at the Current Directory
 
@@ -70,27 +70,26 @@
 
  *\<file\* is the file of interest):
 
-        wc -l \<file\
+        wc -l <file>
 
- 1.4. SEARCH FILE CONTENT
 
  Often we would like to store the output of a command, which we can do
  by *redirecting* the output of the command to a file. For example, we
  can redirect the count of the **GIANT_Height.txt** to **giant_count**
  using the following command:
 
-     wc -l GIANT_Height.txt \ giant_count.txt
+     wc -l GIANT_Height.txt < giant_count.txt
 
-**Search File Content**
+## Search File Content
 
  Another common task is to search for specific words or characters in a
  file (e.g. does this file contain our gene of interest?). This can be
  performed using the \"grep\" command as follows:
 
-       grep \<string\ \<file\
+       grep <string> file
 
  For example, to check if the [Single Nucleotide Polymorphism
- (SNP)](#_bookmark0) *rs10786427* is present in **GIANT_Height.txt**,
+ (SNP) *rs10786427* is present in **GIANT_Height.txt**,
  we can do:
 
        grep rs10786427 GIANT_Height.txt
@@ -98,7 +97,7 @@
  In addition, grep allows us to check if patterns contained in one file
  can be found in another file. For example, if we want to extract a
  subset of samples from the phenotype file (e.g. extract the list of
- samples in **Data/Select.sample**), we can do:
+ samples in **Data/TAR.height**), we can do:
 
         grep -f Select.sample TAR.height
 
@@ -129,13 +128,13 @@
       awk '{ print $1,$4,$7}' GIANT_Height.txt < GIANT_Height_3cols.txt
 
  We can also use a \"conditional statement\" in awk to extract all
- *significant [SNPs](#_bookmark0)*
+ *significant [SNPs]
 
  from the results file, using the following command:
 
      awk '{if($7 < 5e-8) { print } }' GIANT_Height.txt < Significant_SNPs.txt
 
-# Or the short form:
+Or the short form:
 
      awk '$7 < 5e-8{ print}' GIANT_Height.txt < Significant_SNPs.txt
 
@@ -159,7 +158,7 @@ the practicals throughout the workshop.
  If you are not using R Studio then you can type **R** in your terminal
  to run **R** in the terminal.
 
- **Working Directory**
+## Working Directory**
 
  When we start **R**, we will be working in a specific folder called
  the **working direc- tory**. We can check the current/working
@@ -169,9 +168,9 @@ the practicals throughout the workshop.
 
  And we can change our working directory to the **Practical** folder by
 
-     setwd("~/Desktop/PRS_Workshop/Day_1a")
+       setwd("~/Desktop/PRS_Workshop/Day_1a")
 
-### Libraries
+## Libraries
 
  Most functionality of **R** is organised in \"packages\" or
  \"libraries\". To access these functions, we will have to install and
@@ -192,172 +191,166 @@ the practicals throughout the workshop.
  from an R script file on our computer. For example, you can load the
  Nagelkerke *R*^2^ function by typing
 
-         source(\"Software/nagelkerke.R\")
+         source("Software/nagelkerke.R")
 
  And you are now able to use the NagelkerkeR2 function (we will use
  this function at the end of this worksheet).
 
-### Variables in R
+## Variables in R
 
  You can assign a value or values to any variable you want using \<-.
  e.g
 
- # Assign a number to a
+Assign a number to a
 
       a <- 1
 
-# Assign a vector containing a,b,c to b
+Assign a vector containing a,b,c to b
 
       v1 <- c("a", "b","c")
 
-### Functions
+## Functions
 
  You can perform lots of operations in **R** using diﬀerent built-in R
  functions. Some examples are below:
 
- ### Assign number of samples
+Assign number of samples
 
         nsample <- 10000
 
- ### Generate nsample random normal variable with mean = 0 and sd = 1
+Generate nsample random normal variable with mean = 0 and sd = 1
 
         normal <- rnorm(nsample, mean=0,sd=1)
 
         normal.2 <- rnorm(nsample, mean=0,sd=1)
 
- ### We can examine the first few entries of the result using head
+We can examine the first few entries of the result using head
 
       head(normal)
 
- ### And we can obtain the mean and sd using
+And we can obtain the mean and sd using
 
- 9 mean(normal)
+      mean(normal)
 
- 10 sd(normal)
+      sd(normal)
 
- 11 \# We can also calculate the correlation between two variables
+We can also calculate the correlation between two variables
  using cor
 
- 12 cor(normal, normal.2)
+      cor(normal, normal.2)
 
 ## Plotting
 
  While **R** contains many powerful plotting functions in its base
- packages, customisa- tion can be diﬃcult (e.g. changing the colour
- scales, arranging the axes). **ggplot2**
+ packages,customisationn can be diﬃcult (e.g. changing the colour
+ scales, arranging the axes). **ggplot2** is a powerful visualization package that provides extensive
+ flexibility and customi- sation of plots. As an example, we can do the following
 
- [2.3. REGRESSION MODELS]{.underline}
+Load the package
 
- is a powerful visualization package that provides extensive
- flexibility and customi- sation of plots. As an example, we can do the
- following
+      library(ggplot2)
 
- 1 \# Load the package
+Specify sample size
 
- 2 library(ggplot2)
+      nsample <-1000
 
- 3 \# Specify sample size
+ Generate random grouping using sample with replacement
 
- 4 nsample\<-1000
+     groups <- sample(c("a","b"), nsample, replace=T)
 
- 5 \# Generate random grouping using sample with replacement
+ Now generate the data
 
- 6 groups \<- sample(c(\"a\",\"b\"), nsample, replace=T)
+     dat <- data.frame(x=rnorm(nsample), y=rnorm(nsample), groups)
 
- 7 \# Now generate the data
+ Generate a scatter plot with diﬀerent coloring based on group
 
- 8 dat \<- data.frame(x=rnorm(nsample), y=rnorm(nsample), groups)
+     ggplot(dat, aes(x=x,y=y,color=groups))+geom_point()
 
- 9 \# Generate a scatter plot with diﬀerent coloring based on group
 
- 10 ggplot(dat, aes(x=x,y=y,color=groups))+geom_point()
-
-2.  []{#_bookmark15 .anchor}**Regression Models**
+## Regression Models
 
  In statistical modelling, regression analyses are a set of statistical
  techniques for estimating the relationships among variables or
  features. We can perform regression analysis in **R**.
 
  Use the following code to perform linear regression on simulated
- variables \"x\" and \"y\":
+ variables "x" and "y":
 
- 1 \# Simulate data
+ Simulate data
 
- 2 nsample \<- 10000
+     nsample <- 10000
 
- 3 x \<- rnorm(nsample)
+     x <- rnorm(nsample)
 
- 4 y \<- rnorm(nsample)
+     y <- rnorm(nsample)
 
- 5 \# Run linear regression
+ Run linear regression
 
- 6 lm(y\~x)
+      lm(y~x)
 
- 7 \# We can store the result into a variable
+ We can store the result into a variable
 
- 8 reg \<- lm(y\~x)
+       reg <- lm(y\~x)
 
- 9 \# And get a detailed output using summary
+ And get a detailed output using summary
 
- 10 summary(lm(y\~x))
+       summary(lm(y~x))
 
- 11 \# We can also extract the coeﬃcient of regression using
+ We can also extract the coeﬃcient of regression using
 
- 12 reg\$coeﬃcient
+       reg$coeﬃcient
 
- 13 \# And we can obtain the residuals by
+ And we can obtain the residuals by
 
- 14 residual \<- resid(reg)
+      residual <- resid(reg)
 
- 15 \# Examine the first few entries of residuals
+ Examine the first few entries of residuals
 
- 16 head(residual)
+       head(residual)
 
- 17 \# We can also include covariates into the model
+ We can also include covariates into the model
 
- 18 covar \<- rnorm(nsample)
+      covar <- rnorm(nsample)
 
- 19 lm(y\~x+covar)
+      lm(y\~x+covar)
 
- 20 \# And can even perform interaction analysis
+ And can even perform interaction analysis
 
- 21 lm(y\~x+covar+x∗covar)
+      lm(y~x+covar+x∗covar)
 
  Alternatively, we can use the glm function to perform the regression:
 
- 1 glm(y\~x)
+      glm(y\~x)
 
  For binary traits (case controls studies), logistic regression can be
  performed using
 
- 1 \# Simulate samples
+ Simulate samples
 
- [PRACTICAL 2. INTRODUCTION TO R]{.underline}
+      nsample\<- 10000
 
- 2 nsample\<- 10000
+      x <- rnorm(nsample)
 
- 3 x \<- rnorm(nsample)
+Simulate binary traits (must be coded with 0 and 1)
 
- 4 \# Simulate binary traits (must be coded with 0 and 1)
+      y <- sample(c(0,1), size=nsample, replace=T)
 
- 5 y \<- sample(c(0,1), size=nsample, replace=T)
+ Perform logistic regression
 
- 6 \# Perform logistic regression
+      glm(y~x, family=binomial)
 
- 7 glm(y\~x, family=binomial)
+ Obtain the detailed output
 
- 8 \# Obtain the detail output
+      summary(glm(y~x, family=binomial))
 
- 9 summary(glm(y\~x, family=binomial))
+ We will need the NagelkerkeR2 function
 
- 10 \# We will need the NagelkerkeR2 function
+ to calculate the pseudo R2 for logistic model
 
- 11 \# to calculate the pseudo R2 for logistic model
+       source("Software/nagelkerke.R")
 
- 12 source(\"Software/nagelkerke.R\")
+       reg <- glm(y~x, family=binomial)
 
- 13 reg \<- glm(y\~x, family=binomial)
+ Calculate the Nagelkerke R2 using the NagelkerkeR2 function
 
- 14 \# Calculate the Nagelkerke R2 using the NagelkerkeR2 function
-
- 15 NagelkerkeR2(reg)
+         NagelkerkeR2(reg)
