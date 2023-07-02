@@ -21,7 +21,7 @@
 
  We can change our directory using the following command:
 
-       cd \<Path\
+       cd \<Path>\
 
  where *\<Path\* is the path to the target directory.
 
@@ -109,7 +109,9 @@
 
  that were found in **TAR.height** in a single command, as follows:
 
+  ```bash 
    grep -f Select.sample TAR.height | wc -l
+```
 
 
 ## Filtering and Reshuﬄing Files
