@@ -1,7 +1,7 @@
- # Polygenic Risk Score Analyses Workshop 2023
+# Polygenic Risk Score Analyses Workshop 2023
 
 
- # Day 1a: GWAS & relevant Statistics
+# Day 1a: GWAS & relevant Statistics
 
 
 ## Introduction to Bash
@@ -53,13 +53,13 @@
  For ls, there are a number of additional Unix command options that you
  can append to it to get additional information, for example:
 
-        ls -l \# shows files as list
+        ls -l  # shows files as list
 
-        ls -lh \# shows files as a list with human readable format
+        ls -lh  # shows files as a list with human readable format
 
-        ls -lt \# shows the files as a list sorted by time-last-edited
+        ls -lt  # shows the files as a list sorted by time-last-edited
 
-        ls -lS \# shows the files as a list sorted by size
+        ls -lS  # shows the files as a list sorted by size
 
 
 
@@ -290,7 +290,7 @@ Specify sample size
 
  We can store the result into a variable
 
-       reg <- lm(y\~x)
+       reg <- lm(y~x)
 
  And get a detailed output using summary
 
@@ -312,22 +312,22 @@ Specify sample size
 
       covar <- rnorm(nsample)
 
-      lm(y\~x+covar)
+      lm(y~x+covar)
 
  And can even perform interaction analysis
 
-      lm(y~x+covar+x∗covar)
+      lm(y~x+covar+x*covar)
 
  Alternatively, we can use the glm function to perform the regression:
 
-      glm(y\~x)
+      glm(y~x)
 
  For binary traits (case controls studies), logistic regression can be
  performed using
 
  Simulate samples
 
-      nsample\<- 10000
+      nsample <- 10000
 
       x <- rnorm(nsample)
 
