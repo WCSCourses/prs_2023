@@ -30,7 +30,7 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 
 |**Data Set**|**Description**|**Download Link**|
 |:---:|:---:|:---:|
-|Ensembl Human Genome GTF file|A file containing the coordinates for genes in the human genome. Used by PRSice to map the SNPs onto genic regions| [Link](ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens)|
+|Ensembl Human Genome GTF file|A file containing the coordinates for genes in the human genome. Used by PRSice to map the SNPs onto genic regions|[Link](ftp://ftp.ensembl.org/pub/release-86/gtf/homo_sapiens)|
 |MSigDB Gene Sets | File containing the gene-set information. *Free registration required.*| [Download here after registration](http://software.broadinstitute.org/gsea/msigdb/download_file.jsp?filePath=/resources/msigdb/6.1/h.all.v6.1.symbols.gmt)|
 
 In this practical, we will explore how to perform gene-set based PRS analyses. To perform this analysis, gene-set information and coordinates for the genic regions are required. These information can be obtained from the following database:
