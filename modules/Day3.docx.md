@@ -7,7 +7,7 @@
   1. [Key Learning Outcomes](#key-learning-outcomes)
   2. [Resources you will be using](#resources-you-will-be-using)
   3. [Datasets](#data-sets) 
-  4. [Introduction](#introduction)
+  4. [Exercise 1: Estimating R2 in case/control studies](#Exercise-1:-Estimating-R2-in-case/control-studies)
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
@@ -51,7 +51,11 @@ You will find all practical materials in the **PRS_Workshop/Day_3** directory. R
   - TAR.height
   - TAR.cad 
   - TAR.covariate
-
+    
+  📁: Reference files
+   - Homo_sapiens.GRCh38.86.gt
+   - Sets.gmt
+     
  🛠️: Software
   - plink_mac
   - plink_linux
@@ -60,10 +64,23 @@ You will find all practical materials in the **PRS_Workshop/Day_3** directory. R
   - PRSice_mac
   - PRSice_linux
   - PRSice_win64.exe
-
+    
 ---
 > 
 > ‼️ All target phenotype data in this worshop are **simulated**. They have no specific biological meaning and are for demonstration purposes only. 
 > 
 ---
 <a href="#top">[Back to Top](#table-of-contents)</a>
+
+## Exercise 1: Estimating R2 in case/control studies
+Bias in R2 estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al (2011), which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
+
+Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R2 is usually used to represent the model R2 (this is the default of PRSice). However, this R2 does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R2 (Fig.2.1a).
+
+Bias in R2 estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al. 2012 (Fig.2.1b), which requires the sample
+prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
+
+
+
+Now, account for the ascertainment of the case/control sample by including the population prevalence (let’s assume e.g. 5% here) in the PRSice command to obtain the adjusted (Lee) R2 :
+
