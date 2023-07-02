@@ -168,7 +168,7 @@ the practicals throughout the workshop.
 
  And we can change our working directory to the **Practical** folder by
 
-       setwd("~/Desktop/PRS_Workshop/Day_1a")
+       setwd("~/Data/Day_1a")
 
 ## Libraries
 
