@@ -23,7 +23,7 @@
 
        cd \<Path>\
 
- where *\<Path\* is the path to the target directory.
+ where *\<Path>\* is the path to the target directory.
 
 
  Some common usage of cd includes
@@ -45,7 +45,7 @@
 
 ## Looking at the Current Directory
 
- Once we have moved into the **PRS_Workshop** folder, we can list out
+ Once we have moved into the **~/Data/Day1a** folder, we can list out
  the folder content by typing:
 
         ls
@@ -68,7 +68,7 @@
  We can also count the number of lines in a file with the following
  command (where
 
- *\<file\* is the file of interest):
+ *\<file>\* is the file of interest):
 
         wc -l <file>
 
@@ -84,7 +84,7 @@
 
  Another common task is to search for specific words or characters in a
  file (e.g. does this file contain our gene of interest?). This can be
- performed using the \"grep\" command as follows:
+ performed using the "grep" command as follows:
 
        grep <string> file
 
@@ -97,7 +97,7 @@
  In addition, grep allows us to check if patterns contained in one file
  can be found in another file. For example, if we want to extract a
  subset of samples from the phenotype file (e.g. extract the list of
- samples in **Data/TAR.height**), we can do:
+ samples in **Data/Day_1a/TAR.height**), we can do:
 
         grep -f Select.sample TAR.height
 
