@@ -202,7 +202,7 @@ the practicals throughout the workshop.
 
          source("nagelkerke.R")
 
- And you are now able to use the NagelkerkeR2 function (we will use
+ And you are now able to use the Nagelkerke R2 function (we will use
  this function at the end of this worksheet).
 
 ## Variables in R
