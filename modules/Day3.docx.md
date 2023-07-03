@@ -28,12 +28,12 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 
 ## Additional Resources
 
+In this practical, we will explore how to perform gene-set based PRS analyses. To perform this analysis, gene-set information and coordinates for the genic regions are required. These information can be obtained from the following database:
+
 |**Data Set**|**Description**|**Download Link**|
 |:---:|:---:|:---:|
 |Ensembl Human Genome GTF file|A file containing the coordinates for genes in the human genome. Used by PRSice to map the SNPs onto genic regions| [Link](https://ftp.ensembl.org/pub/release-109/gtf/homo_sapiens/) |
 |MSigDB Gene Sets | File containing the gene-set information. *Free registration required.*| [Download here after registration](http://software.broadinstitute.org/gsea/msigdb/download_file.jsp?filePath=/resources/msigdb/6.1/h.all.v6.1.symbols.gmt)|
-
-In this practical, we will explore how to perform gene-set based PRS analyses. To perform this analysis, gene-set information and coordinates for the genic regions are required. These information can be obtained from the following database:
 
 
 ## Data Sets
@@ -114,4 +114,16 @@ Rscript ./Software/PRSice.R \
     --binary-target T \
 --out Results/CAD.highres.LEER2
 ```
+Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R2 and the adjusted (Lee) R2.
 
+---
+> 
+> 📌 To speed up the practical, we have generated a smaller gene-set file. If you want the full gene-set file, you can download it from the link above.
+> 
+---
+
+---
+> 
+> 📌 All target phenotype data in this workshop are simulated. While they reflect the corresponding trait data, they have no specific biological meaning and are for demonstration purposes only.
+---
+<a href="#top">[Back to Top](#table-of-contents)</a>
