@@ -60,6 +60,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > ```
 > mkdir Target_data
 > ```
+> ```
 > mv TAR.* Target.data
 > ```
 > 
