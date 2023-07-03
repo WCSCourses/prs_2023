@@ -48,7 +48,10 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > ```
 > mv ~/Downloads/Day2_Base_Data.zip ~/data/Day2_Target_Data/Day2_Target_Data
 > ```
-> 
+> Now, your Day2_Base_dat.zip has been moved to your Day2_Target_Data directory. However, the file is zipped so you will need to unzip it:
+> ```
+> unzip Day2_Base_Data.zip
+> ```
 > 
  📂: Base_Data
 
