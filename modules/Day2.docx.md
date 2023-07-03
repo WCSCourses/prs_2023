@@ -52,6 +52,19 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > ```
 > unzip Day2_Base_Data.zip
 > ```
+>
+> For clearly purposes, rename your Day2_Base_data to Base_data and make a directory for your Target data called "Target_data" in which you will move all your target datasets.
+> ```
+> mv Day2_Base_data Base_data
+> ```
+> ```
+> mkdir Target_data
+> ```
+> mv TAR.* Target.data
+> ```
+> 
+> So now in your current working directory (for Day2), you should have two directories (in blue) called Base_data which contains the base data we will be using and Target_data, which contains the target data.
+>
 > 
  📂: Base_Data
 
