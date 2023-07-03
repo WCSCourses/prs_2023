@@ -160,6 +160,13 @@ the practicals throughout the workshop.
  If you are not using R Studio then you can type **R** in your terminal
  to run **R** in the terminal.
 
+ ## Adding script to working dir
+
+      cd ~/data/Day1a_Data/Day1a_Data
+      wget https://raw.githubusercontent.com/WCSCourses/prs_2023/main/scripts/nagelkerke.R
+
+ 
+
 ## Working Directory**
 
  When we start **R**, we will be working in a specific folder called
