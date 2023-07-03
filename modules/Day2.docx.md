@@ -275,6 +275,9 @@ Rscript ~/PRSice/PRSice.R \
 --out Results/Height.gws
 
 ```
+```
+Rscript ~/PRSice/PRSice.R --prsice ~/PRSice/PRSice_linux --base Base_Data/GIANT_Height.txt --target Target_Data/TAR --snp MarkerName --A1 Allele1 --A2 Allele2 --stat b --beta --pvalue p --pheno Target_Data/TAR.height --binary-target F --bar-levels 5e-8 --no-full --fastscore --out Results/Height.gws
+```
 
 This command takes the Height GWAS summary statistic file (\--base), informs PRSice of the column name for the column containing the SNP ID(\--snp), the effect allele (--A1), the non-effect allele (\--A2),the effect size (\--stat) and the 𝑃-value (\--pvalue). We also inform PRSice that the effect size is a 𝛽 coefficient (\--beta) instead of an OR. The \--binary-target F command informs PRSice that the target phenotype is a quantitative trait and thus linear regression should be performed. In addition, we ask PRSice not to perform high-resolution scoring over multiple thresholds (\--fastscore), and to compute the PRS using only those SNPs with 𝑃-value \< 5*×*10<sup>−8</sup>.
 
