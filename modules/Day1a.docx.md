@@ -198,7 +198,7 @@ the practicals throughout the workshop.
 
  Alternatively, we can import functions (e.g. that we have written)
  from an R script file on our computer. For example, you can load the
- Nagelkerke *R*^2^ function by typing
+ Nagelkerke *R^2* function by typing
 
          source("nagelkerke.R")
 
