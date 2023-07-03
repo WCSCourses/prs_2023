@@ -61,7 +61,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > mkdir Target_data
 > ```
 > ```
-> mv TAR.* Target.data
+> mv TAR.* Target_data
 > ```
 > 
 > So now in your current working directory (for Day2), you should have two directories (in blue) called Base_data which contains the base data we will be using and Target_data, which contains the target data.
