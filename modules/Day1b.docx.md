@@ -160,11 +160,11 @@ Sample ID lists can also be used to 'keep' or 'remove' individuals in the same '
 
 **Solution 1:**
 
-       plink --bfile D1D --maf 0.05 --geno 0.05 --write-snplist --out D1D_snps
+TO BE REVEALED LATER!!
 
 **Solution 2:**
 
-       plink --bfile D1D --extract D1D_snps.snplist --make-bed --out D1D_MAF_MISS
+TO BE REVEALED LATER!!
        
 # Practical 2 
 
