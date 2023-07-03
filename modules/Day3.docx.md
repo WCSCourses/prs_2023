@@ -72,6 +72,7 @@ You will find all practical materials in the **PRS_Workshop/Day_3** directory. R
 ---
 <a href="#top">[Back to Top](#table-of-contents)</a>
 
+
 ## Exercise 1: Estimating R2 in case/control studies
 Bias in R2 estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al (2011), which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
 
