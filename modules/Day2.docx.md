@@ -46,7 +46,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
  📂: Base_Data
 
  ```
-wget https://www.dropbox.com/s/w7g75bo069tupuq/Day2_Base_Data.zip?dl=0
+wget https://www.dropbox.com/home/Day2_Base_Data/PRS23_Base_Data
 ```
   - GIANT_Height.txt,
   - cad.add.txt,
