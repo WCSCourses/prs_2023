@@ -7,7 +7,7 @@
   1. [Key Learning Outcomes](#key-learning-outcomes)
   2. [Resources you will be using](#resources-you-will-be-using)
   3. [Datasets](#data-sets) 
-  4. [Exercise 1: Estimating R2 in case and control studies](#exercise-1:-estimating-r2-in-case-and-control-studies)
+  4. [Exercise 1~ Estimating R2 in case and control studies](#exercise-1~-estimating-r2-in-case-and-control-studies)
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
@@ -73,7 +73,7 @@ You will find all practical materials in the **PRS_Workshop/Day_3** directory. R
 <a href="#top">[Back to Top](#table-of-contents)</a>
 
 
-## Exercise 1: Estimating R2 in case and control studies
+## Exercise 1~ Estimating R2 in case and control studies
 Bias in R2 estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al (2011), which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
 
 Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R2 is usually used to represent the model R2 (this is the default of PRSice). However, this R2 does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R2 (Fig.1.1a).
