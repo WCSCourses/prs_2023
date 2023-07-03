@@ -198,11 +198,11 @@ the practicals throughout the workshop.
 
  Alternatively, we can import functions (e.g. that we have written)
  from an R script file on our computer. For example, you can load the
- Nagelkerke *R^2* function by typing
+ Nagelkerke *R2* function by typing
 
          source("nagelkerke.R")
 
- And you are now able to use the Nagelkerke R2 function (we will use
+ And you are now able to use the Nagelkerke *R2* function (we will use
  this function at the end of this worksheet).
 
 ## Variables in R
