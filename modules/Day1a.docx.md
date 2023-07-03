@@ -200,7 +200,7 @@ the practicals throughout the workshop.
  from an R script file on our computer. For example, you can load the
  Nagelkerke *R*^2^ function by typing
 
-         source("Software/nagelkerke.R")
+         source("nagelkerke.R")
 
  And you are now able to use the NagelkerkeR2 function (we will use
  this function at the end of this worksheet).
