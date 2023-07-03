@@ -8,6 +8,8 @@
   2. [Resources you will be using](#resources-you-will-be-using)
   3. [Datasets](#data-sets) 
   4. [Exercise 1 Estimating R<sup>2</sup> in case and control studies](#exercise-1-estimating-r2-in-case-and-control-studies)
+  5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation).
+  6. 
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
@@ -135,3 +137,13 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 > 
 ---
 <a href="#top">[Back to Top](#table-of-contents)</a>
+
+## Exercise 2 Overfitting caused by model optimisation
+
+In PRS analyses, the shrinkage or tuning parameter is usually optimized across a wide range of parametric space (e.g. P -value threshold, proportion of causal SNPs). When both optimisation and association testing are performed on the target data, over-fitted results will be obtained. The accuracy and predictive power of over-fitted results are likely to diminish when replicated in an independent data set.
+
+A simple solution is to perform permutation to obtain an empirical P -value for the association model, which is implemented in PRSice. Briefly, permutation is performed as follows:
+1) Compute the P -value in your original data, denoted as obs.p, at the "best" threshold.
+2) Then shuﬄe the phenotype and obtain the P -value of the "best" threshold for this null phenotype, denoted as null.p
+3) Repeat 2) N times
+4) Calculate the empirical P -value as:
