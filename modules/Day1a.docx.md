@@ -78,7 +78,7 @@
  can redirect the count of the **GIANT_Height.txt** to **giant_count**
  using the following command:
 
-     wc -l GIANT_Height.txt < giant_count.txt
+     wc -l GIANT_Height.txt > giant_count.txt
 
 ## Search File Content
 
