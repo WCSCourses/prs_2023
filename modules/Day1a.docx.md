@@ -127,18 +127,18 @@
  contains SNP rsIDs (column 1), allele frequencies (column 4) and *P*
  -values (column 7) as follows:
 
-      awk '{ print $1,$4,$7}' GIANT_Height.txt < GIANT_Height_3cols.txt
+      awk '{ print $1,$4,$7}' GIANT_Height.txt > GIANT_Height_3cols.txt
 
  We can also use a \"conditional statement\" in awk to extract all
  *significant [SNPs]
 
  from the results file, using the following command:
 
-     awk '{if($7 < 5e-8) { print } }' GIANT_Height.txt < Significant_SNPs.txt
+     awk '{if($7 < 5e-8) { print } }' GIANT_Height.txt > Significant_SNPs.txt
 
 Or the short form:
 
-     awk '$7 < 5e-8{ print}' GIANT_Height.txt < Significant_SNPs.txt
+     awk '$7 < 5e-8{ print}' GIANT_Height.txt > Significant_SNPs.txt
 
  "if($7<5e-8)" and "$7 < 5e-8" tell awk to extract any rows
  with column 7 (the column containing *P* -value) with a value of
