@@ -200,7 +200,7 @@ for each copy of the *effect allele*. For example, if the effect
 
 Use the command below to perform clumping of the Height GWAS data using PLINK([**Chang, C et al., 2015**](https://doi.org/10.1186/s13742-015-0047-8)). First, you will have to navigate to the right folder where the data are stored using the terminal. Open the terminal and type the command below at the terminal prompt:
 ```
-  ./plink_linux \
+  plink \
   --bfile Target_Data/TAR \
   --clump Base_Data/GIANT_Height.txt \
   --clump-p1 1 \
@@ -255,10 +255,10 @@ The command above performs clumping on the height GWAS using LD calculated based
 
 ### Height PRS using GW-significant SNPs only
 
-Use the commands below to run PRSice with GIANT Height GWAS as base data and the height phenotype as target data. PRSice will calculate Height PRS in the target data and then perform a regression of the Height PRS against the target individual's true height values. From the **PRS_Workshop/Day_2** directory, run the following command in the terminal:
+Use the commands below to run PRSice with GIANT Height GWAS as base data and the height phenotype as target data. PRSice will calculate Height PRS in the target data and then perform a regression of the Height PRS against the target individual's true height values. From the **/home/manager/data/Day2_Target_Data/Day2_Target_Data** directory, run the following command in the terminal:
 ```
-Rscript ./Software/PRSice.R \
---prsice Software/PRSice_linux \
+Rscript ~/PRSice.R \
+--prsice ~/PRSice_linux \
 --base Base_Data/GIANT_Height.txt \
 --target Target_Data/TAR \
 --snp MarkerName \
