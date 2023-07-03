@@ -66,6 +66,10 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > 
 > So now in your current working directory (for Day2), you should have two directories (in blue) called Base_data which contains the base data we will be using and Target_data, which contains the target data.
 >
+> You also want to create a "Results" directory where all your results will be saved
+> ```
+> mkdir Results
+> ```
 > 
  📂: Base_Data
 
@@ -196,7 +200,7 @@ for each copy of the *effect allele*. For example, if the effect
 
 Use the command below to perform clumping of the Height GWAS data using PLINK([**Chang, C et al., 2015**](https://doi.org/10.1186/s13742-015-0047-8)). First, you will have to navigate to the right folder where the data are stored using the terminal. Open the terminal and type the command below at the terminal prompt:
 ```
-  ./Software/plink_linux \
+  ./plink_linux \
   --bfile Target_Data/TAR \
   --clump Base_Data/GIANT_Height.txt \
   --clump-p1 1 \
