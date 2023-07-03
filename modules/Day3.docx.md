@@ -76,7 +76,7 @@ You will find all practical materials in the **PRS_Workshop/Day_3** directory. R
 ## Exercise 1 Estimating R<sup>2</sup> in case and control studies
 Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al (2011), which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
 
-Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R<sup>2</sup> is usually used to represent the model R2 (this is the default of PRSice). However, this R2 does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R2 (Figure 1.1a).
+Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R<sup>2</sup> is usually used to represent the model R<sup>2</sup> (this is the default of PRSice). However, this R<sup>2</sup> does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R<sup>2</sup> (Figure 1.1a).
 >
   **Figure 1.1 Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
@@ -125,5 +125,13 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 ---
 > 
 > 📌 All target phenotype data in this workshop are simulated. While they reflect the corresponding trait data, they have no specific biological meaning and are for demonstration purposes only.
+---
+> 
+>❓Has accounting for the population prevalence aﬀected the R<sup>2</sup>?
+> 
+---
+> 
+>❓Would you expect a diﬀerence between the Nagelkerke R<sup>2</sup> and the Lee adjusted R<sup>2</sup> if the case/control ratio in the target sample reflects the disease prevalence in the population?
+> 
 ---
 <a href="#top">[Back to Top](#table-of-contents)</a>
