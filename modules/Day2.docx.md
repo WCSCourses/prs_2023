@@ -44,6 +44,10 @@ To perform PRS analyses, summary statistics from Genome-Wide Association Studies
 You will find all practical materials in the **/home/manager/data/Day2_Target_Data/Day2_Target_Data** directory. Relevant materials that you should see there at the start of the practical are as follows:
 
  📂: Base_Data
+
+ ```
+wget https://www.dropbox.com/s/w7g75bo069tupuq/Day2_Base_Data.zip?dl=0
+```
   - GIANT_Height.txt,
   - cad.add.txt,
   - cad.add.readme.
