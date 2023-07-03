@@ -176,7 +176,7 @@ for each copy of the *effect allele*. For example, if the effect
 
 ---
 >
-‼️For SNPs that have complementary alleles, e.g. **A|T**, **G|C**, we cannot be certain that the alleles referred to in the target data correspond to those of the base data or whether they are the 'other way around' due to being on the other DNA strand (unless the same genotyping chip was used for all data). These SNPs are known as ***ambiguous SNPs***, and while allele frequency information can be used to match the alleles, we remove ambiguous SNPs in PRSice to avoid the possibility of introducting unknown bias.
+‼️For SNPs that have complementary alleles, e.g. **A/T**, **G/C**, we cannot be certain that the alleles referred to in the target data correspond to those of the base data or whether they are the 'other way around' due to being on the other DNA strand (unless the same genotyping chip was used for all data). These SNPs are known as ***ambiguous SNPs***, and while allele frequency information can be used to match the alleles, we remove ambiguous SNPs in PRSice to avoid the possibility of introducting unknown bias.
 >  
 ---
 <a href="#top">[Back to Table of Contents](#table-of-contents)</a>
