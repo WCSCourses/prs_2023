@@ -257,8 +257,8 @@ The command above performs clumping on the height GWAS using LD calculated based
 
 Use the commands below to run PRSice with GIANT Height GWAS as base data and the height phenotype as target data. PRSice will calculate Height PRS in the target data and then perform a regression of the Height PRS against the target individual's true height values. From the **/home/manager/data/Day2_Target_Data/Day2_Target_Data** directory, run the following command in the terminal:
 ```
-Rscript ~/PRSice.R \
---prsice ~/PRSice_linux \
+Rscript ~/PRSice/PRSice.R \
+--prsice ~/PRSice/PRSice_linux \
 --base Base_Data/GIANT_Height.txt \
 --target Target_Data/TAR \
 --snp MarkerName \
