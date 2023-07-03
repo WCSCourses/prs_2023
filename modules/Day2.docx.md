@@ -489,7 +489,7 @@ Rscript ~/PRSice/PRSice.R --prsice ~/PRSice/PRSice_linux --base Base_Data/GIANT_
 ---
 
 ```
-Rscript ~/PRSice/PRSice.R --prsice ~/PRSIce/PRSice_linux --base Base_Data/cad.add.txt --target Target_Data/TAR
+Rscript ~/PRSice/PRSice.R --prsice ~/PRSice/PRSice_linux --base Base_Data/cad.add.txt --target Target_Data/TAR
 --snp markername --A1 effect_allele --A2 noneffect_allele --chr chr --bp bp_hg19 --stat beta --beta --pvalue p_dgc --pheno Target_Data/CAD.pheno --binary-target T --out Results/CAD.highres
 ```
 ---
