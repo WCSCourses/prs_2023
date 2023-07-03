@@ -147,4 +147,5 @@ A simple solution is to perform permutation to obtain an empirical P -value for 
 2) Then shuﬄe the phenotype and obtain the P -value of the "best" threshold for this null phenotype, denoted as null.p
 3) Repeat 2) N times
 4) Calculate the empirical P -value as:
-          $` P<sub>emp</sub> = (\sum(obs.p > null.p<sub>i</sub> + 1) / (N + 1) `$
+>
+ $` Pemp = (\sum(obs.p > null.pi + 1) / (N + 1) `$
