@@ -170,7 +170,7 @@ the practicals throughout the workshop.
 
  And we can change our working directory to the **Practical** folder by
 
-       setwd("~/data/Day1a_Data")
+       setwd("~/data/Day1a_Data/Day1a_Data")
 
 ## Libraries
 
