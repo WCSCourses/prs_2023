@@ -7,7 +7,7 @@
   1. [Key Learning Outcomes](#key-learning-outcomes)
   2. [Resources you will be using](#resources-you-will-be-using)
   3. [Datasets](#data-sets) 
-  4. [Exercise 1: Estimating R2 in case/control studies](#exercise-1:-estimating-r2-in-case/control-studies)
+  4. [Exercise 1: Estimating R2 in case/control studies](#exercise-1-estimating-r2-in-case/control-studies)
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
