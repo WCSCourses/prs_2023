@@ -36,16 +36,16 @@
 
        cd XXX # will bring you to the XXX directory, so long as it is in the current directory
 
- As an example, we can move to the **PRS_Workshop** directory by
+ As an example, we can move to the **data** directory by
  typing:
 
-       cd ~/Desktop/PRS_Workshop/
+       cd data/
 
 
 
 ## Looking at the Current Directory
 
- Once we have moved into the **~/Data/Day1a** folder, we can list out
+ Once we have moved into the **~/data/Day1a** folder, we can list out
  the folder content by typing:
 
         ls
@@ -88,7 +88,7 @@
 
        grep <string> file
 
- For example, to check if the [Single Nucleotide Polymorphism
+ For example, to check if the Single Nucleotide Polymorphism
  (SNP) *rs10786427* is present in **GIANT_Height.txt**,
  we can do:
 
