@@ -293,6 +293,8 @@ PRSice performs strand flipping and clumping automatically and generates the **H
 
 For now, we can ignore most columns and focus on the **PRS.R2** and the **P** column, which provide information on the model fit.
 
+![Figue](/images/Day2.docxfolder/Height.gws_BARPLOT_2023-07-03.png)
+
 ---
 >
 > ❓What is the R<sup>2</sup> for the PRS constructed using only genome-wide significant SNPs?
