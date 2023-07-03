@@ -81,7 +81,7 @@ Residuals of logistic regression is not well defined, and in PRS analyses, Nagel
 >
    **Figure 1.1 Performance of diﬀerent R2 when the study contains equal portion of cases and controls**
    ** (a) Nagelkerke R2  **
-![Figure 1.1a](images/day3/images-004.png)
+![Figure 1.1a](/images/day3/images-004.png)
 ---
 
 Bias in R2 estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al. 2012 (Fig.2.1b), which requires the sample
