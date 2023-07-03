@@ -63,13 +63,12 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > ```
 > mv TAR.* Target_data
 > ```
-> 
-> So now in your current working directory (for Day2), you should have two directories (in blue) called Base_data which contains the base data we will be using and Target_data, which contains the target data.
 >
 > You also want to create a "Results" directory where all your results will be saved
 > ```
 > mkdir Results
 > ```
+>So now in your current working directory (for Day2), you should have 3 directories (in blue) called Base_data, Target_data, and Results
 > 
  📂: Base_Data
 
