@@ -130,7 +130,7 @@
       awk '{ print $1,$4,$7}' GIANT_Height.txt > GIANT_Height_3cols.txt
 
  We can also use a \"conditional statement\" in awk to extract all
- *significant [SNPs]
+ significant [SNPs]
 
  from the results file, using the following command:
 
@@ -167,10 +167,10 @@ the practicals throughout the workshop.
 
  
 
-## Working Directory**
+## Working Directory
 
  When we start **R**, we will be working in a specific folder called
- the **working direc- tory**. We can check the current/working
+ the **working directory**. We can check the current/working
  directory we are in by typing:
 
        getwd()
@@ -214,7 +214,7 @@ Assign a number to a
 
       a <- 1
 
-Assign a vector containing a,b,c to b
+Assign a vector containing a,b,c to v1
 
       v1 <- c("a", "b","c")
 
