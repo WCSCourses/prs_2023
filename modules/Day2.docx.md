@@ -46,7 +46,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > First, download the Base datasets using this [link](https://www.dropbox.com/s/w7g75bo069tupuq/Day2_Base_Data.zip?dl=0)
 > The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following command
 > ```
-> mv ~/manager/Downloads/Day2_Base_Data.zip ~/manager/data/Day2_Target_Data/Day2_Target_Data
+> mv ~/Downloads/Day2_Base_Data.zip ~/data/Day2_Target_Data/Day2_Target_Data
 > ```
 > 
 > 
