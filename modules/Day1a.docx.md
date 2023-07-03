@@ -45,7 +45,7 @@
 
 ## Looking at the Current Directory
 
- Once we have moved into the **~/data/Day1a** folder, we can list out
+ Next we can move into the **~/data/Data_Day1b/** folder (from the data/ folder type: cd Data_Day1b/). We can list out
  the folder content by typing:
 
         ls
