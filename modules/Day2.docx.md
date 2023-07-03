@@ -69,7 +69,8 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > mkdir Results
 > ```
 >So now in your current working directory (for Day2), you should have 3 directories (in blue) called Base_data, Target_data, and Results
-> 
+>
+
  📂: Base_Data
 
   - GIANT_Height.txt,
