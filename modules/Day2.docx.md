@@ -53,7 +53,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > unzip Day2_Base_Data.zip
 > ```
 >
-> For clearly purposes, rename your Day2_Base_data to Base_data and make a directory for your Target data called "Target_data" in which you will move all your target datasets.
+> For clarity purposes, rename your Day2_Base_data to Base_data and make a directory for your Target data called "Target_data" in which you will move all your target datasets.
 > ```
 > mv Day2_Base_data Base_data
 > ```
