@@ -121,7 +121,7 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 >
   **Plot of CAD Lee R<sup>2</sup>**  
 >
-![Figure 1.1b](https://drive.google.com/uc?id=1TiaO0fT-PC4bt_ho1afPUYU72LvKw6s2)
+![Figure 1.2](https://drive.google.com/uc?id=1TiaO0fT-PC4bt_ho1afPUYU72LvKw6s2)
 ---
 
 ---
