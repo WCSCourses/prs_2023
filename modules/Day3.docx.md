@@ -121,7 +121,7 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 >
   **Plot of CAD LEER<sup>2</sup>**
 >
-![Figure 1.2](/images/day3/CADLEER2HIGHRESPLOT.png)
+![Figure 1.2](https://github.com/WCSCourses/prs_2023/blob/main/images/day3/CADLEER2HIGHRESPLOT.png)
 ---
 
 ---
