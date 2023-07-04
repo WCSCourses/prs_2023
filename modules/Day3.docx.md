@@ -8,8 +8,8 @@
   2. [Resources you will be using](#resources-you-will-be-using)
   3. [Datasets](#data-sets) 
   4. [Exercise 1 Estimating R<sup>2</sup> in case and control studies](#exercise-1-estimating-r2-in-case-and-control-studies)
-  5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation).
-  6. [Exercise 3 Distribution of PRS](#distribution-of-prs).
+  5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation)
+  6. [Exercise 3 Distribution of PRS](#exercise-3-distribution-of-prs)
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
