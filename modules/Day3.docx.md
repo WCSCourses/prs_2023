@@ -275,6 +275,8 @@ Currently, most PRS analyses have been performed on a genome-wide scale, disrega
 
 ### Molecular Signatures Database (MSigDB)
 The Molecular Signatures Database (MSigDB) oﬀers an excellent source of gene-sets, including the hallmark genes, gene-sets of diﬀerent biological processes, gene-sets of diﬀerent oncogenic signatures etc. All gene-sets from MSigDB follows the Gene Matrix Transposed file format (GMT), which consists of one line per gene-set, each containing at least 3 column of data:
+
+| | | | | |
 |:---:|:---:|:---:|:---:|:---:|
 |Set A| Description | Gene 1 | Gene 2 | ...
 |Set A| Description | Gene 1 | Gene 2 | ...
