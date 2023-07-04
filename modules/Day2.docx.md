@@ -58,13 +58,13 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 >
 > For clarity purposes, rename your Day2_Base_data to Base_data and make a directory for your Target data called "Target_data" in which you will move all your target datasets.
 > ```
-> mv Day2_Base_Data Base_data
+> mv Day2_Base_Data Base_Data
 > ```
 > ```
-> mkdir Target_data
+> mkdir Target_Data
 > ```
 > ```
-> mv TAR.* Target_data
+> mv TAR.* Target_Data
 > ```
 >
 > You also want to create a "Results" directory where all your results will be saved
