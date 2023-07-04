@@ -46,7 +46,10 @@ In this practical, we will explore how to perform gene-set based PRS analyses. T
 
 
 ## Data Sets
-You will find all practical materials in the **PRS_Workshop/Day_3** directory. Relevant materials that you should see there at the start of the practical are as follows:
+
+You will need to download the required files for this tutorial [here](https://drive.google.com/file/d/1nC20DaahMQJZlmguPsZJk0rx3E801yPs/view?usp=sharing)
+
+You will find all practical materials in the **data/Day_3** directory. Relevant materials that you should see there at the start of the practical are as follows:
 
  📂: Base_Data
   - GIANT_Height.txt,
