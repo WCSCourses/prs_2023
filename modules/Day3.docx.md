@@ -106,7 +106,7 @@ prevalence (case/control ratio) and population prevalence as parameters. This fu
 Now, account for the ascertainment of the case/control sample by including the population prevalence (let’s assume e.g. 5% here) in the PRSice command to obtain the adjusted (Lee) R<sup>2</sup> :
 
 ```
-Rscript ./Software/PRSice.R \
+Rscript PRSice.R \
     --prsice Software/PRSice_linux \
     --base  Base_Data/cad.add.txt \
     --target Target_Data/TAR \
@@ -165,8 +165,8 @@ A simple solution is to perform permutation to obtain an empirical P -value for 
 You will have to specify the number of permutation (N ) to perform by providing --perm N as a parameter to PRSice.
 
 ```
-Rscript ./Software/PRSice.R \
-    --prsice Software/PRSice_mac \
+Rscript PRSice.R \
+    --prsice Software/PRSice_linux\
     --base  Base_Data/GIANT_Height.txt \
     --target Target_Data/TAR \
     --snp MarkerName \
@@ -197,8 +197,8 @@ Rscript ./Software/PRSice.R \
 The best way to avoid having results that are over-fit is to perform validation on an independent validation data set. We can perform validation of the previous height + covariate analysis with PRSice, using the independent VAL target sample as validation data and the "best" P-value threshold predicted in the VAL samples:
 
 ```
-Rscript ./Software/PRSice.R \
-    --prsice Software/PRSice_mac \
+Rscript PRSice.R \
+    --prsice Software/PRSice_linux \
     --base  Base_Data/GIANT_Height.txt \
     --target Target_Data/VAL \
     --snp MarkerName \
@@ -291,8 +291,14 @@ The Molecular Signatures Database (MSigDB) oﬀers an excellent source of gene-s
 > 💬 While you can read the GMT file using Excel. You should be aware that Excel has a tendency to convert gene names into dates (e.g. SEPT9 to Sep-9)
 >
 ---
+
 As GMT format does not contain the chromosomal location for each individual gene, an additional file is required to provide the chromosoaml location such that SNPs can be map to genes.
 
 ### General Transfer Format file
-The General Transfer Format (GTF) file contains the chromosomal coordinates for each gene. It is a tab separated file and all but the final field in each feature line must contain a value. "Empty" columns should be denoted with a ‘.’. You can read the full format specification here. One column that might be of particular interest is column 3: feature, which indicates what feature that line of GTF represents. This allows us to select or ignore features that are of interest.
+The General Transfer Format (GTF) file contains the chromosomal coordinates for each gene. It is a **tab** separated file and all but the final field in each feature line must contain a value. "Empty" columns should be denoted with a ‘.’. You can read the full format specification here. One column that might be of particular interest is column 3: **feature**, which indicates what feature that line of GTF represents. This allows us to select or ignore features that are of interest.
+
 You can find the description of each feature [here](http://www.sequenceontology.org/browser/obob.cgi).
+
+
+### Browser Extensible Data (BED)
+Browser Extensible Data (BED) file (diﬀerent to the binary ped file from PLINK) is a file format to define genetic regions. It contains 3 required fields per line (chromosome, start coordinate and end coordinate) together with 9 additional optional field. A special property of BED is that it is a 0-based format, i.e. chromosome starts at 0, as opposed to the usual 1-based format such as the PLINK format. For example, a SNP on chr1:10000 will be represented as:
