@@ -90,23 +90,23 @@ You will find all practical materials in the **data/Day_3** directory. Relevant 
 
 
 ## Exercise 1 Estimating R<sup>2</sup> in case and control studies
-Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al (2011), which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
+Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by **Lee et al (2011)**, which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command **--prevalence**.
 
 Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R<sup>2</sup> is usually used to represent the model R<sup>2</sup> (this is the default of PRSice). However, this R<sup>2</sup> does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R<sup>2</sup> (Figure 1.1a). 
 >
   **Figure 1.1: Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
-  **(a) Nagelkerke R<sup>2</sup>**
-![Figure 1.1a](/images/day3/images004.png)
+  **(a) Nagelkerke R<sup>2</sup>** 
+![Figure 1.1a](https://drive.google.com/uc?id=1r3LV442RQT3CWGSAnZsU6QT1DqHtRKkd)
 ---
 
-Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al. 2012 (Figure 1.1b), which requires the sample
-prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
+Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by **Lee et al. 2011 (Figure 1.1b)**, which requires the sample
+prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command **--prevalence**.
 >
   **Figure 1.1: Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
-  **(b) Lee adjusted R<sup>2</sup>**
-![Figure 1.1b](/images/day3/images006.png)
+  **(b) Lee adjusted R<sup>2</sup>** 
+![Figure 1.1b](https://drive.google.com/uc?id=19ACkFb2gr7EU4dfcsTDPtprwtYPDQufo)
 ---
 
 
