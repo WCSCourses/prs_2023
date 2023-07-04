@@ -49,7 +49,7 @@ In this practical, we will explore how to perform gene-set based PRS analyses. T
 
 You will need to download the required files for this tutorial [here](https://drive.google.com/file/d/1nC20DaahMQJZlmguPsZJk0rx3E801yPs/view?usp=sharing). The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following command.
 
-'''
+```
 cd data
 mv ~/Downloads/Day_3.zip .
 unzip Day_3.zip
