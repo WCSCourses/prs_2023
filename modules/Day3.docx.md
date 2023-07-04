@@ -143,7 +143,7 @@ A simple solution is to perform permutation to obtain an empirical P -value for 
 1) Compute the P -value in your original data, denoted as obs.p, at the "best" threshold.
 2) Then shuﬄe the phenotype and obtain the P -value of the "best" threshold for this null phenotype, denoted as null.p
 3) Repeat 2) N times
-4) Calculate the empirical P -value as:
+4) Calculate the empirical P-value as:
 >
  $` Pemp = (\sum(obs.p > null.pi + 1) / (N + 1) `$
 You will have to specify the number of permutation (N ) to perform by providing --perm N as a parameter to PRSice.
@@ -168,17 +168,17 @@ Rscript ./Software/PRSice.R \
 ```
 ---
 >
-> 📓 ** 10000 permutations typically provide empirical P -values with high accuracy to the second decimal place (eg. 0.05), but smaller empirical P -values should be considered approximate. **
+> 📝 **10000 permutations typically provide empirical P -values with high accuracy to the second decimal place (eg. 0.05), but smaller empirical P -values should be considered approximate.**
 >
 ---
 >
-> ❓ What is the smallest possible empirical P -value when 10000 permutation are performed?
+> ❓ What is the smallest possible empirical P-value when 10000 permutation are performed?
 >
 > ❓ Is the height PRS significantly associated with height after accounting for the over-fitting implicit in identifying the best-fit PRS? How about CAD?
 >
 ---
 
-The best way to avoid having results that are over-fit is to perform validation on an independent validation data set. We can perform validation of the previous height + covariate analysis with PRSice, using the independent VAL target sample as validation data and the "best" P -value threshold predicted in the VAL samples:
+The best way to avoid having results that are over-fit is to perform validation on an independent validation data set. We can perform validation of the previous height + covariate analysis with PRSice, using the independent VAL target sample as validation data and the "best" P-value threshold predicted in the VAL samples:
 
 ```
 Rscript ./Software/PRSice.R \
@@ -208,7 +208,33 @@ Rscript ./Software/PRSice.R \
 >
 ---
 
----
 <a href="#top">[Back to Top](#table-of-contents)</a>
 
 ## Exercise 3 Distribution of PRS
+
+Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.2). 
+
+This might lead us to believe that individuals with PRS values in the top quantiles have a distinctly diﬀerent genetic aetiology compared to the rest of the sample, or that there is epistasis/interactions causing there substantially higher risk. However, when we plot a normally distributed variable (e.g. a PRS) as quantiles on the X-axis then we expect to observe this exponential pattern even when the X variable only has a linear eﬀect on the Y variable. This is because the top (and bottom) quantiles are further away from each other on the absolute scale of the variable and so the diﬀerences in their eﬀects are larger than between quantiles in the middle of the distribution.
+
+To understand this more, we will perform a simple simulation using R:
+```
+R
+# First, we define some simulation parameters
+n.sample <- 10000
+PRS.r2 <- 0.01
+# Then, we simulate PRS that follow a random normal distribution
+prs <- rnorm(n.sample)
+# We can then simulate the phenotype using the following script
+pheno <- prs + rnorm(n.sample,mean=0, sd=sqrt(var(prs)*(1-PRS.r2)/(PRS.r2)))
+# We can examine the relationship between the phenotype and prs 
+# using linear regression
+summary(lm(pheno~prs))
+# Which shows that we have the expected PRS R2
+# Group the phenotype and PRS into a data.frame
+info <- data.frame(SampleID=1:n.sample, PRS=prs, Phenotype=pheno)
+# Then we can generate the quantile plot. 
+# To save time, we will load in the quantile plot script from Software
+source("./Software/Quantile.R")
+# Then we can plot the quantile plot using quantile_plot function
+quantile_plot(info, "Results/Height", 100)
+```
