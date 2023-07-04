@@ -10,6 +10,13 @@
   4. [Exercise 1 Estimating R<sup>2</sup> in case and control studies](#exercise-1-estimating-r2-in-case-and-control-studies)
   5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation)
   6. [Exercise 3 Distribution of PRS](#exercise-3-distribution-of-prs)
+  7. [Gene Set Analysis](#gene-set-analysis)
+     1. [Molecular Signatures Database (MSigDB)](#molecular-signatures-Database-(msigdb))
+     2. [General Transfer Format file](#general-transfer-format-file)
+     3. [Browser Extensible Data (BED)](#browser-extensible-data-(bed))
+  9. [Gene Set Enrichment Analysis](#gene-set-enrichment-analysis)
+  10. [Exercise 4 Gene Set Based PRS Analysis](#exercise-4-gene-set-based-prs-analysis)
+      
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
@@ -252,3 +259,40 @@ source("./Software/Quantile.R")
 # Then we can plot the quantile plot using quantile_plot function
 quantile_plot(info, "Results/Height", 100)
 ```
+---
+>
+> ❓ What is the shape of the resulting quantile plot?
+>
+> ❓ Try plotting the densities of the height or CAD PRS in R * - do they look normally distributed? Why? (*Hint: You can generate a density plot for the
+PRS in R using plot(density(x)) where x is a vector of the PRS values in the sample).
+>
+---
+
+<a href="#top">[Back to Top](#table-of-contents)</a>
+
+## Gene Set Analysis
+Currently, most PRS analyses have been performed on a genome-wide scale, disregarding the underlying biological pathways. Udler et al. 2018 suggest that grouping Single Nucleotide Polymorphisms (SNPs) into biological functional groups can lead to PRS that are more relevant to clinical risk. In this practical, we will go through some common file formats for gene-set analysis and will then calculate some gene-set (or pathway) based PRS.
+
+### Molecular Signatures Database (MSigDB)
+The Molecular Signatures Database (MSigDB) oﬀers an excellent source of gene-sets, including the hallmark genes, gene-sets of diﬀerent biological processes, gene-sets of diﬀerent oncogenic signatures etc. All gene-sets from MSigDB follows the Gene Matrix Transposed file format (GMT), which consists of one line per gene-set, each containing at least 3 column of data:
+|:---:|:---:|:---:|:---:|:---:|
+|Set A| Description | Gene 1 | Gene 2 | ...
+|Set A| Description | Gene 1 | Gene 2 | ...
+
+---
+> ** Have a look at the Reference/Sets.gmt file. **
+>
+> ❓ How many gene-sets are there in the Reference/Sets.gmt file? 
+>
+> ❓ How many genes does the largest gene-set contain?
+>
+---
+>
+> 💬 While you can read the GMT file using Excel. You should be aware that Excel has a tendency to convert gene names into dates (e.g. SEPT9 to Sep-9)
+>
+---
+As GMT format does not contain the chromosomal location for each individual gene, an additional file is required to provide the chromosoaml location such that SNPs can be map to genes.
+
+### General Transfer Format file
+The General Transfer Format (GTF) file contains the chromosomal coordinates for each gene. It is a tab separated file and all but the final field in each feature line must contain a value. "Empty" columns should be denoted with a ‘.’. You can read the full format specification here. One column that might be of particular interest is column 3: feature, which indicates what feature that line of GTF represents. This allows us to select or ignore features that are of interest.
+You can find the description of each feature [here](http://www.sequenceontology.org/browser/obob.cgi).
