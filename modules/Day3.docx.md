@@ -133,9 +133,8 @@ Rscript ./Software/PRSice.R \
 Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
 
 >
-  **Figuren1.2: Plot of CAD Lee R<sup>2</sup>**  
->
-![Figure 1.2](https://drive.google.com/uc?id=1TiaO0fT-PC4bt_ho1afPUYU72LvKw6s2)
+  **Figuren1.2: Barplot of CAD Lee R<sup>2</sup>**  
+![Figure 1.2](https://drive.google.com/uc?id=1ktv_UydzcZXUdup9oTB1LKkFyhCT9WdY)
 ---
 
 ---
