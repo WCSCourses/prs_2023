@@ -130,6 +130,7 @@ Rscript ./Software/PRSice.R \
 --binary-target T \
 --out Results/CAD.highres.LEER2
 ```
+The results are written to the "Results" directory. Examine the results folder and each file that was generated. For more information about each file type, see  [here](https://choishingwan.github.io/PRSice/step_by_step/).
 Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
 
 >
@@ -142,15 +143,16 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 > 
 > 📌 To speed up the practical, we have generated a smaller gene-set file. If you want the full gene-set file, you can download it from the link above.
 > 
-> 
 > 📌 All target phenotype data in this workshop are simulated. While they reflect the corresponding trait data, they have no specific biological meaning and are for demonstration purposes only.
 ---
 
 ---
+>
 > 
 >❓Has accounting for the population prevalence aﬀected the R<sup>2</sup>?
 > 
 ---
+>
 > 
 >❓Would you expect a diﬀerence between the Nagelkerke R<sup>2</sup> and the Lee adjusted R<sup>2</sup> if the case/control ratio in the target sample reflects the disease prevalence in the population?
 > 
