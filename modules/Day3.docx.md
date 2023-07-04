@@ -76,13 +76,10 @@ You will find all practical materials in the **data/Day_3** directory. Relevant 
    - Sets.gmt
      
  🛠️: Software
-  - plink_mac
-  - plink_linux
-  - plink.exe
   - PRSice.R 
-  - PRSice_mac
   - PRSice_linux
-  - PRSice_win64.exe
+  - nagelkerke.R
+  - Quantile.R
     
 ---
 > 
