@@ -131,7 +131,11 @@ Rscript ./Software/PRSice.R \
 --out Results/CAD.highres.LEER2
 ```
 The results are written to the "Results" directory. Examine the results folder and each file that was generated. For more information about each file type, see  [here](https://choishingwan.github.io/PRSice/step_by_step/).
-Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
+
+---
+>
+> ⭐ Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
+>
 
 >
   **Figuren1.2: Barplot of CAD Lee R<sup>2</sup>**  
@@ -150,12 +154,25 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 >
 > 
 >❓Has accounting for the population prevalence aﬀected the R<sup>2</sup>?
+><details>
+> <summary>Solution</summary>     
+>
+> Yes, the adjusted R<sup>2</sup> = 0.0521524 and default R<sup>2</sup> = 0.0442664      
+>
+></details>
+>
 > 
 ---
 >
 > 
 >❓Would you expect a diﬀerence between the Nagelkerke R<sup>2</sup> and the Lee adjusted R<sup>2</sup> if the case/control ratio in the target sample reflects the disease prevalence in the population?
-> 
+>
+><details>
+> <summary>Solution</summary>     
+>
+> No, the R<sup>2</sup> will be the same because the prevalence of the target is a true representation of the population prevalence.      
+>
+></details>
 ---
 <a href="#top">[Back to Top](#table-of-contents)</a>
 
