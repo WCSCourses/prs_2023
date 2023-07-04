@@ -9,7 +9,7 @@
   3. [Datasets](#data-sets) 
   4. [Exercise 1 Estimating R<sup>2</sup> in case and control studies](#exercise-1-estimating-r2-in-case-and-control-studies)
   5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation).
-  6. 
+  6. [Exercise 3 Distribution of PRS](#distribution-of-prs).
 
 ## Key Learning Outcomes
 After completing this practical, you should be able to:
@@ -122,9 +122,6 @@ Check the *.summary file in the Results folder where you will find the usual (Na
 > 
 > 📌 To speed up the practical, we have generated a smaller gene-set file. If you want the full gene-set file, you can download it from the link above.
 > 
----
-
----
 > 
 > 📌 All target phenotype data in this workshop are simulated. While they reflect the corresponding trait data, they have no specific biological meaning and are for demonstration purposes only.
 ---
@@ -149,3 +146,69 @@ A simple solution is to perform permutation to obtain an empirical P -value for 
 4) Calculate the empirical P -value as:
 >
  $` Pemp = (\sum(obs.p > null.pi + 1) / (N + 1) `$
+You will have to specify the number of permutation (N ) to perform by providing --perm N as a parameter to PRSice.
+
+```
+Rscript ./Software/PRSice.R \
+    --prsice Software/PRSice_mac \
+    --base  Base_Data/GIANT_Height.txt \
+    --target Target_Data/TAR \
+    --snp MarkerName \
+    --A1 Allele1 \
+    --A2 Allele2 \
+    --stat b \
+    --beta \
+    --pvalue p \
+    --pheno Target_Data/TAR.height \
+    --binary-target F \
+    --cov Target_Data/TAR.covariate \
+    --cov-col Sex \
+    --perm 1000 \
+    --out Results/Height.perm
+```
+---
+>
+> 📓 ** 10000 permutations typically provide empirical P -values with high accuracy to the second decimal place (eg. 0.05), but smaller empirical P -values should be considered approximate. **
+>
+---
+>
+> ❓ What is the smallest possible empirical P -value when 10000 permutation are performed?
+>
+> ❓ Is the height PRS significantly associated with height after accounting for the over-fitting implicit in identifying the best-fit PRS? How about CAD?
+>
+---
+
+The best way to avoid having results that are over-fit is to perform validation on an independent validation data set. We can perform validation of the previous height + covariate analysis with PRSice, using the independent VAL target sample as validation data and the "best" P -value threshold predicted in the VAL samples:
+
+```
+Rscript ./Software/PRSice.R \
+    --prsice Software/PRSice_mac \
+    --base  Base_Data/GIANT_Height.txt \
+    --target Target_Data/VAL \
+    --snp MarkerName \
+    --A1 Allele1 \
+    --A2 Allele2 \
+    --stat b \
+    --beta \
+    --pvalue p \
+    --pheno Target_Data/VAL.height \
+    --binary-target F \
+    --no-full \
+    --bar-levels 0.0680001 \
+    --fastscore \
+    --cov Target_Data/VAL.covariate \
+    --cov-col Sex \
+    --out Results/Height.val
+```
+---
+>
+> ❓ Why do we use --bar-levels 0.0680001 --no-full and --fastscore in this script?
+>
+> ❓ How does the PRS R2 and P -value for the validation data set compare to the analysis on the TAR target data? Is this what you would expect? Why?
+>
+---
+
+---
+<a href="#top">[Back to Top](#table-of-contents)</a>
+
+## Exercise 3 Distribution of PRS
