@@ -162,6 +162,8 @@ A simple solution is to perform permutation to obtain an empirical P -value for 
 4) Calculate the empirical P-value as:
 >
  $` Pemp = (\sum(obs.p > null.pi + 1) / (N + 1) `$
+---
+
 You will have to specify the number of permutation (N ) to perform by providing --perm N as a parameter to PRSice.
 
 ```
