@@ -78,12 +78,12 @@ You will find all practical materials in the **PRS_Workshop/Day_3** directory. R
 ## Exercise 1 Estimating R<sup>2</sup> in case and control studies
 Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al (2011), which requires the sample prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
 
-Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R<sup>2</sup> is usually used to represent the model R<sup>2</sup> (this is the default of PRSice). However, this R<sup>2</sup> does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R<sup>2</sup> (Figure 1.1a).
+Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R<sup>2</sup> is usually used to represent the model R<sup>2</sup> (this is the default of PRSice). However, this R<sup>2</sup> does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R<sup>2</sup> (Figure 1.1a). 
 >
   **Figure 1.1 Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
   **(a) Nagelkerke R<sup>2</sup>**
-![Figure 1.1a](/images/day3/images-004.png)
+![Figure 1.1a](/images/day3/images004.png)
 ---
 
 Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al. 2012 (Figure 1.1b), which requires the sample
@@ -92,7 +92,7 @@ prevalence (case/control ratio) and population prevalence as parameters. This fu
   **Figure 1.1 Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
   **(b) Lee adjusted R<sup>2</sup>**
-![Figure 1.1b](/images/day3/images-006.png)
+![Figure 1.1b](/images/day3/images006.png)
 ---
 
 
@@ -117,6 +117,12 @@ Rscript ./Software/PRSice.R \
 --out Results/CAD.highres.LEER2
 ```
 Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
+
+>
+  **Barplot of CAD Highres LEER<sup>2</sup>**
+>
+![Figure 1.2](/images/day3/images020.png)
+---
 
 ---
 > 
@@ -212,7 +218,12 @@ Rscript ./Software/PRSice.R \
 
 ## Exercise 3 Distribution of PRS
 
-Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.2). 
+Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.3). 
+>
+  **Figure 1.3 An example of a S-shaped quantile plot**
+>
+![Figure 1.3](/images/day3/images021.png)
+---
 
 This might lead us to believe that individuals with PRS values in the top quantiles have a distinctly diﬀerent genetic aetiology compared to the rest of the sample, or that there is epistasis/interactions causing there substantially higher risk. However, when we plot a normally distributed variable (e.g. a PRS) as quantiles on the X-axis then we expect to observe this exponential pattern even when the X variable only has a linear eﬀect on the Y variable. This is because the top (and bottom) quantiles are further away from each other on the absolute scale of the variable and so the diﬀerences in their eﬀects are larger than between quantiles in the middle of the distribution.
 
