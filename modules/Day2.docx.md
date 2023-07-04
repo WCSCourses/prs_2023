@@ -158,8 +158,8 @@ for each copy of the *effect allele*. For example, if the effect
 > rs878177 T C 0.3 0.14 0.0031 8.2e-06 251271      
 >      
 > Second, multiply the weight of each risk allele by their dosage     
-> Ind1: PRS=2*(-0.0011) + 0*(0.0031) = -0.0022,   
-> Ind2: PRS=0*(-0.0011) + 0*(0.0031) = 0
+> Individual_1: PRS=?,  
+> Individual_2: PRS=?
 >      
 > </details>
 
