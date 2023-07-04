@@ -53,7 +53,7 @@ You will find all practical materials in the **/home/manager/data/Day2_Target_Da
 > ```
 > Now, your Day2_Base_dat.zip has been moved to your Day2_Target_Data directory. However, the file is zipped so you will need to unzip it:
 > ```
-> unzip Day2_Base_data.zip
+> unzip Day2_Base_Data.zip
 > ```
 >
 > For clarity purposes, rename your Day2_Base_data to Base_data and make a directory for your Target data called "Target_data" in which you will move all your target datasets.
