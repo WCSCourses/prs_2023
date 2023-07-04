@@ -119,9 +119,9 @@ Rscript ./Software/PRSice.R \
 Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
 
 >
-  **Plot of CAD Lee R<sup>2</sup>**
+  **Plot of CAD Lee R<sup>2</sup>**  
 >
-> <img src="https://github.com/WCSCourses/prs_2023/blob/main/images/day3/CADLEER2HIGHRESPLOT.png"/>
+> <img src="https://drive.google.com/uc?id=1TiaO0fT-PC4bt_ho1afPUYU72LvKw6s2"/>
 
 ---
 
