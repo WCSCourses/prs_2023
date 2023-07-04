@@ -304,3 +304,30 @@ You can find the description of each feature [here](http://www.sequenceontology.
 
 ### Browser Extensible Data (BED)
 Browser Extensible Data (BED) file (diﬀerent to the binary ped file from PLINK) is a file format to define genetic regions. It contains 3 required fields per line (chromosome, start coordinate and end coordinate) together with 9 additional optional field. A special property of BED is that it is a 0-based format, i.e. chromosome starts at 0, as opposed to the usual 1-based format such as the PLINK format. For example, a SNP on chr1:10000 will be represented as:
+
+|:---:|:---:|:---:|
+|**1**|**9999**|**10000**|
+
+---
+>
+> ❓ How should we represent the coordinate of rs2980300 (chr1:785989) in BED format?
+>
+---
+
+## Gene Set Enrichment Analysis
+
+Now we have gone through all the files involved in gene-set analysis, we should consider one of the most important aspects of gene-set (or pathway) enrichment
+analyses, which is the diﬀerent types of testing that we can perform when doing them:
+
+### Self-Contained vs Competitive Testing
+The null-hypothesis of self-contained and competitive test statistics is diﬀerent:
+  – **Self-Contained** - None of the genes within the gene-set are associated with the phenotype
+  – **Competitive** - Genes within the gene-set are no more associated with the phenotype than genes outside the gene-set
+Therefore, a bigger gene-set will have a higher likelihood of having a significant P -value from self-contained test, which is not desirable.
+
+
+### Gene Set Based PRS Analysis
+
+Having learnt about the basics of gene-set analyses, we are now ready to perform gene-set association analyses using PRSet.
+
+To perform the PRSet analysis and obtain the set based PRS and competitive P-value, simply provide the GTF file and the GMT file to PRSice and specify the number of permutation for competitive P-value calculation using the --set-perm option
