@@ -119,17 +119,20 @@ Rscript ./Software/PRSice.R \
 Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
 
 >
-  **Plot of CAD LEER<sup>2</sup>**
+  **Plot of CAD Lee R<sup>2</sup>**
 >
 ![Figure 1.2](https://github.com/WCSCourses/prs_2023/blob/main/images/day3/CADLEER2HIGHRESPLOT.png)
 ---
 
 ---
+>
 > 
 > 📌 To speed up the practical, we have generated a smaller gene-set file. If you want the full gene-set file, you can download it from the link above.
 > 
 > 
 > 📌 All target phenotype data in this workshop are simulated. While they reflect the corresponding trait data, they have no specific biological meaning and are for demonstration purposes only.
+---
+
 ---
 > 
 >❓Has accounting for the population prevalence aﬀected the R<sup>2</sup>?
