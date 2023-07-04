@@ -11,9 +11,9 @@
   5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation)
   6. [Exercise 3 Distribution of PRS](#exercise-3-distribution-of-prs)
   7. [Gene Set Analysis](#gene-set-analysis)
-     1. [Molecular Signatures Database (MSigDB)](#molecular-signatures-Database-(msigdb))
+     1. [Molecular Signatures Database MSigDB](#molecular-signatures-Database-msigdb)
      2. [General Transfer Format file](#general-transfer-format-file)
-     3. [Browser Extensible Data (BED)](#browser-extensible-data-(bed))
+     3. [Browser Extensible Data BED](#browser-extensible-data-bed)
   9. [Gene Set Enrichment Analysis](#gene-set-enrichment-analysis)
   10. [Exercise 4 Gene Set Based PRS Analysis](#exercise-4-gene-set-based-prs-analysis)
       
@@ -87,7 +87,7 @@ Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can 
 
 Residuals of logistic regression is not well defined, and in PRS analyses, Nagelkerke R<sup>2</sup> is usually used to represent the model R<sup>2</sup> (this is the default of PRSice). However, this R<sup>2</sup> does not account for the diﬀerence between sample prevalence (i.e. case-control ratio) and population prevalence, which can lead to bias in the reported R<sup>2</sup> (Figure 1.1a). 
 >
-  **Figure 1.1 Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
+  **Figure 1.1: Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
   **(a) Nagelkerke R<sup>2</sup>**
 ![Figure 1.1a](/images/day3/images004.png)
@@ -96,7 +96,7 @@ Residuals of logistic regression is not well defined, and in PRS analyses, Nagel
 Bias in R<sup>2</sup> estimation caused by ascertained case/control samples can be adjusted using the equation proposed by Lee et al. 2012 (Figure 1.1b), which requires the sample
 prevalence (case/control ratio) and population prevalence as parameters. This function is implemented in PRSice and the adjustment can be performed by providing the population prevalence to the command --prevalence.
 >
-  **Figure 1.1 Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
+  **Figure 1.1: Performance of diﬀerent R<sup>2</sup> when the study contains equal portion of cases and controls**
 >
   **(b) Lee adjusted R<sup>2</sup>**
 ![Figure 1.1b](/images/day3/images006.png)
@@ -126,7 +126,7 @@ Rscript PRSice.R \
 Check the *.summary file in the Results folder where you will find the usual (Nagelkerke) R<sup>2</sup> and the adjusted (Lee) R<sup>2</sup>.
 
 >
-  **Plot of CAD Lee R<sup>2</sup>**  
+  **Figuren1.2: Plot of CAD Lee R<sup>2</sup>**  
 >
 ![Figure 1.2](https://drive.google.com/uc?id=1TiaO0fT-PC4bt_ho1afPUYU72LvKw6s2)
 ---
@@ -230,7 +230,7 @@ Rscript PRSice.R \
 
 Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.3). 
 >
-  **Figure 1.3 An example of a S-shaped quantile plot**
+  **Figure 1.3: An example of a S-shaped quantile plot**
 >
 ![Figure 1.3](/images/day3/images021.png)
 ---
@@ -273,7 +273,7 @@ PRS in R using plot(density(x)) where x is a vector of the PRS values in the sam
 ## Gene Set Analysis
 Currently, most PRS analyses have been performed on a genome-wide scale, disregarding the underlying biological pathways. Udler et al. 2018 suggest that grouping Single Nucleotide Polymorphisms (SNPs) into biological functional groups can lead to PRS that are more relevant to clinical risk. In this practical, we will go through some common file formats for gene-set analysis and will then calculate some gene-set (or pathway) based PRS.
 
-### Molecular Signatures Database (MSigDB)
+### Molecular Signatures Database MSigDB
 The Molecular Signatures Database (MSigDB) oﬀers an excellent source of gene-sets, including the hallmark genes, gene-sets of diﬀerent biological processes, gene-sets of diﬀerent oncogenic signatures etc. All gene-sets from MSigDB follows the Gene Matrix Transposed file format (GMT), which consists of one line per gene-set, each containing at least 3 column of data:
 
 | | | | | |
@@ -302,9 +302,10 @@ The General Transfer Format (GTF) file contains the chromosomal coordinates for 
 You can find the description of each feature [here](http://www.sequenceontology.org/browser/obob.cgi).
 
 
-### Browser Extensible Data (BED)
+### Browser Extensible Data BED
 Browser Extensible Data (BED) file (diﬀerent to the binary ped file from PLINK) is a file format to define genetic regions. It contains 3 required fields per line (chromosome, start coordinate and end coordinate) together with 9 additional optional field. A special property of BED is that it is a 0-based format, i.e. chromosome starts at 0, as opposed to the usual 1-based format such as the PLINK format. For example, a SNP on chr1:10000 will be represented as:
 
+| | | |
 |:---:|:---:|:---:|
 |**1**|**9999**|**10000**|
 
@@ -313,6 +314,9 @@ Browser Extensible Data (BED) file (diﬀerent to the binary ped file from PLINK
 > ❓ How should we represent the coordinate of rs2980300 (chr1:785989) in BED format?
 >
 ---
+
+<a href="#top">[Back to Top](#table-of-contents)</a>
+
 
 ## Gene Set Enrichment Analysis
 
@@ -326,8 +330,52 @@ The null-hypothesis of self-contained and competitive test statistics is diﬀer
 Therefore, a bigger gene-set will have a higher likelihood of having a significant P -value from self-contained test, which is not desirable.
 
 
-### Gene Set Based PRS Analysis
+## Exercise 4 Gene Set Based PRS Analysis
 
 Having learnt about the basics of gene-set analyses, we are now ready to perform gene-set association analyses using PRSet.
 
-To perform the PRSet analysis and obtain the set based PRS and competitive P-value, simply provide the GTF file and the GMT file to PRSice and specify the number of permutation for competitive P-value calculation using the --set-perm option
+To perform the PRSet analysis and obtain the set based PRS and competitive P-value, simply provide the GTF file and the GMT file to PRSice and specify the number of permutation for competitive P-value calculation using the --set-perm option.
+
+```
+Rscript PRSice.R \
+    --prsice Software/PRSice_linux  \
+    --base Base_Data/GIANT_Height.txt \
+    --target Target_Data/TAR \
+    --A1 Allele1 \
+    --A2 Allele2 \
+    --snp MarkerName \
+    --pvalue p \
+    --stat b \
+    --beta \
+    --binary-target F \
+    --pheno Target_Data/TAR.height \
+    --cov Target_Data/TAR.covariate \
+    --out Results/Height.set \
+    --gtf Reference/Homo_sapiens.GRCh38.86.gtf \
+    --wind-5 5kb \
+    --wind-3 1kb \
+    --msigdb Reference/Sets.gmt \
+    --multi-plot 10 \
+    --set-perm 1000
+```
+
+>
+  **Figure 1.4: An example of the multi-set plot. Sets are sorted based on their self-contained R2 . Base is the genome wide PRS**
+>
+![Figure 1.4](/images/day3/Height.set_MULTISET_BARPLOT_2023-06-30.png)
+---
+>
+> 📌 If the --wind-5 and --wind-3 flag is not specified, PRSet will use the exact coordinates of each gene as the boundary. By specifying eg. --wind-5 5kb and --wind-3 1kb then the boundary of each gene will be extended 5 kb towards the 5’ end and 1 kb towards the 3’ end so that regulatory elements of the gene can be included.
+>
+> 📍 By default, when calculating set based PRS, PRSet will not perform P -value thresholding. This is because the aim in gene-set analyses is to assess the overall signal in each gene-set, and compare which is most enriched for signal, rather than optimise predictive power as typically desirable for genome-wide PRS. Providing any of the following commands will activate P -value thresholding for set based PRS calculation: --lower, --upper, --inter, --bar-levels, --fastscore
+>
+---
+
+>
+> ❓ Can you plot the relationship between the gene-set R2 and the number of SNPs in each gene-set? What general trend can be seen?
+>
+> ❓ Considering the plot, what gene-sets do you think are most interesting and why?
+>
+> ❓ Why is it useful to have polygenic scores measured across gene-sets (or pathways) for individuals? Isn’t it suﬃcient to just obtain a ranking of gene-sets according to GWAS-signal enrichment?
+>
+---
