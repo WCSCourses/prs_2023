@@ -1,0 +1,441 @@
+    1  sudo apt install build-essential
+    2  sudo apt install git
+    3  wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo gpg --dearmor -o /usr/share/keyrings/r-project.gpg
+    4  echo "deb [signed-by=/usr/share/keyrings/r-project.gpg] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" | sudo tee -a /etc/apt/sources.list.d/r-project.list
+    5  sudo apt update
+    6  sudo apt install --no-install-recommends r-base=4.2.3-1.2204.0
+    7  sudo apt install --no-install-recommends r-recommended=4.2.3-1.2204.0 r-base=4.2.3-1.2204.0
+    8  R
+    9  sudo apt remove r-base-core
+   10  sudo apt remove r-recommnded
+   11  sudo apt remove r-base
+   12  sudo apt clean
+   13  sudo apt autoclean
+   14  sudo apt install --no-install-recommends r-base-core=4.2.3-1.2204.0 r-recommended=4.2.3-1.2204.0 r-base=4.2.3-1.2204.0
+   15  exit
+   16  which R
+   17  R
+   18  git clone https://github.com/WTAC-NGS/ngs-vm
+   19  cd ngs-vm/
+   20  ls
+   21  nano install_miniconda.sh 
+   22  ./install_miniconda.sh 
+   23  conda install mamba
+   24  mamba install r-base=4.2.3
+   25  R
+   26  which R
+   27  ls -al
+   28  rstudio 
+   29  rstudio --help
+   30  rstudio 
+   31  which R
+   32  sudo ln -fs home/manager/miniconda/bin/R /usr/local/bin/R
+   33  sudo ln -fs home/manager/miniconda/bin/R /usr/bin/R
+   34  rstudio 
+   35  ls
+   36  ls -lrt /usr/bin/
+   37  sudo rm /usr/bin/R
+   38  sudo ls -l /usr/local/bin/
+   39  sudo rm /usr/local/bin/R 
+   40  which R
+   41  nano .bashrc 
+   42  rstudio 
+   43  nano .bashrc 
+   44  ls -al
+   45  nano .profile 
+   46  rstudio 
+   47  sudo ln -s home/manager/miniconda/bin/R /usr/bin/R
+   48  ls -l /usr/bin/
+   49  ls -lrt /usr/bin/
+   50  which R
+   51  /usr/bin/R
+   52  sudo ln -fs /home/manager/miniconda/bin/R /usr/bin/R
+   53  ls -lrt /usr/bin/
+   54  rstudio 
+   55  find . -name libR.so
+   56  ls /usr/lib
+   57  find . -name libR.so
+   58  pwd
+   59  sudo ln -s /home/manager/miniconda/lib/R/lib/libR.so /usr/lib/libR.so
+   60  ls -lrt /usr/lib
+   61  sudo rm /usr/lib/libR.so 
+   62  mamba remove r-base
+   63  which R
+   64  sudo apt install r-base-core=4.2.3-1.2204.0
+   65  which R
+   66  R
+   67  sudo apt install r-base=4.2.3-1.2204.0
+   68  sudo apt install r-recommended=4.2.3-1.2204.0
+   69  sudo apt install r-base=4.2.3-1.2204.0
+   70  R
+   71  sudo apt install r-base-html=4.2.3-1.2204.0
+   72  R
+   73  sudo apt install r-base=4.2.3-1.2204.0
+   74  R
+   75  sudo apt remove r-base-html
+   76  R
+   77  sudo apt remove r-base
+   78  R
+   79  sudo apt remove r-recommended
+   80  R
+   81  sudo apt remove r-base-core
+   82  R
+   83  sudo apt install r-base=4.2.3-1.2204.0
+   84  sudo apt install r-base-core=4.2.3-1.2204.0
+   85  sudo apt install r-recommended=4.2.3-1.2204.0
+   86  R
+   87  sudo apt install r-base-core=4.2.3-1.2204.0
+   88  R
+   89  cd Downloads/
+   90  ls
+   91  rm rstudio-2023.03.1-446-amd64.deb 
+   92  unzip PRSice_linux.zip 
+   93  ls
+   94  ./PRSice_linux 
+   95  Rscript PRSice.R -h
+   96  top
+   97  gedit
+   98  cd PRSice_linux/
+   99  ls
+  100  top
+  101  sudo shutdown 
+  102  nano install_docs.txt
+  103  cd Downloads/
+  104  ls
+  105  cd /home/manager/PRSice_linux/
+  106  nautilus $PWD
+  107  ls
+  108  cd
+  109  /home/manager/PRSice_linux/PRSice.R 
+  110  ls
+  111  mv PRSice_linux/ ./PRSice -r
+  112  mv PRSice_linux/ ./PRSice
+  113  ls
+  114  ls PRSice/
+  115  ls
+  116  cd PRSice/
+  117  ls
+  118  chmod 651 PRSice_linux 
+  119  ls
+  120  ./PRSice_linux
+  121  chmod 773 PRSice_linux 
+  122  ./PRSice_linux
+  123  ls
+  124  pwd
+  125  export PATH="/home/manager/PRSice:$PATH"
+  126  nano /home/manager/.bashrc 
+  127  PRSice_linux 
+  128  nano prsice_tstscript.sh
+  129  chmod 773 prsice_tstscript.sh 
+  130  ./prsice_tstscript.sh 
+  131  cd PRSice/
+  132  ls
+  133  pwd
+  134  cd -
+  135  nano prsice_tstscript.sh
+  136  ./prsice_tstscript.sh 
+  137  cd PRSice/
+  138  ls
+  139  chmod 777 PRSice_linux 
+  140  cd -
+  141  cls
+  142  ls
+  143  cd -
+  144  ls
+  145  cd ..
+  146  cls
+  147  ls
+  148  ./prsice_tstscript.sh 
+  149  ls
+  150  cd PRSice/
+  151  ls
+  152  cd ..
+  153  chmod 755 PRSice/
+  154  ./prsice_tstscript.sh 
+  155  cp prsice_tstscript.sh PRSice/
+  156  cd PRSice/
+  157  ls
+  158  ls -alh
+  159  cd PRSice/
+  160  ls
+  161  cd ..
+  162  chmod 755 PRSice/
+  163  cd PRSice/
+  164  ls
+  165  ls -lha
+  166  chmod 755 PRSice.R 
+  167  chmod 777 PRSice.R 
+  168  chmod 777 prsice_tstscript.sh 
+  169  ./prsice_tstscript.sh 
+  170  top
+  171  htop
+  172  sudo apt  install htop 
+  173  sudo apt-get update
+  174  git clone https://github.com/getian107/PRScsx.git
+  175  chmod 755 PRScsx/
+  176  cd PRScsx/
+  177  ls
+  178  https://www.dropbox.com/s/mq94h1q9uuhun1h/ldblk_1kg_afr.tar.gz?dl=0
+  179  cd PRSice/
+  180  ls
+  181  Rscript PRSice.R --dir . --prsice PRSice_linux
+  182  sudo apt install htop
+  183  htop
+  184  ls
+  185  gedit install_docs.txt 
+  186  sudo shutdown
+  187  cd Downloads/
+  188  chmod 755 plink
+  189  ./plink 
+  190  cp plink /usr/bin/
+  191  sudo cp plink /usr/bin/
+  192  cd ..
+  193  plink 
+  194  ls
+  195  cd D
+  196  cd Documents/
+  197  ls
+  198  cd ..
+  199  cd Downloads/
+  200  ls
+  201  cd ..
+  202  ls
+  203  cd PRScsx/
+  204  ls
+  205  ls ~/Downloads/ -alh
+  206  pwd
+  207  ls
+  208  chmod 777 PRScsx.py 
+  209  chmod 777 gigrnd.py 
+  210  chmod 777 parse_genet.py 
+  211  chmod 777 mcmc_gtb.py 
+  212  cd ..
+  213  chmod 755 PRScsx/
+  214  ls
+  215  nano .bashrc 
+  216  ls
+  217  cd Downloads/
+  218  ls
+  219  ls -lah
+  220  mv ldblk_1kg_* ~/PRScsx/
+  221  mv snpinfo_mult_1kg_hm3 ~/PRScsx/
+  222  ls
+  223  cd ..
+  224  ls
+  225  conda install scipy
+  226  conda install h5py
+  227  ls
+  228  git clone https://github.com/clivehoggart/BridgePRS.git
+  229  cd BridgePRS/
+  230  ls
+  231  chmod +x bin/BridgePRS.sh
+  232  chmod +x BridgePRS_example.sh
+  233  pwd
+  234  gedit ~/.bashrc
+  235  cd PRScsx/
+  236  pwd
+  237  gedit ~/.bashrc
+  238  Rscript PRSice.R --dir . 
+  239  cd PRSice/
+  240  ls
+  241  Rscript PRSice.R --dir .
+  242  ./prsice_tstscript.sh 
+  243  gedit prsice_tstscript.sh 
+  244  ./prsice_tstscript.sh 
+  245  cp PRSice_linux PRSice
+  246  ls
+  247  cd 
+  248  sudo apt install libfl-dev
+  249  sudo apt-get update
+  250  sudo apt-get install r-base-dev
+  251  cd BridgePRS/
+  252  ls
+  253  nano BridgePRS_example.sh 
+  254  ls
+  255  less log_bridgeprstest.txt 
+  256  ls
+  257  less out/
+  258  ls
+  259  cd out/
+  260  ls
+  261  cd ..
+  262  ls
+  263  less log_bridgeprstest.txt 
+  264  less out/
+  265  ls out/
+  266  cd out/
+  267  ls
+  268  less AFR_stage1.log 
+  269  cd ..
+  270  rm -r out/
+  271  ls
+  272  less log.txt 
+  273  ls
+  274  cd out/
+  275  ls
+  276  ;ess AFR_weighted_combined_var_explained.log
+  277  less AFR_weighted_combined_var_explained.log
+  278  less AFR_stage2_best_pred_valid.dat 
+  279  less AFR_stage2_best_pred_test.dat 
+  280  cd 
+  281  cd BridgePRS/
+  282  ls
+  283  cd bin/
+  284  ls
+  285  cd PRScsx/ls
+  286  cd
+  287  ls
+  288  cd data/
+  289  ls
+  290  gunzip Data_Day1b.zip
+  291  R --version
+  292  PRSice --h
+  293  PRSice_linux --h
+  294  PRSice_linux -help
+  295  ls
+  296  cd data/
+  297  ls
+  298  cd Data_Day1b/
+  299  pwd
+  300  ls
+  301  cd Data_Day1b/
+  302  ls
+  303  pwd
+  304  cd BridgePRS/
+  305  ls
+  306  cd data/
+  307  ls
+  308  cd ..
+  309  ls
+  310  cd ..
+  311  ls
+  312  cd Do
+  313  cd Downloads/
+  314  ls
+  315  cd ..
+  316  ls
+  317  cd data/
+  318  ls
+  319  cd ..
+  320  ls
+  321  cd PRScsx/
+  322  ls
+  323  ls -alh
+  324  ls -lah
+  325  sudo shutdown now
+  326  cd data/Data_Day1b/
+  327  ls
+  328  pwd
+  329  ls
+  330  cd ..
+  331  ls
+  332  cd Day4/
+  333  ls
+  334  pwd
+  335  sudo shutdown now
+  336  ls
+  337  cd pwd
+  338  pwd
+  339  cd Data
+  340  ls 
+  341  cd data
+  342  pwd
+  343  cd ~/
+  344  pwd
+  345  clear
+  346  ls
+  347  cd data/
+  348  ls
+  349  cd D§
+  350  cd Day1a_Data/
+  351  pwd
+  352  ls
+  353  cd Day1a_Data/
+  354  ls
+  355  pwd
+  356  ls
+  357  head GIANT_Height.txt
+  358  tail GIANT_Height.txt
+  359  cd
+  360  ls
+  361  less nagelkerke.R 
+  362  rm nagelkerke.R 
+  363  wget https://github.com/WCSCourses/prs_2023/blob/main/scripts/nagelkerke.R
+  364  less nagelkerke.R 
+  365  rm nagelkerke.R 
+  366  wget https://raw.githubusercontent.com/WCSCourses/prs_2023/main/scripts/nagelkerke.R
+  367  less nagelkerke.R 
+  368  cd ..
+  369  ls
+  370  cd ..
+  371  cd Data_Day1b/
+  372  ls
+  373  cd data
+  374  ls 
+  375  cd Day1a_Data/Day1a_Data/
+  376  ls
+  377  R
+  378  cd
+  379  ls
+  380  cd data/
+  381  ls
+  382  cd Data_Day1b/
+  383  ls
+  384  clear
+  385  ls
+  386  plink
+  387  head D1D.map 
+  388  ls
+  389  clear
+  390  ls
+  391  plink --file D1D --make-bed out D1D
+  392  plink --file D1D --make-bed --out D1D
+  393  ls 
+  394  clear
+  395  ls
+  396  head D1D.fam
+  397  head D1D.ped
+  398  ls -lrt
+  399  clear
+  400  head D1D.fam
+  401  plink --bfile D1D --maf 0.05 --geno 0.05 --write-snplist --out D1D_snps
+  402  head D1D_snps.snplist 
+  403  plink --bfile D1D --extract D1D_snps.snplist --make-bed --out D2D
+  404  plink --bfile D1D --extract D1D_snps.snplist --make-bed --out D1D_snps
+  405  plink --bfile D1D --extract D1D_snps.snplist --make-bed --out D1D_MAF_MISS
+  406  clear
+  407  plink --bfile D1D --missing
+  408  ls
+  409  plink --bfile D1D --missing --out D1D
+  410  plink --bfile D1D --missing --out D1D_miss
+  411  head D1D_miss.imiss 
+  412  plink --bfile D1D --test-missing --out D1D_miss
+  413  ls -lrt
+  414  head D1D_miss.lmiss 
+  415  head D1D_miss.imiss 
+  416  head D1D_miss.missing 
+  417  plink --bfile D1D --hardy --out D1D_hardy
+  418  ls -l
+  419  ls -lrt
+  420  head D1D_hardy.hwe
+  421  clear
+  422  plink --bfile D1D --freq --out D1D_freq
+  423  ls
+  424  head D1D_freq.frq 
+  425  clear
+  426  plink --bfile D1D --mind 0.03 --make-bed --out D1D_imiss3pc
+  427  ls -lrt
+  428  cat D1D_imiss3pc.log 
+  429  head D1D_imiss3pc.fam
+  430  awk '{print $5}' D1D_imiss3pc.fam | grep "2" | wc -l
+  431  clear
+  432  plink --bfile D1D_imiss3pc --maf0.05 --geno 0.02 --make-bed --out D1D_imiss3pc_lmiss2pc_maf5pc
+  433  plink --bfile D1D_imiss3pc --maf 0.05 --geno 0.02 --make-bed --out D1D_imiss3pc_lmiss2pc_maf5pc
+  434  plink --bfile D1D_imiss3pc_lmiss2pc_maf5pc --hwe 0.0001 --make-bed --out D1D_QC
+  435  plink --bfile D1D_QC --logistic --adjust --pheno D1D.pheno1 --out D1D_CC
+  436  ls -lrt
+  437  head D1D_CC.assoc.logistic
+  438  head D1D_CC.assoc.logistic.adjusted 
+  439  history 
+  440  history | less
+  441  history > day1commands.txt
