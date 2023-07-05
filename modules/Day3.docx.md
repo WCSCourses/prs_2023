@@ -9,8 +9,9 @@
   3. [Datasets](#data-sets) 
   4. [Exercise 1 Estimating R<sup>2</sup> in case and control studies](#exercise-1-estimating-r2-in-case-and-control-studies)
   5. [Exercise 2 Overfitting caused by model optimisation](#exercise-2-Overfitting-caused-by-model-optimisation)
-  6. [Exercise 3 Distribution of PRS](#exercise-3-distribution-of-prs)
-  7. [Gene Set Analysis](#gene-set-analysis)
+     1. [Out of Sample Validation](#out-of-sample-validation)
+  7. [Exercise 3 Distribution of PRS](#exercise-3-distribution-of-prs)
+  8. [Gene Set Analysis](#gene-set-analysis)
      1. [Molecular Signatures Database MSigDB](#molecular-signatures-Database-msigdb)
      2. [General Transfer Format file](#general-transfer-format-file)
      3. [Browser Extensible Data BED](#browser-extensible-data-bed)
@@ -185,15 +186,15 @@ A simple solution is to perform permutation to obtain an empirical P -value for 
 2) Then shuﬄe the phenotype and obtain the P -value of the "best" threshold for this null phenotype, denoted as null.p
 3) Repeat 2) N times
 4) Calculate the empirical P-value as:
->
+
  $` Pemp = (\sum(obs.p > null.pi + 1) / (N + 1) `$
 ---
 
 You will have to specify the number of permutation (N ) to perform by providing --perm N as a parameter to PRSice.
 
 ```
-Rscript PRSice.R \
-    --prsice Software/PRSice_linux\
+Rscript ./Software/PRSice.R \
+    --prsice Software/PRSice_linux \
     --base  Base_Data/GIANT_Height.txt \
     --target Target_Data/TAR \
     --snp MarkerName \
@@ -211,20 +212,40 @@ Rscript PRSice.R \
 ```
 ---
 >
+  **Figure 1.3: Barplot of Height using 1000 permutations**  
+![Figure 1.3](https://drive.google.com/uc?id=1LVqUBgLKSopgg4NK4x958NadAETGgGXx)
+---
+
+---
+>
 > 📝 **10000 permutations typically provide empirical P -values with high accuracy to the second decimal place (eg. 0.05), but smaller empirical P -values should be considered approximate.**
 >
 ---
 >
-> ❓ What is the smallest possible empirical P-value when 10000 permutation are performed?
+> ❓ What is the smallest possible empirical P-value when 10000 permutation are performed? 
+>
+><details>
+> <summary>Solution</summary>     
+>
+> 1.5 X 10<sup>-34</sup>.      
+>
+></details>
 >
 > ❓ Is the height PRS significantly associated with height after accounting for the over-fitting implicit in identifying the best-fit PRS? How about CAD?
 >
+>><details>
+> <summary>Solution</summary>     
+>
+> Yes, the height PRS is significantly associated with height. After accounting for the over-fitting implicit in identifying the best-fit PRS, the emprical p-value is 0.000999001.
+>
+></details>
 ---
+### Out of Sample Validation
 
 The best way to avoid having results that are over-fit is to perform validation on an independent validation data set. We can perform validation of the previous height + covariate analysis with PRSice, using the independent VAL target sample as validation data and the "best" P-value threshold predicted in the VAL samples:
 
 ```
-Rscript PRSice.R \
+Rscript ./Software/PRSice.R \
     --prsice Software/PRSice_linux \
     --base  Base_Data/GIANT_Height.txt \
     --target Target_Data/VAL \
@@ -243,6 +264,11 @@ Rscript PRSice.R \
     --cov-col Sex \
     --out Results/Height.val
 ```
+--- 
+>
+  **Figuren1.4: Barplot of Height validation dataset**  
+![Figure 1.4](https://drive.google.com/uc?id=1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs)
+---
 ---
 >
 > ❓ Why do we use --bar-levels 0.0680001 --no-full and --fastscore in this script?
