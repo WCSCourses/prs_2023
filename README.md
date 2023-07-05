@@ -58,8 +58,7 @@ The course will begin with an overview of genome-wide association studies, an in
 
 
 **Day 5 - Group Projects**  
-Group projects revealed on Day 3
-<!---- [Group Projects Online Manual](modules/Day5_Projects.md) ---->
+[Day 5 Project Description](modules/Day5_Projects.md)
 
 
 
