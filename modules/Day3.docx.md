@@ -289,11 +289,16 @@ Rscript ./Software/PRSice.R \
 
 ## Exercise 3 Distribution of PRS
 
-Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.3). 
+Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.6). 
 >
-  **Figure 1.5: An example of a S-shaped quantile plot**
+  **Figure 1.5: An example of density plot for PRS**
 >
-![Figure 1.5](/images/day3/images021.png)
+![Figure 1.5](/images/day3/images020.png)
+---
+>
+  **Figure 1.6: An example of a S-shaped quantile plot**
+>
+![Figure 1.6](/images/day3/images021.png)
 ---
 
 This might lead us to believe that individuals with PRS values in the top quantiles have a distinctly diﬀerent genetic aetiology compared to the rest of the sample, or that there is epistasis/interactions causing there substantially higher risk. However, when we plot a normally distributed variable (e.g. a PRS) as quantiles on the X-axis then we expect to observe this exponential pattern even when the X variable only has a linear eﬀect on the Y variable. This is because the top (and bottom) quantiles are further away from each other on the absolute scale of the variable and so the diﬀerences in their eﬀects are larger than between quantiles in the middle of the distribution.
@@ -320,6 +325,12 @@ source("./Software/Quantile.R")
 # Then we can plot the quantile plot using quantile_plot function
 quantile_plot(info, "Results/Height", 100)
 ```
+>
+  **Figure 1.7: The resulting quantile plot**
+>
+![Figure 1.7](images/day3/Height_QUANTILES_PLOT_2023-07-05.png)
+---
+
 ---
 >
 > ❓ What is the shape of the resulting quantile plot?
@@ -398,7 +409,7 @@ Having learnt about the basics of gene-set analyses, we are now ready to perform
 To perform the PRSet analysis and obtain the set based PRS and competitive P-value, simply provide the GTF file and the GMT file to PRSice and specify the number of permutation for competitive P-value calculation using the --set-perm option.
 
 ```
-Rscript PRSice.R \
+Rscript ./Software/PRSice.R \
     --prsice Software/PRSice_linux  \
     --base Base_Data/GIANT_Height.txt \
     --target Target_Data/TAR \
@@ -421,9 +432,9 @@ Rscript PRSice.R \
 ```
 
 >
-  **Figure 1.4: An example of the multi-set plot. Sets are sorted based on their self-contained R2 . Base is the genome wide PRS**
+  **Figure 1.8: An example of the multi-set plot. Sets are sorted based on their self-contained R2 . Base is the genome wide PRS**
 >
-![Figure 1.4](/images/day3/Height.set_MULTISET_BARPLOT_2023-06-30.png)
+![Figure 1.8](/images/day3/Height.set_MULTISET_BARPLOT_2023-06-30.png)
 ---
 >
 > 📌 If the --wind-5 and --wind-3 flag is not specified, PRSet will use the exact coordinates of each gene as the boundary. By specifying eg. --wind-5 5kb and --wind-3 1kb then the boundary of each gene will be extended 5 kb towards the 5’ end and 1 kb towards the 3’ end so that regulatory elements of the gene can be included.
