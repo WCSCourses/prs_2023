@@ -139,7 +139,7 @@ The results are written to the "Results" directory. Examine the results folder a
 >
 
 >
-  **Figuren1.2: Barplot of CAD Lee R<sup>2</sup>**  
+  **Figure 1.2: Barplot of CAD Lee R<sup>2</sup>** 
 ![Figure 1.2](https://drive.google.com/uc?id=1ktv_UydzcZXUdup9oTB1LKkFyhCT9WdY)
 ---
 
@@ -212,7 +212,7 @@ Rscript ./Software/PRSice.R \
 ```
 ---
 >
-  **Figure 1.3: Barplot of Height using 1000 permutations**  
+  **Figure 1.3: Barplot of Height using 1000 permutations** 
 ![Figure 1.3](https://drive.google.com/uc?id=1LVqUBgLKSopgg4NK4x958NadAETGgGXx)
 ---
 
@@ -266,7 +266,7 @@ Rscript ./Software/PRSice.R \
 ```
 --- 
 >
-  **Figuren1.4: Barplot of Height validation dataset**  
+  **Figure 1.4: Barplot of Height validation dataset** https://drive.google.com/file/d/1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs/view?usp=sharing
 ![Figure 1.4](https://drive.google.com/uc?id=1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs)
 ---
 ---
