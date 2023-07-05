@@ -133,7 +133,7 @@ Rscript ./Software/PRSice.R \
 --beta \
 --pvalue p_dgc \
 --pheno Target_Data/TAR.cad \
---prevalence 0.493 \ 
+--prevalence 0.05 \ 
 --binary-target T \
 --out Results/CAD.highres.LEER2
 ```
