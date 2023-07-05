@@ -266,7 +266,7 @@ Rscript ./Software/PRSice.R \
 ```
 --- 
 >
-  **Figure 1.4: Barplot of Height validation dataset** https://drive.google.com/file/d/1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs/view?usp=sharing
+  **Figure 1.4: Barplot of Height validation dataset** 
 ![Figure 1.4](https://drive.google.com/uc?id=1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs)
 ---
 ---
