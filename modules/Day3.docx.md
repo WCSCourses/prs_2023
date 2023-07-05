@@ -212,7 +212,8 @@ Rscript ./Software/PRSice.R \
 ```
 ---
 >
-  **Figure 1.3: Barplot of Height using 1000 permutations** 
+  **Figure 1.3: Barplot of Height using 1000 permutations**
+>
 ![Figure 1.3](https://drive.google.com/uc?id=1LVqUBgLKSopgg4NK4x958NadAETGgGXx)
 >
 ---
