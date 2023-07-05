@@ -328,7 +328,7 @@ quantile_plot(info, "Results/Height", 100)
 >
   **Figure 1.7: The resulting quantile plot**
 >
-![Figure 1.7](images/day3/Height_QUANTILES_PLOT_2023-07-05.png)
+![Figure 1.7](/images/day3/Height_QUANTILES_PLOT_2023-07-05.png)
 ---
 
 ---
