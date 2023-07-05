@@ -221,13 +221,13 @@ Rscript ./Software/PRSice.R \
 >
   **Figure 1.3: Barplot of Height using 1000 permutations**
 >
-![Figure 1.3](https://drive.google.com/uc?id=1LVqUBgLKSopgg4NK4x958NadAETGgGXx)
+![Figure 1.3](/images/day3/Height.perm_BARPLOT_2023-06-30.png)
 >
 ---
 
 ---
 >
-> 📝 **10000 permutations typically provide empirical P -values with high accuracy to the second decimal place (eg. 0.05), but smaller empirical P -values should be considered approximate.**
+> 📝 **10000 permutations typically provide empirical P-values with high accuracy to the second decimal place (eg. 0.05), but smaller empirical P-values should be considered approximate.**
 >
 ---
 >
@@ -242,7 +242,7 @@ Rscript ./Software/PRSice.R \
 >
 > ❓ Is the height PRS significantly associated with height after accounting for the over-fitting implicit in identifying the best-fit PRS? How about CAD?
 >
->><details>
+><details>
 > <summary>Solution</summary>     
 >
 > Yes, the height PRS is significantly associated with height. After accounting for the over-fitting implicit in identifying the best-fit PRS, the emprical p-value is 0.000999001.
@@ -267,7 +267,7 @@ Rscript ./Software/PRSice.R \
     --pheno Target_Data/VAL.height \
     --binary-target F \
     --no-full \
-    --bar-levels 0.0680001 \
+    --bar-levels 0.0680001 \https://drive.google.com/uc?id=1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs
     --fastscore \
     --cov Target_Data/VAL.covariate \
     --cov-col Sex \
@@ -276,7 +276,7 @@ Rscript ./Software/PRSice.R \
 --- 
 >
   **Figure 1.4: Barplot of Height validation dataset** 
-![Figure 1.4](https://drive.google.com/uc?id=1aXFbtFXUzp5I87l5PuP0e1FeySftDzYs)
+![Figure 1.4](/images/day3/Height.val_BARPLOT_2023-06-30.png)
 ---
 ---
 >
@@ -292,9 +292,9 @@ Rscript ./Software/PRSice.R \
 
 Many PRS study publications include quantile plots that show an exponential increase in phenotypic value or / Odd Ratios (OR) among the top quantiles (e.g. an S-shaped quantile plot, e.g. Figure 1.3). 
 >
-  **Figure 1.3: An example of a S-shaped quantile plot**
+  **Figure 1.5: An example of a S-shaped quantile plot**
 >
-![Figure 1.3](/images/day3/images021.png)
+![Figure 1.5](/images/day3/images021.png)
 ---
 
 This might lead us to believe that individuals with PRS values in the top quantiles have a distinctly diﬀerent genetic aetiology compared to the rest of the sample, or that there is epistasis/interactions causing there substantially higher risk. However, when we plot a normally distributed variable (e.g. a PRS) as quantiles on the X-axis then we expect to observe this exponential pattern even when the X variable only has a linear eﬀect on the Y variable. This is because the top (and bottom) quantiles are further away from each other on the absolute scale of the variable and so the diﬀerences in their eﬀects are larger than between quantiles in the middle of the distribution.
