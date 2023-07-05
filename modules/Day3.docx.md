@@ -48,7 +48,14 @@ In this practical, we will explore how to perform gene-set based PRS analyses. T
 
 ## Data Sets
 
-You will need to download the required files for this tutorial [here](https://drive.google.com/file/d/1nC20DaahMQJZlmguPsZJk0rx3E801yPs/view?usp=sharing). The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following commands.
+You will need to download the required files for this tutorial.       
+
+[Download Backup 1](https://drive.google.com/file/d/17gUSawRcynw9tusqQxbwI-qSh_shiCpJ/view?usp=sharing)        
+[Download Backup 2](https://drive.google.com/file/d/1XFrEYyEBPCwSlnDNQa5eEoAYHFpHqKEN/view?usp=sharing)        
+
+The data will be downloaded into your "Downloads" folder. You will need to move it to right directory, using the following commands.
+
+
 
 ```
 cd data
