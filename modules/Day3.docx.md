@@ -266,7 +266,7 @@ Rscript ./Software/PRSice.R \
     --pheno Target_Data/VAL.height \
     --binary-target F \
     --no-full \
-    --bar-levels 0.0680001 
+    --bar-levels 0.0680001 \
     --fastscore \
     --cov Target_Data/VAL.covariate \
     --cov-col Sex \
