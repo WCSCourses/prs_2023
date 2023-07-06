@@ -1,5 +1,5 @@
 ## Introduction to Cross-Ancestry PRS analysis
-Before starting the practical the following commands will need to be applied from within your virtual machine:
+Before starting the practical the following commands will need to be run from within your virtual machine:
 
 (1) conda create -n "PRScsx" python=3.7
 
