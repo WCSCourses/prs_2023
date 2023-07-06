@@ -205,7 +205,7 @@ The next series of commands implement in-ancestry and cross-ancestry prediction 
 ```sh
 Rscript /home/manager/data/Data_Day4/software/PRSice.R \
 --prsice /home/manager/data/Data_Day4/software/PRSice_linux \
---base /home/manager/data/Data_Day4/afr.SBP.posterior.sumstats \
+--base /home/manager/data/Data_Day4/afr.sbp.posterior.sumstats \
 --extract /home/manager/data/Data_Day4/snps.afr.posterior \
 --A1 A1 \
 --pvalue P \
