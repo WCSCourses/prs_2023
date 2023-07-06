@@ -224,7 +224,7 @@ Rscript /home/manager/data/Data_Day4/software/PRSice.R \
 ##### 12. Predicting from European training to African target data
 ```sh
 Rscript /home/manager/data/Data_Day4/software/PRSice.R \
---prsice /home/manager/data/Data_Day4software/PRSice_linux \
+--prsice /home/manager/data/Data_Day4/software/PRSice_linux \
 --base /home/manager/data/Data_Day4/eur.SBP.posterior.sumstats \
 --extract /home/manager/data/Data_Day4/snps.eur.posterior \
 --A1 A1 \
