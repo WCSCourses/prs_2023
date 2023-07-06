@@ -93,7 +93,7 @@ To save time, we will be running the analyses across chromosome 15, rather than 
 python /home/manager/data/Data_Day4/software/PRScsx.py \
 --ref_dir=/home/manager/data/Data_Day4/reference/csx \
 --bim_prefix=/home/manager/data/Data_Day4/data/AFR_1kg.hm3.only.csx \
---sst_file=/home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx,$home/data/AFR-SBP-simulated.sumstats.prscsx \
+--sst_file=/home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx,/home/manager/data/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \
 --n_gwas=25732,4855 \
 --pop=EUR,AFR \
 --chrom=15 \
