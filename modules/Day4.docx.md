@@ -4,12 +4,13 @@ Before starting the practical the following fixes will need to be applied from w
 (2) conda activate PRScsx
 (3) pip install scipy
 (4) pip install h5py
-#### 1. The 1000 Genomes dataset
+
  The goal of this practical is to provide you with basic understanding and experience of running the PRS-CSx software. After completing this practical, you should:
 * Be able to perform cross-population descriptives.
 * Be familiar with running cross-ancestry PRS analyses using PRS-CSx.
 * Understand how to evaluate linear models using Akaike’s Information Criterion
 
+#### 1. The 1000 Genomes dataset
 The data we will be working with are coming from the 1000 Genomes Project reference panel. The data relates to individuals from 26 different source populations around the world. For simplicity, the populations have been collapsed into 5 broader continental super-populations: East Asian, European, South Asian, Amerindian, African ((EAS, EUR, SAS, EUR and AFR)). The scripts used to download and process the 1000Genomes data for the purposes of this course will be provided in the course appendix at the end of this week. 
 
 #### 2. Cross-population allele frequency
