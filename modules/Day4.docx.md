@@ -1,8 +1,12 @@
 ## Introduction to Cross-Ancestry PRS analysis
-Before starting the practical the following fixes will need to be applied from within your virtual machine
+Before starting the practical the following commands will need to be applied from within your virtual machine:
+
 (1) conda create -n "PRScsx" python=3.7
+
 (2) conda activate PRScsx
+
 (3) pip install scipy
+
 (4) pip install h5py
 
  The goal of this practical is to provide you with basic understanding and experience of running the PRS-CSx software. After completing this practical, you should:
