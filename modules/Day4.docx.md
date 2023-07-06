@@ -25,7 +25,7 @@ grep -F 'AFR' plink.frq.strat | wc -l
 ```
 From there we can print the number of SNPs with minor allele frequencies greater than 0 (and are hence potentially available for genomic analyes).
 ```sh
-grep -F 'EAS' plink.frq.strat > freq_report.eas | awk '$6 >0' | wc -l
+grep -F 'EAS' plink.frq.strat | awk '$6 >0' | wc -l
 ```
 Recycle the code above to find the number of available SNPs in each of the 4 other global populations (EUR, AFR, SAS, AMR).
 
