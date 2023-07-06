@@ -56,9 +56,13 @@ ggplot(na.omit(plotDat),
 ##### (iii) What is the reason behind these two features?
 &nbsp;
 #### 4. Calculation of Fst
-Fst is a formal metric which is used to convey the level of genetic divergence between populations (on a scale between 0 and 1), using information derived from a set of genome-wide and mutually independent SNPs. Fst between parwise populations is estimated efficiently in Plink-2. A higher Fst corresponds to greater divergence between populations. Use the following command to calculate Fst:
+Fst is a formal metric which is used to convey the level of genetic divergence between populations (on a scale between 0 and 1), using information derived from a set of genome-wide and mutually independent SNPs. Fst between parwise populations is estimated efficiently in Plink-2. So first we need to download Plink-2 using the command below:
 ```sh
-./plink2 --bfile ./data/chr1-22 --fst POP --pheno ./data/pop_info.pheno
+sudo apt install plink2
+```
+A higher Fst corresponds to greater divergence between populations. Use the following command to calculate Fst:
+```sh
+plink2 --bfile ./data/chr1-22 --fst POP --pheno ./data/pop_info.pheno
 ```
 Check the output file plink2.fst.summary
 #### **Questions**
