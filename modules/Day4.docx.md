@@ -346,7 +346,4 @@ Does combining the two sets of adjusted scores perform consistently better than 
 ##### **(i) For each ancestry which model performs best and which performs worst?**   
 ##### **(ii) Does linearly combining adjusted scores (European plus African) always result in better performance compared to single-ancestry prediction?**   
 
-## Introduction to BridgePRS
-BridgePRS is an R and bash based package that integrates GWAS summary statistics from two populations. It was designed to improve prediction in a population for which GWASs are relatively under-powered (population 2) but there exist powerful GWAS data in another population (population 1). In addition to GWAS summary statistics, BridgePRS also requires genotype and phenotype data from the two populations for parameter optimisation (test data) and estimation of LD. The LD and test data files can be different or identical. Measures of model fit and SNP weights for the best model for population 2 are returned. In addition, validation data from population 2, can be supplied to make out-of-sample prediction and measures of model fit.
-
 
