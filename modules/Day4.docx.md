@@ -107,7 +107,7 @@ The file run_prscsx_eur-target.sh is used to estimate optimal SNP weights for pr
 python /home/manager/data/Data_Day4/software/PRScsx.py \
 --ref_dir=/home/manager/data/Data_Day4/reference/csx \
 --bim_prefix=/home/manager/data/Data_Day4/data/EUR_1kg.hm3.only.csx \
---sst_file=/home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx,/manager/data/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \
+--sst_file=/home/manager/data/Data_Day4/data/EUR-SBP-simulated.sumstats.prscsx,/home/manager/data/Data_Day4/data/AFR-SBP-simulated.sumstats.prscsx \
 --n_gwas=25732,4855 \
 --pop=EUR,AFR \
 --chrom=15 \
