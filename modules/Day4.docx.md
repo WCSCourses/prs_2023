@@ -88,6 +88,26 @@ PRS-CSx uses only HAPMAP3 SNPs therefore we produce a set of plink files contain
 #### 7. Running PRS-CSx
 To model the coupling of effect sizes at individual SNPs across ancestries PRS-CSx uses an MCMC (Bayesian) sampling algorithm to determine values of the global shrinkage parameter ("phi") by Maximum likelihood. For samples of mixed or admixed genetic ancestry (which ours are not) the optimal value of the shrinkage parameter is estimated autonomously from the data. Here we use the value of phi (1e-4), which is suggested by the software authors, given that our trait is simulated to have a relatively small number (N=110) causal variants, distributed genome-wide.
 To save time, we will be running the analyses across chromosome 15, rather than the entire genome. The commands needed to run PRS-CSx are contained in two script files, located in /home/manager/data/Data_Day4/scripts. The file run_prscsx_afr-target.sh is used to estimate optimal SNP weights for predicting into the African target population. 
+
+NB - move the snp file to the reference folder
+
+```
+cp /home/manager/PRScsx/snpinfo_mult_1kg_hm3 /home/manager/data/Data_Day4/reference/csx    
+```
+
+NB - the ld block files must be moved to /home/manager/data/Data_Day4/reference/csx to /home/manager/PRScsx/
+
+```
+mv /home/manager/PRScsx/*.tar.gz /home/manager/PRScsx/
+```
+then extracted with tar
+
+```
+tar -xvfz ld...tar.gz
+```
+be careful of space, your vm has 100GB cap. remove the .gz files once extracted
+
+
 **Script contents**:
 ```sh
 python /home/manager/data/Data_Day4/software/PRScsx.py \
