@@ -303,7 +303,7 @@ sudo apt install cmake
 install.packages("AICcmodavg")
 install.packages("fmsb")
 library(AICcmodavg)
-library(AICcmodavg)
+library(fmsb)
 
 afr.afr<-read.table("/home/manager/data/Data_Day4/out/prscsx_prsice/SBP.afr.afr.best", header=T)
 afr.eur<-read.table("/home/manager/data/Data_Day4/out/prscsx_prsice/SBP.afr.by.eur.best", header=T)
